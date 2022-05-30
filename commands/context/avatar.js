@@ -19,6 +19,8 @@ module.exports = class Avatar extends Command {
 	async run(client, interaction) {
 		const user = client.users.cache.get(interaction.targetId);
 
+		console.log(client.config)
+
 		const embed = new MessageEmbed()
 			.setTitle(`**${user.username}'s Avatar**`)
 			.setColor(client.config.embedColor)

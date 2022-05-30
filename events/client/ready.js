@@ -10,7 +10,7 @@ module.exports = class ReadyEvent extends Event {
 	async run() {
 		const client = this.client;
 
-		client.user.setActivity('👋 Hello World!', { type: 'PLAYING' });
+		client.user.setActivity('Revise ses kanji', { type: 'PLAYING' });
 
 		console.log(`Discord Bot is now online with ${client.users.cache.size} users and ${client.guilds.cache.size} servers.`);
 	}
