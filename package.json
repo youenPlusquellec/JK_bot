@@ -37,7 +37,7 @@
         "text-to-image": "^5.2.0"
     },
     "devDependencies": {
-        "eslint": "^8.15.0",
+        "eslint": "^8.16.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^6.0.0"
     }
