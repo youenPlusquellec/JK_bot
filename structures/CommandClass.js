@@ -11,4 +11,8 @@ module.exports = class Command {
 	async run() {
 		throw new Error(`The Slash Command "${this.name}" does not provide a run method.`);
 	}
+
+	async cronFunction() {
+		throw new Error(`The Slash Command "${this.name}" does not provide a cronFunction method.`);
+	}
 };

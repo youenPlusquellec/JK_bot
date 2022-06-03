@@ -2,5031 +2,5031 @@
 	{
 		"id": 0,
 		"kanji": "異",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1,
 		"kanji": "遺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 2,
 		"kanji": "域",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 3,
 		"kanji": "宇",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 4,
 		"kanji": "映",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 5,
 		"kanji": "延",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 6,
 		"kanji": "沿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 7,
 		"kanji": "我",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 8,
 		"kanji": "灰",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 9,
 		"kanji": "拡",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 10,
 		"kanji": "閣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 11,
 		"kanji": "革",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 12,
 		"kanji": "割",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 13,
 		"kanji": "株",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 14,
 		"kanji": "巻",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 15,
 		"kanji": "干",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 16,
 		"kanji": "看",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 17,
 		"kanji": "簡",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 18,
 		"kanji": "危",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 19,
 		"kanji": "揮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 20,
 		"kanji": "机",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 21,
 		"kanji": "貴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 22,
 		"kanji": "疑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 23,
 		"kanji": "吸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 24,
 		"kanji": "供",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 25,
 		"kanji": "胸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 26,
 		"kanji": "郷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 27,
 		"kanji": "勤",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 28,
 		"kanji": "筋",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 29,
 		"kanji": "敬",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 30,
 		"kanji": "系",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 31,
 		"kanji": "警",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 32,
 		"kanji": "劇",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 33,
 		"kanji": "激",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 34,
 		"kanji": "穴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 35,
 		"kanji": "憲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 36,
 		"kanji": "権",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 37,
 		"kanji": "絹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 38,
 		"kanji": "厳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 39,
 		"kanji": "源",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 40,
 		"kanji": "呼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 41,
 		"kanji": "己",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 42,
 		"kanji": "誤",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 43,
 		"kanji": "后",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 44,
 		"kanji": "孝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 45,
 		"kanji": "皇",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 46,
 		"kanji": "紅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 47,
 		"kanji": "鋼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 48,
 		"kanji": "降",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 49,
 		"kanji": "刻",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 50,
 		"kanji": "穀",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 51,
 		"kanji": "骨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 52,
 		"kanji": "困",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 53,
 		"kanji": "砂",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 54,
 		"kanji": "座",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 55,
 		"kanji": "済",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 56,
 		"kanji": "裁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 57,
 		"kanji": "策",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 58,
 		"kanji": "冊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 59,
 		"kanji": "蚕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 60,
 		"kanji": "姿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 61,
 		"kanji": "私",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 62,
 		"kanji": "至",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 63,
 		"kanji": "視",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 64,
 		"kanji": "詞",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 65,
 		"kanji": "誌",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 66,
 		"kanji": "磁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 67,
 		"kanji": "射",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 68,
 		"kanji": "捨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 69,
 		"kanji": "尺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 70,
 		"kanji": "若",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 71,
 		"kanji": "樹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 72,
 		"kanji": "収",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 73,
 		"kanji": "宗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 74,
 		"kanji": "就",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 75,
 		"kanji": "衆",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 76,
 		"kanji": "従",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 77,
 		"kanji": "縦",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 78,
 		"kanji": "縮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 79,
 		"kanji": "熟",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 80,
 		"kanji": "純",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 81,
 		"kanji": "処",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 82,
 		"kanji": "署",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 83,
 		"kanji": "諸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 84,
 		"kanji": "除",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 85,
 		"kanji": "傷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 86,
 		"kanji": "将",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 87,
 		"kanji": "障",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 88,
 		"kanji": "城",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 89,
 		"kanji": "蒸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 90,
 		"kanji": "針",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 91,
 		"kanji": "仁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 92,
 		"kanji": "垂",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 93,
 		"kanji": "推",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 94,
 		"kanji": "寸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 95,
 		"kanji": "盛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 96,
 		"kanji": "聖",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 97,
 		"kanji": "誠",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 98,
 		"kanji": "宣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 99,
 		"kanji": "専",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 100,
 		"kanji": "泉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 101,
 		"kanji": "洗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 102,
 		"kanji": "染",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 103,
 		"kanji": "善",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 104,
 		"kanji": "創",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 105,
 		"kanji": "奏",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 106,
 		"kanji": "層",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 107,
 		"kanji": "操",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 108,
 		"kanji": "窓",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 109,
 		"kanji": "装",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 110,
 		"kanji": "臓",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 111,
 		"kanji": "蔵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 112,
 		"kanji": "存",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 113,
 		"kanji": "尊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 114,
 		"kanji": "宅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 115,
 		"kanji": "担",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 116,
 		"kanji": "探",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 117,
 		"kanji": "誕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 118,
 		"kanji": "暖",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 119,
 		"kanji": "段",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 120,
 		"kanji": "値",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 121,
 		"kanji": "宙",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 122,
 		"kanji": "忠",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 123,
 		"kanji": "著",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 124,
 		"kanji": "庁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 125,
 		"kanji": "潮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 126,
 		"kanji": "頂",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 127,
 		"kanji": "賃",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 128,
 		"kanji": "痛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 129,
 		"kanji": "展",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 130,
 		"kanji": "党",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 131,
 		"kanji": "糖",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 132,
 		"kanji": "討",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 133,
 		"kanji": "届",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 134,
 		"kanji": "難",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 135,
 		"kanji": "乳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 136,
 		"kanji": "認",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 137,
 		"kanji": "納",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 138,
 		"kanji": "脳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 139,
 		"kanji": "派",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 140,
 		"kanji": "俳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 141,
 		"kanji": "拝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 142,
 		"kanji": "背",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 143,
 		"kanji": "肺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 144,
 		"kanji": "班",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 145,
 		"kanji": "晩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 146,
 		"kanji": "否",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 147,
 		"kanji": "批",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 148,
 		"kanji": "秘",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 149,
 		"kanji": "腹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 150,
 		"kanji": "奮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 151,
 		"kanji": "並",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 152,
 		"kanji": "閉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 153,
 		"kanji": "陛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 154,
 		"kanji": "片",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 155,
 		"kanji": "補",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 156,
 		"kanji": "暮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 157,
 		"kanji": "宝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 158,
 		"kanji": "訪",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 159,
 		"kanji": "亡",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 160,
 		"kanji": "忘",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 161,
 		"kanji": "棒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 162,
 		"kanji": "枚",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 163,
 		"kanji": "幕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 164,
 		"kanji": "密",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 165,
 		"kanji": "盟",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 166,
 		"kanji": "模",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 167,
 		"kanji": "訳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 168,
 		"kanji": "優",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 169,
 		"kanji": "郵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 170,
 		"kanji": "幼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 171,
 		"kanji": "欲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 172,
 		"kanji": "翌",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 173,
 		"kanji": "乱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 174,
 		"kanji": "卵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 175,
 		"kanji": "覧",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 176,
 		"kanji": "裏",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 177,
 		"kanji": "律",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 178,
 		"kanji": "臨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 179,
 		"kanji": "朗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 180,
 		"kanji": "論",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 181,
 		"kanji": "圧",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 182,
 		"kanji": "易",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 183,
 		"kanji": "移",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 184,
 		"kanji": "因",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 185,
 		"kanji": "営",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 186,
 		"kanji": "永",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 187,
 		"kanji": "衛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 188,
 		"kanji": "液",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 189,
 		"kanji": "益",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 190,
 		"kanji": "演",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 191,
 		"kanji": "往",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 192,
 		"kanji": "応",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 193,
 		"kanji": "恩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 194,
 		"kanji": "仮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 195,
 		"kanji": "価",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 196,
 		"kanji": "可",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 197,
 		"kanji": "河",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 198,
 		"kanji": "過",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 199,
 		"kanji": "賀",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 200,
 		"kanji": "解",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 201,
 		"kanji": "快",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 202,
 		"kanji": "格",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 203,
 		"kanji": "確",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 204,
 		"kanji": "額",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 205,
 		"kanji": "刊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 206,
 		"kanji": "幹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 207,
 		"kanji": "慣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 208,
 		"kanji": "眼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 209,
 		"kanji": "基",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 210,
 		"kanji": "寄",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 211,
 		"kanji": "規",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 212,
 		"kanji": "技",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 213,
 		"kanji": "義",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 214,
 		"kanji": "逆",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 215,
 		"kanji": "久",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 216,
 		"kanji": "旧",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 217,
 		"kanji": "居",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 218,
 		"kanji": "許",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 219,
 		"kanji": "境",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 220,
 		"kanji": "興",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 221,
 		"kanji": "均",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 222,
 		"kanji": "禁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 223,
 		"kanji": "句",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 224,
 		"kanji": "群",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 225,
 		"kanji": "経",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 226,
 		"kanji": "潔",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 227,
 		"kanji": "件",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 228,
 		"kanji": "券",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 229,
 		"kanji": "検",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 230,
 		"kanji": "険",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 231,
 		"kanji": "減",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 232,
 		"kanji": "現",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 233,
 		"kanji": "限",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 234,
 		"kanji": "個",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 235,
 		"kanji": "故",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 236,
 		"kanji": "護",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 237,
 		"kanji": "効",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 238,
 		"kanji": "厚",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 239,
 		"kanji": "構",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 240,
 		"kanji": "耕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 241,
 		"kanji": "講",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 242,
 		"kanji": "鉱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 243,
 		"kanji": "混",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 244,
 		"kanji": "査",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 245,
 		"kanji": "再",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 246,
 		"kanji": "妻",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 247,
 		"kanji": "採",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 248,
 		"kanji": "災",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 249,
 		"kanji": "際",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 250,
 		"kanji": "在",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 251,
 		"kanji": "罪",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 252,
 		"kanji": "財",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 253,
 		"kanji": "桜",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 254,
 		"kanji": "雑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 255,
 		"kanji": "賛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 256,
 		"kanji": "酸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 257,
 		"kanji": "師",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 258,
 		"kanji": "志",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 259,
 		"kanji": "支",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 260,
 		"kanji": "枝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 261,
 		"kanji": "資",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 262,
 		"kanji": "飼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 263,
 		"kanji": "似",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 264,
 		"kanji": "示",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 265,
 		"kanji": "識",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 266,
 		"kanji": "質",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 267,
 		"kanji": "舎",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 268,
 		"kanji": "謝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 269,
 		"kanji": "授",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 270,
 		"kanji": "修",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 271,
 		"kanji": "術",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 272,
 		"kanji": "述",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 273,
 		"kanji": "準",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 274,
 		"kanji": "序",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 275,
 		"kanji": "承",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 276,
 		"kanji": "招",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 277,
 		"kanji": "証",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 278,
 		"kanji": "常",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 279,
 		"kanji": "情",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 280,
 		"kanji": "条",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 281,
 		"kanji": "状",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 282,
 		"kanji": "織",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 283,
 		"kanji": "職",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 284,
 		"kanji": "制",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 285,
 		"kanji": "勢",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 286,
 		"kanji": "性",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 287,
 		"kanji": "政",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 288,
 		"kanji": "精",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 289,
 		"kanji": "製",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 290,
 		"kanji": "税",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 291,
 		"kanji": "績",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 292,
 		"kanji": "責",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 293,
 		"kanji": "接",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 294,
 		"kanji": "設",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 295,
 		"kanji": "絶",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 296,
 		"kanji": "舌",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 297,
 		"kanji": "銭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 298,
 		"kanji": "祖",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 299,
 		"kanji": "素",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 300,
 		"kanji": "総",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 301,
 		"kanji": "像",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 302,
 		"kanji": "増",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 303,
 		"kanji": "造",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 304,
 		"kanji": "則",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 305,
 		"kanji": "測",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 306,
 		"kanji": "属",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 307,
 		"kanji": "損",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 308,
 		"kanji": "態",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 309,
 		"kanji": "貸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 310,
 		"kanji": "退",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 311,
 		"kanji": "団",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 312,
 		"kanji": "断",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 313,
 		"kanji": "築",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 314,
 		"kanji": "張",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 315,
 		"kanji": "提",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 316,
 		"kanji": "程",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 317,
 		"kanji": "敵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 318,
 		"kanji": "適",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 319,
 		"kanji": "統",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 320,
 		"kanji": "導",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 321,
 		"kanji": "銅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 322,
 		"kanji": "徳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 323,
 		"kanji": "独",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 324,
 		"kanji": "任",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 325,
 		"kanji": "燃",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 326,
 		"kanji": "能",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 327,
 		"kanji": "破",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 328,
 		"kanji": "判",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 329,
 		"kanji": "版",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 330,
 		"kanji": "犯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 331,
 		"kanji": "比",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 332,
 		"kanji": "肥",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 333,
 		"kanji": "非",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 334,
 		"kanji": "備",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 335,
 		"kanji": "俵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 336,
 		"kanji": "評",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 337,
 		"kanji": "貧",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 338,
 		"kanji": "婦",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 339,
 		"kanji": "富",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 340,
 		"kanji": "布",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 341,
 		"kanji": "武",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 342,
 		"kanji": "復",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 343,
 		"kanji": "複",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 344,
 		"kanji": "仏",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 345,
 		"kanji": "編",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 346,
 		"kanji": "弁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 347,
 		"kanji": "保",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 348,
 		"kanji": "墓",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 349,
 		"kanji": "報",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 350,
 		"kanji": "豊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 351,
 		"kanji": "暴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 352,
 		"kanji": "貿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 353,
 		"kanji": "防",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 354,
 		"kanji": "務",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 355,
 		"kanji": "夢",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 356,
 		"kanji": "迷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 357,
 		"kanji": "綿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 358,
 		"kanji": "輸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 359,
 		"kanji": "余",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 360,
 		"kanji": "預",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 361,
 		"kanji": "容",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 362,
 		"kanji": "率",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 363,
 		"kanji": "略",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 364,
 		"kanji": "留",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 365,
 		"kanji": "領",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 366,
 		"kanji": "愛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 367,
 		"kanji": "案",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 368,
 		"kanji": "以",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 369,
 		"kanji": "位",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 370,
 		"kanji": "囲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 371,
 		"kanji": "胃",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 372,
 		"kanji": "衣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 373,
 		"kanji": "印",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 374,
 		"kanji": "栄",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 375,
 		"kanji": "英",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 376,
 		"kanji": "塩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 377,
 		"kanji": "億",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 378,
 		"kanji": "加",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 379,
 		"kanji": "果",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 380,
 		"kanji": "課",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 381,
 		"kanji": "貨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 382,
 		"kanji": "芽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 383,
 		"kanji": "改",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 384,
 		"kanji": "械",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 385,
 		"kanji": "害",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 386,
 		"kanji": "街",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 387,
 		"kanji": "各",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 388,
 		"kanji": "覚",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 389,
 		"kanji": "完",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 390,
 		"kanji": "官",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 391,
 		"kanji": "管",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 392,
 		"kanji": "観",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 393,
 		"kanji": "関",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 394,
 		"kanji": "願",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 395,
 		"kanji": "喜",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 396,
 		"kanji": "器",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 397,
 		"kanji": "希",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 398,
 		"kanji": "旗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 399,
 		"kanji": "機",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 400,
 		"kanji": "季",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 401,
 		"kanji": "紀",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 402,
 		"kanji": "議",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 403,
 		"kanji": "救",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 404,
 		"kanji": "求",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 405,
 		"kanji": "泣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 406,
 		"kanji": "給",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 407,
 		"kanji": "挙",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 408,
 		"kanji": "漁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 409,
 		"kanji": "競",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 410,
 		"kanji": "共",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 411,
 		"kanji": "協",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 412,
 		"kanji": "鏡",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 413,
 		"kanji": "極",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 414,
 		"kanji": "訓",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 415,
 		"kanji": "軍",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 416,
 		"kanji": "郡",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 417,
 		"kanji": "型",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 418,
 		"kanji": "径",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 419,
 		"kanji": "景",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 420,
 		"kanji": "芸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 421,
 		"kanji": "欠",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 422,
 		"kanji": "結",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 423,
 		"kanji": "健",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 424,
 		"kanji": "建",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 425,
 		"kanji": "験",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 426,
 		"kanji": "固",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 427,
 		"kanji": "候",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 428,
 		"kanji": "功",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 429,
 		"kanji": "好",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 430,
 		"kanji": "康",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 431,
 		"kanji": "航",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 432,
 		"kanji": "告",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 433,
 		"kanji": "差",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 434,
 		"kanji": "最",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 435,
 		"kanji": "菜",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 436,
 		"kanji": "材",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 437,
 		"kanji": "昨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 438,
 		"kanji": "刷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 439,
 		"kanji": "察",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 440,
 		"kanji": "札",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 441,
 		"kanji": "殺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 442,
 		"kanji": "参",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 443,
 		"kanji": "散",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 444,
 		"kanji": "産",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 445,
 		"kanji": "残",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 446,
 		"kanji": "司",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 447,
 		"kanji": "史",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 448,
 		"kanji": "士",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 449,
 		"kanji": "氏",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 450,
 		"kanji": "試",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 451,
 		"kanji": "児",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 452,
 		"kanji": "治",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 453,
 		"kanji": "辞",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 454,
 		"kanji": "失",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 455,
 		"kanji": "借",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 456,
 		"kanji": "種",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 457,
 		"kanji": "周",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 458,
 		"kanji": "祝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 459,
 		"kanji": "順",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 460,
 		"kanji": "初",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 461,
 		"kanji": "唱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 462,
 		"kanji": "松",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 463,
 		"kanji": "焼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 464,
 		"kanji": "照",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 465,
 		"kanji": "省",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 466,
 		"kanji": "笑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 467,
 		"kanji": "象",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 468,
 		"kanji": "賞",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 469,
 		"kanji": "信",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 470,
 		"kanji": "臣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 471,
 		"kanji": "成",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 472,
 		"kanji": "清",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 473,
 		"kanji": "静",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 474,
 		"kanji": "席",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 475,
 		"kanji": "積",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 476,
 		"kanji": "折",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 477,
 		"kanji": "節",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 478,
 		"kanji": "説",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 479,
 		"kanji": "戦",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 480,
 		"kanji": "浅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 481,
 		"kanji": "選",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 482,
 		"kanji": "然",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 483,
 		"kanji": "倉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 484,
 		"kanji": "巣",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 485,
 		"kanji": "争",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 486,
 		"kanji": "側",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 487,
 		"kanji": "束",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 488,
 		"kanji": "続",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 489,
 		"kanji": "卒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 490,
 		"kanji": "孫",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 491,
 		"kanji": "帯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 492,
 		"kanji": "隊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 493,
 		"kanji": "達",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 494,
 		"kanji": "単",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 495,
 		"kanji": "置",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 496,
 		"kanji": "仲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 497,
 		"kanji": "貯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 498,
 		"kanji": "兆",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 499,
 		"kanji": "腸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 500,
 		"kanji": "低",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 501,
 		"kanji": "停",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 502,
 		"kanji": "底",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 503,
 		"kanji": "的",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 504,
 		"kanji": "典",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 505,
 		"kanji": "伝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 506,
 		"kanji": "徒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 507,
 		"kanji": "努",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 508,
 		"kanji": "灯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 509,
 		"kanji": "働",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 510,
 		"kanji": "堂",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 511,
 		"kanji": "得",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 512,
 		"kanji": "特",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 513,
 		"kanji": "毒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 514,
 		"kanji": "熱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 515,
 		"kanji": "念",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 516,
 		"kanji": "敗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 517,
 		"kanji": "梅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 518,
 		"kanji": "博",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 519,
 		"kanji": "飯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 520,
 		"kanji": "費",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 521,
 		"kanji": "飛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 522,
 		"kanji": "必",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 523,
 		"kanji": "標",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 524,
 		"kanji": "票",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 525,
 		"kanji": "不",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 526,
 		"kanji": "付",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 527,
 		"kanji": "夫",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 528,
 		"kanji": "府",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 529,
 		"kanji": "副",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 530,
 		"kanji": "粉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 531,
 		"kanji": "兵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 532,
 		"kanji": "別",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 533,
 		"kanji": "変",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 534,
 		"kanji": "辺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 535,
 		"kanji": "便",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 536,
 		"kanji": "包",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 537,
 		"kanji": "法",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 538,
 		"kanji": "望",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 539,
 		"kanji": "牧",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 540,
 		"kanji": "末",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 541,
 		"kanji": "満",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 542,
 		"kanji": "未",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 543,
 		"kanji": "脈",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 544,
 		"kanji": "民",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 545,
 		"kanji": "無",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 546,
 		"kanji": "約",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 547,
 		"kanji": "勇",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 548,
 		"kanji": "要",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 549,
 		"kanji": "養",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 550,
 		"kanji": "浴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 551,
 		"kanji": "利",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 552,
 		"kanji": "陸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 553,
 		"kanji": "料",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 554,
 		"kanji": "良",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 555,
 		"kanji": "量",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 556,
 		"kanji": "輪",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 557,
 		"kanji": "類",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 558,
 		"kanji": "令",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 559,
 		"kanji": "例",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 560,
 		"kanji": "冷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 561,
 		"kanji": "歴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 562,
 		"kanji": "連",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 563,
 		"kanji": "労",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 564,
 		"kanji": "老",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 565,
 		"kanji": "録",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 566,
 		"kanji": "悪",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 567,
 		"kanji": "安",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 568,
 		"kanji": "暗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 569,
 		"kanji": "委",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 570,
 		"kanji": "意",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 571,
 		"kanji": "医",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 572,
 		"kanji": "育",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 573,
 		"kanji": "員",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 574,
 		"kanji": "飲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 575,
 		"kanji": "院",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 576,
 		"kanji": "運",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 577,
 		"kanji": "泳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 578,
 		"kanji": "駅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 579,
 		"kanji": "央",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 580,
 		"kanji": "横",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 581,
 		"kanji": "屋",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 582,
 		"kanji": "温",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 583,
 		"kanji": "化",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 584,
 		"kanji": "荷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 585,
 		"kanji": "界",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 586,
 		"kanji": "開",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 587,
 		"kanji": "階",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 588,
 		"kanji": "寒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 589,
 		"kanji": "感",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 590,
 		"kanji": "漢",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 591,
 		"kanji": "館",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 592,
 		"kanji": "岸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 593,
 		"kanji": "期",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 594,
 		"kanji": "起",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 595,
 		"kanji": "客",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 596,
 		"kanji": "宮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 597,
 		"kanji": "急",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 598,
 		"kanji": "球",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 599,
 		"kanji": "究",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 600,
 		"kanji": "級",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 601,
 		"kanji": "去",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 602,
 		"kanji": "橋",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 603,
 		"kanji": "業",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 604,
 		"kanji": "局",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 605,
 		"kanji": "曲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 606,
 		"kanji": "銀",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 607,
 		"kanji": "区",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 608,
 		"kanji": "苦",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 609,
 		"kanji": "具",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 610,
 		"kanji": "君",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 611,
 		"kanji": "係",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 612,
 		"kanji": "軽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 613,
 		"kanji": "決",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 614,
 		"kanji": "血",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 615,
 		"kanji": "研",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 616,
 		"kanji": "県",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 617,
 		"kanji": "庫",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 618,
 		"kanji": "湖",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 619,
 		"kanji": "向",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 620,
 		"kanji": "幸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 621,
 		"kanji": "港",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 622,
 		"kanji": "号",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 623,
 		"kanji": "根",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 624,
 		"kanji": "祭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 625,
 		"kanji": "坂",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 626,
 		"kanji": "皿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 627,
 		"kanji": "仕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 628,
 		"kanji": "使",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 629,
 		"kanji": "始",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 630,
 		"kanji": "指",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 631,
 		"kanji": "死",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 632,
 		"kanji": "詩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 633,
 		"kanji": "歯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 634,
 		"kanji": "事",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 635,
 		"kanji": "持",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 636,
 		"kanji": "次",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 637,
 		"kanji": "式",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 638,
 		"kanji": "実",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 639,
 		"kanji": "写",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 640,
 		"kanji": "者",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 641,
 		"kanji": "主",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 642,
 		"kanji": "取",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 643,
 		"kanji": "守",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 644,
 		"kanji": "酒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 645,
 		"kanji": "受",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 646,
 		"kanji": "州",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 647,
 		"kanji": "拾",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 648,
 		"kanji": "終",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 649,
 		"kanji": "習",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 650,
 		"kanji": "集",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 651,
 		"kanji": "住",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 652,
 		"kanji": "重",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 653,
 		"kanji": "宿",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 654,
 		"kanji": "所",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 655,
 		"kanji": "暑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 656,
 		"kanji": "助",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 657,
 		"kanji": "勝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 658,
 		"kanji": "商",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 659,
 		"kanji": "昭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 660,
 		"kanji": "消",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 661,
 		"kanji": "章",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 662,
 		"kanji": "乗",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 663,
 		"kanji": "植",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 664,
 		"kanji": "深",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 665,
 		"kanji": "申",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 666,
 		"kanji": "真",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 667,
 		"kanji": "神",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 668,
 		"kanji": "身",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 669,
 		"kanji": "進",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 670,
 		"kanji": "世",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 671,
 		"kanji": "整",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 672,
 		"kanji": "昔",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 673,
 		"kanji": "全",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 674,
 		"kanji": "想",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 675,
 		"kanji": "相",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 676,
 		"kanji": "送",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 677,
 		"kanji": "息",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 678,
 		"kanji": "速",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 679,
 		"kanji": "族",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 680,
 		"kanji": "他",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 681,
 		"kanji": "打",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 682,
 		"kanji": "対",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 683,
 		"kanji": "待",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 684,
 		"kanji": "代",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 685,
 		"kanji": "第",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 686,
 		"kanji": "題",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 687,
 		"kanji": "炭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 688,
 		"kanji": "短",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 689,
 		"kanji": "談",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 690,
 		"kanji": "着",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 691,
 		"kanji": "柱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 692,
 		"kanji": "注",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 693,
 		"kanji": "丁",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 694,
 		"kanji": "帳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 695,
 		"kanji": "調",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 696,
 		"kanji": "追",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 697,
 		"kanji": "定",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 698,
 		"kanji": "庭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 699,
 		"kanji": "笛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 700,
 		"kanji": "鉄",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 701,
 		"kanji": "転",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 702,
 		"kanji": "登",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 703,
 		"kanji": "都",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 704,
 		"kanji": "度",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 705,
 		"kanji": "島",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 706,
 		"kanji": "投",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 707,
 		"kanji": "湯",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 708,
 		"kanji": "等",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 709,
 		"kanji": "豆",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 710,
 		"kanji": "動",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 711,
 		"kanji": "童",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 712,
 		"kanji": "農",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 713,
 		"kanji": "波",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 714,
 		"kanji": "配",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 715,
 		"kanji": "倍",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 716,
 		"kanji": "箱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 717,
 		"kanji": "畑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 718,
 		"kanji": "発",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 719,
 		"kanji": "反",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 720,
 		"kanji": "板",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 721,
 		"kanji": "悲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 722,
 		"kanji": "皮",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 723,
 		"kanji": "美",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 724,
 		"kanji": "鼻",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 725,
 		"kanji": "筆",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 726,
 		"kanji": "氷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 727,
 		"kanji": "表",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 728,
 		"kanji": "病",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 729,
 		"kanji": "秒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 730,
 		"kanji": "品",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 731,
 		"kanji": "負",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 732,
 		"kanji": "部",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 733,
 		"kanji": "服",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 734,
 		"kanji": "福",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 735,
 		"kanji": "物",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 736,
 		"kanji": "平",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 737,
 		"kanji": "返",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 738,
 		"kanji": "勉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 739,
 		"kanji": "放",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 740,
 		"kanji": "味",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 741,
 		"kanji": "命",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 742,
 		"kanji": "面",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 743,
 		"kanji": "問",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 744,
 		"kanji": "役",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 745,
 		"kanji": "薬",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 746,
 		"kanji": "油",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 747,
 		"kanji": "有",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 748,
 		"kanji": "由",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 749,
 		"kanji": "遊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 750,
 		"kanji": "予",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 751,
 		"kanji": "様",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 752,
 		"kanji": "洋",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 753,
 		"kanji": "羊",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 754,
 		"kanji": "葉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 755,
 		"kanji": "陽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 756,
 		"kanji": "落",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 757,
 		"kanji": "流",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 758,
 		"kanji": "旅",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 759,
 		"kanji": "両",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 760,
 		"kanji": "緑",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 761,
 		"kanji": "礼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 762,
 		"kanji": "列",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 763,
 		"kanji": "練",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 764,
 		"kanji": "路",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 765,
 		"kanji": "和",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 766,
 		"kanji": "引",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 767,
 		"kanji": "羽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 768,
 		"kanji": "雲",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 769,
 		"kanji": "園",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 770,
 		"kanji": "遠",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 771,
 		"kanji": "黄",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 772,
 		"kanji": "何",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 773,
 		"kanji": "夏",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 774,
 		"kanji": "家",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 775,
 		"kanji": "科",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 776,
 		"kanji": "歌",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 777,
 		"kanji": "画",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 778,
 		"kanji": "会",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 779,
 		"kanji": "回",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 780,
 		"kanji": "海",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 781,
 		"kanji": "絵",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 782,
 		"kanji": "外",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 783,
 		"kanji": "角",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 784,
 		"kanji": "楽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 785,
 		"kanji": "活",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 786,
 		"kanji": "間",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 787,
 		"kanji": "丸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 788,
 		"kanji": "岩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 789,
 		"kanji": "顔",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 790,
 		"kanji": "帰",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 791,
 		"kanji": "汽",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 792,
 		"kanji": "記",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 793,
 		"kanji": "弓",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 794,
 		"kanji": "牛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 795,
 		"kanji": "魚",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 796,
 		"kanji": "京",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 797,
 		"kanji": "強",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 798,
 		"kanji": "教",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 799,
 		"kanji": "近",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 800,
 		"kanji": "兄",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 801,
 		"kanji": "形",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 802,
 		"kanji": "計",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 803,
 		"kanji": "元",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 804,
 		"kanji": "原",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 805,
 		"kanji": "言",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 806,
 		"kanji": "古",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 807,
 		"kanji": "戸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 808,
 		"kanji": "午",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 809,
 		"kanji": "後",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 810,
 		"kanji": "語",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 811,
 		"kanji": "交",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 812,
 		"kanji": "光",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 813,
 		"kanji": "公",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 814,
 		"kanji": "工",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 815,
 		"kanji": "広",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 816,
 		"kanji": "考",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 817,
 		"kanji": "行",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 818,
 		"kanji": "高",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 819,
 		"kanji": "合",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 820,
 		"kanji": "国",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 821,
 		"kanji": "黒",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 822,
 		"kanji": "今",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 823,
 		"kanji": "才",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 824,
 		"kanji": "細",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 825,
 		"kanji": "作",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 826,
 		"kanji": "算",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 827,
 		"kanji": "姉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 828,
 		"kanji": "市",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 829,
 		"kanji": "思",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 830,
 		"kanji": "止",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 831,
 		"kanji": "紙",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 832,
 		"kanji": "寺",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 833,
 		"kanji": "時",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 834,
 		"kanji": "自",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 835,
 		"kanji": "室",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 836,
 		"kanji": "社",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 837,
 		"kanji": "弱",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 838,
 		"kanji": "首",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 839,
 		"kanji": "秋",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 840,
 		"kanji": "週",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 841,
 		"kanji": "春",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 842,
 		"kanji": "書",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 843,
 		"kanji": "少",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 844,
 		"kanji": "場",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 845,
 		"kanji": "色",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 846,
 		"kanji": "食",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 847,
 		"kanji": "心",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 848,
 		"kanji": "新",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 849,
 		"kanji": "親",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 850,
 		"kanji": "図",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 851,
 		"kanji": "数",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 852,
 		"kanji": "星",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 853,
 		"kanji": "晴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 854,
 		"kanji": "声",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 855,
 		"kanji": "西",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 856,
 		"kanji": "切",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 857,
 		"kanji": "雪",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 858,
 		"kanji": "線",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 859,
 		"kanji": "船",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 860,
 		"kanji": "前",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 861,
 		"kanji": "組",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 862,
 		"kanji": "走",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 863,
 		"kanji": "多",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 864,
 		"kanji": "太",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 865,
 		"kanji": "体",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 866,
 		"kanji": "台",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 867,
 		"kanji": "谷",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 868,
 		"kanji": "知",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 869,
 		"kanji": "地",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 870,
 		"kanji": "池",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 871,
 		"kanji": "茶",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 872,
 		"kanji": "昼",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 873,
 		"kanji": "朝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 874,
 		"kanji": "長",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 875,
 		"kanji": "鳥",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 876,
 		"kanji": "直",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 877,
 		"kanji": "通",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 878,
 		"kanji": "弟",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 879,
 		"kanji": "店",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 880,
 		"kanji": "点",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 881,
 		"kanji": "電",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 882,
 		"kanji": "冬",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 883,
 		"kanji": "刀",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 884,
 		"kanji": "東",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 885,
 		"kanji": "当",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 886,
 		"kanji": "答",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 887,
 		"kanji": "頭",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 888,
 		"kanji": "同",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 889,
 		"kanji": "道",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 890,
 		"kanji": "読",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 891,
 		"kanji": "内",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 892,
 		"kanji": "南",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 893,
 		"kanji": "肉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 894,
 		"kanji": "馬",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 895,
 		"kanji": "買",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 896,
 		"kanji": "売",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 897,
 		"kanji": "麦",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 898,
 		"kanji": "半",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 899,
 		"kanji": "番",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 900,
 		"kanji": "父",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 901,
 		"kanji": "風",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 902,
 		"kanji": "分",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 903,
 		"kanji": "聞",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 904,
 		"kanji": "米",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 905,
 		"kanji": "歩",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 906,
 		"kanji": "母",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 907,
 		"kanji": "方",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 908,
 		"kanji": "北",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 909,
 		"kanji": "妹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 910,
 		"kanji": "毎",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 911,
 		"kanji": "万",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 912,
 		"kanji": "明",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 913,
 		"kanji": "鳴",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 914,
 		"kanji": "毛",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 915,
 		"kanji": "門",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 916,
 		"kanji": "夜",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 917,
 		"kanji": "野",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 918,
 		"kanji": "矢",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 919,
 		"kanji": "友",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 920,
 		"kanji": "曜",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 921,
 		"kanji": "用",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 922,
 		"kanji": "来",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 923,
 		"kanji": "理",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 924,
 		"kanji": "里",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 925,
 		"kanji": "話",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 926,
 		"kanji": "一",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 927,
 		"kanji": "右",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 928,
 		"kanji": "雨",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 929,
 		"kanji": "円",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 930,
 		"kanji": "王",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 931,
 		"kanji": "音",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 932,
 		"kanji": "下",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 933,
 		"kanji": "火",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 934,
 		"kanji": "花",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 935,
 		"kanji": "貝",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 936,
 		"kanji": "学",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 937,
 		"kanji": "気",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 938,
 		"kanji": "休",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 939,
 		"kanji": "玉",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 940,
 		"kanji": "金",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 941,
 		"kanji": "九",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 942,
 		"kanji": "空",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 943,
 		"kanji": "月",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 944,
 		"kanji": "犬",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 945,
 		"kanji": "見",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 946,
 		"kanji": "五",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 947,
 		"kanji": "口",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 948,
 		"kanji": "校",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 949,
 		"kanji": "左",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 950,
 		"kanji": "三",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 951,
 		"kanji": "山",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 952,
 		"kanji": "四",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 953,
 		"kanji": "子",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 954,
 		"kanji": "糸",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 955,
 		"kanji": "字",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 956,
 		"kanji": "耳",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 957,
 		"kanji": "七",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 958,
 		"kanji": "車",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 959,
 		"kanji": "手",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 960,
 		"kanji": "十",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 961,
 		"kanji": "出",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 962,
 		"kanji": "女",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 963,
 		"kanji": "小",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 964,
 		"kanji": "上",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 965,
 		"kanji": "森",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 966,
 		"kanji": "人",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 967,
 		"kanji": "水",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 968,
 		"kanji": "正",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 969,
 		"kanji": "生",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 970,
 		"kanji": "青",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 971,
 		"kanji": "石",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 972,
 		"kanji": "赤",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 973,
 		"kanji": "先",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 974,
 		"kanji": "千",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 975,
 		"kanji": "川",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 976,
 		"kanji": "早",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 977,
 		"kanji": "草",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 978,
 		"kanji": "足",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 979,
 		"kanji": "村",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 980,
 		"kanji": "大",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 981,
 		"kanji": "男",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 982,
 		"kanji": "竹",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 983,
 		"kanji": "中",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 984,
 		"kanji": "虫",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 985,
 		"kanji": "町",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 986,
 		"kanji": "天",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 987,
 		"kanji": "田",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 988,
 		"kanji": "土",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 989,
 		"kanji": "二",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 990,
 		"kanji": "日",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 991,
 		"kanji": "入",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 992,
 		"kanji": "年",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 993,
 		"kanji": "白",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 994,
 		"kanji": "八",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 995,
 		"kanji": "百",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 996,
 		"kanji": "文",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 997,
 		"kanji": "本",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 998,
 		"kanji": "名",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 999,
 		"kanji": "木",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1000,
 		"kanji": "目",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1001,
 		"kanji": "夕",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1002,
 		"kanji": "立",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1003,
 		"kanji": "力",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1004,
 		"kanji": "林",
-		"active": false
+		"available": true
 	},
 	{
 		"id": 1005,
 		"kanji": "六",
-		"active": false
+		"available": true
 	}
 ]}

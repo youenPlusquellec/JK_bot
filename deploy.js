@@ -2,6 +2,7 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v10');
 const fs = require('fs');
 require('dotenv').config();
+const logger = require('./common/utils/logger');
 
 const deploy = async () => {
 	const commandData = [];
@@ -23,16 +24,19 @@ const deploy = async () => {
 
 	try {
 		const clientId = process.env.CLIENT_ID;
-		const guildId = process.env.DEPLOY_GUILD_ID;
+		const guildIdTab = process.env.DEPLOY_GUILD_ID.split(', ');
 
-		console.log('Started refreshing Slash Commands and Context Menus...');
+		logger.info('Started refreshing Slash Commands and Context Menus...');
 
-		await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
-			{ body: commandData },
-		).then(() => {
-			console.log('Slash Commands and Context Menus have now been deployed.');
-		});
+		for(id in guildIdTab) {
+			const guildId = guildIdTab[id]
+			await rest.put(
+				Routes.applicationGuildCommands(clientId, guildId),
+				{ body: commandData },
+			).then(() => {
+				logger.info(`Slash Commands and Context Menus have now been deployed on ${guildId}.`);
+			});
+		}
 	}
 	catch (e) {
 		console.error(e);

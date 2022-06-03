@@ -1,17 +1,37 @@
 const Command = require('../../structures/CommandClass');
-const textToImage = require('text-to-image');
+const cron = require('cron');
 
-const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { MessageEmbed, MessageAttachment, ApplicationCommandOptionType } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
-const { get_random_kanji, get_kanji_info } = require("../../kanji/import_json")
+const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
 
+const ActionRepository = require('../../model/actionRepository');
+const actionRepository = new ActionRepository();
+const { Logger } = require('log4js');
+
+/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+the information about the kanji */
 module.exports = class RandomKanji extends Command {
+
+	/**
+	 * A constructor function. It is called when the class is instantiated.
+	 * @param client - The client object
+	 */
 	constructor(client) {
 		super(client, {
 			data: new SlashCommandBuilder()
 				.setName('rkanji')
-				.setDescription('Renvoie un kanji aléatoire'),
+				.setDescription('Renvoie un kanji aléatoire')
+				.addStringOption(option =>
+					option.setName('scheduling')
+						.setDescription('Sheduling task : "*[0-59s] *[0-59m] *[0-23h] *[1-31 day_month] *[1-12 month] *[0-7 d_week]"')
+						.setRequired(false))
+				.addRoleOption(option =>
+					option.setName('role')
+						.setDescription('Pour ping un role à chaque message')
+						.setRequired(false)),
 			usage: 'rkanji',
 			category: 'kanji',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
@@ -20,49 +40,55 @@ module.exports = class RandomKanji extends Command {
 
 	async run(client, interaction) {
 
-		/* It's getting a random kanji from a JSON file and getting the information about it. */
-		let randKanji = get_random_kanji()
-		let kInfo = await get_kanji_info(randKanji.kanji);
-		console.log("Random Kanji found : " + randKanji);
+		// Getting cron parameter
+		const cronTimer = interaction.options.getString('scheduling');
+
+		// Getting role parameter
+		const role = `<@&${interaction.options.getRole('role').id}>`;
 
 		/* It's a way to send a message to the user without sending it right away. */
 		await interaction.deferReply();
 
-		/* It's generating an image from the kanji. */
-		const dataUri = await textToImage.generate(randKanji.kanji, {
-			fontSize: 395,
-			margin: 5,
-			bgColor: '#F4E0C7',
-			textColor: 'black',
-			verticalAlign: 'center'
-		});
+		/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+		generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+		the information about the kanji */
+		let kanjiEmbed = await generateEmbedKanji(client, role)
 
-		/* It's saving the image to a file. */
-		var base64Data = dataUri.replace(/^data:image\/png;base64,/, "");
-		require("fs").writeFile("out.png", base64Data, 'base64', function(err) {
-			console.log(`write file error: ${err}`);
-		});
-
-		/* It's creating an embed with the information about the kanji. */
-		const kanjiEmbed = new MessageEmbed()
-			.setTitle(`**\`Le kanji du jour : ${kInfo.kanji}\`**`)
-			.setURL(`https://jisho.org/search/${kInfo.kanji}%20%23kanji`)
-			.setColor(client.config.embedColor)
-			.setDescription(stripIndents`
-			**✍️ Lectures KUN:** ${kInfo.kun_readings}
-
-			**✍️ Lectures ON:** ${kInfo.on_readings}
-
-			**📚 Sens (anglais):** ${kInfo.meanings}
-
-			**🎓 JLPT:** ${kInfo.jlpt ? kInfo.jlpt : "Pas dans le JLPT"}
-
-			À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
-		`)
-		.setImage('attachment://out.png')
-		.setTimestamp();
+		// Launching task in background if defined
+		if (cronTimer) {
+			actionRepository.createAction(this.name, cronTimer, interaction.channelId, role)
+			this.cronFunction(client, cronTimer, interaction.channelId, role);
+		}
 
 		/* It's sending the message to the user. */
-		return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] });
+		return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] }).then(() => {
+			// If there is a role to ping, ping it
+			if(role) {
+				client.channels.cache.get(interaction.channelId).send(role);
+			} 
+		});
+	}
+
+	cronFunction(client, cronTimer, channelId, role) {
+
+		// Scheduling message
+		let scheduledMessage = new cron.CronJob(cronTimer, async () => {
+
+			// Generating random kanji message
+			let kanjiEmbed = await generateEmbedKanji(client, role)
+
+			// Sending the message to the user.
+			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] })
+				.then(() => {
+					// If there is a role to ping, ping it
+					if(role) {
+						client.channels.cache.get(channelId).send(role);
+					} 
+				});
+
+		});
+
+		// Launch scheduled message
+		//scheduledMessage.start()
 	}
 };

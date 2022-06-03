@@ -3,6 +3,7 @@ const Command = require('../../structures/CommandClass');
 const { MessageEmbed } = require('discord.js');
 const { ContextMenuCommandBuilder } = require('@discordjs/builders');
 const { ApplicationCommandType } = require('discord-api-types/v10');
+const logger = require('../../common/utils/logger');
 
 module.exports = class Avatar extends Command {
 	constructor(client) {
@@ -18,8 +19,6 @@ module.exports = class Avatar extends Command {
 	}
 	async run(client, interaction) {
 		const user = client.users.cache.get(interaction.targetId);
-
-		console.log(client.config)
 
 		const embed = new MessageEmbed()
 			.setTitle(`**${user.username}'s Avatar**`)

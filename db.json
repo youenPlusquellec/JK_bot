@@ -1,0 +1,5035 @@
+{
+  "kanjis": [
+    {
+      "id": 0,
+      "kanji": "異",
+      "available": true
+    },
+    {
+      "id": 1,
+      "kanji": "遺",
+      "available": true
+    },
+    {
+      "id": 2,
+      "kanji": "域",
+      "available": true
+    },
+    {
+      "id": 3,
+      "kanji": "宇",
+      "available": true
+    },
+    {
+      "id": 4,
+      "kanji": "映",
+      "available": true
+    },
+    {
+      "id": 5,
+      "kanji": "延",
+      "available": true
+    },
+    {
+      "id": 6,
+      "kanji": "沿",
+      "available": true
+    },
+    {
+      "id": 7,
+      "kanji": "我",
+      "available": true
+    },
+    {
+      "id": 8,
+      "kanji": "灰",
+      "available": true
+    },
+    {
+      "id": 9,
+      "kanji": "拡",
+      "available": true
+    },
+    {
+      "id": 10,
+      "kanji": "閣",
+      "available": true
+    },
+    {
+      "id": 11,
+      "kanji": "革",
+      "available": true
+    },
+    {
+      "id": 12,
+      "kanji": "割",
+      "available": true
+    },
+    {
+      "id": 13,
+      "kanji": "株",
+      "available": true
+    },
+    {
+      "id": 14,
+      "kanji": "巻",
+      "available": true
+    },
+    {
+      "id": 15,
+      "kanji": "干",
+      "available": true
+    },
+    {
+      "id": 16,
+      "kanji": "看",
+      "available": true
+    },
+    {
+      "id": 17,
+      "kanji": "簡",
+      "available": true
+    },
+    {
+      "id": 18,
+      "kanji": "危",
+      "available": true
+    },
+    {
+      "id": 19,
+      "kanji": "揮",
+      "available": true
+    },
+    {
+      "id": 20,
+      "kanji": "机",
+      "available": true
+    },
+    {
+      "id": 21,
+      "kanji": "貴",
+      "available": true
+    },
+    {
+      "id": 22,
+      "kanji": "疑",
+      "available": true
+    },
+    {
+      "id": 23,
+      "kanji": "吸",
+      "available": true
+    },
+    {
+      "id": 24,
+      "kanji": "供",
+      "available": true
+    },
+    {
+      "id": 25,
+      "kanji": "胸",
+      "available": true
+    },
+    {
+      "id": 26,
+      "kanji": "郷",
+      "available": true
+    },
+    {
+      "id": 27,
+      "kanji": "勤",
+      "available": true
+    },
+    {
+      "id": 28,
+      "kanji": "筋",
+      "available": true
+    },
+    {
+      "id": 29,
+      "kanji": "敬",
+      "available": true
+    },
+    {
+      "id": 30,
+      "kanji": "系",
+      "available": true
+    },
+    {
+      "id": 31,
+      "kanji": "警",
+      "available": true
+    },
+    {
+      "id": 32,
+      "kanji": "劇",
+      "available": true
+    },
+    {
+      "id": 33,
+      "kanji": "激",
+      "available": true
+    },
+    {
+      "id": 34,
+      "kanji": "穴",
+      "available": true
+    },
+    {
+      "id": 35,
+      "kanji": "憲",
+      "available": true
+    },
+    {
+      "id": 36,
+      "kanji": "権",
+      "available": true
+    },
+    {
+      "id": 37,
+      "kanji": "絹",
+      "available": true
+    },
+    {
+      "id": 38,
+      "kanji": "厳",
+      "available": true
+    },
+    {
+      "id": 39,
+      "kanji": "源",
+      "available": true
+    },
+    {
+      "id": 40,
+      "kanji": "呼",
+      "available": true
+    },
+    {
+      "id": 41,
+      "kanji": "己",
+      "available": true
+    },
+    {
+      "id": 42,
+      "kanji": "誤",
+      "available": true
+    },
+    {
+      "id": 43,
+      "kanji": "后",
+      "available": true
+    },
+    {
+      "id": 44,
+      "kanji": "孝",
+      "available": true
+    },
+    {
+      "id": 45,
+      "kanji": "皇",
+      "available": true
+    },
+    {
+      "id": 46,
+      "kanji": "紅",
+      "available": true
+    },
+    {
+      "id": 47,
+      "kanji": "鋼",
+      "available": true
+    },
+    {
+      "id": 48,
+      "kanji": "降",
+      "available": true
+    },
+    {
+      "id": 49,
+      "kanji": "刻",
+      "available": true
+    },
+    {
+      "id": 50,
+      "kanji": "穀",
+      "available": true
+    },
+    {
+      "id": 51,
+      "kanji": "骨",
+      "available": true
+    },
+    {
+      "id": 52,
+      "kanji": "困",
+      "available": true
+    },
+    {
+      "id": 53,
+      "kanji": "砂",
+      "available": true
+    },
+    {
+      "id": 54,
+      "kanji": "座",
+      "available": true
+    },
+    {
+      "id": 55,
+      "kanji": "済",
+      "available": true
+    },
+    {
+      "id": 56,
+      "kanji": "裁",
+      "available": true
+    },
+    {
+      "id": 57,
+      "kanji": "策",
+      "available": true
+    },
+    {
+      "id": 58,
+      "kanji": "冊",
+      "available": true
+    },
+    {
+      "id": 59,
+      "kanji": "蚕",
+      "available": true
+    },
+    {
+      "id": 60,
+      "kanji": "姿",
+      "available": true
+    },
+    {
+      "id": 61,
+      "kanji": "私",
+      "available": true
+    },
+    {
+      "id": 62,
+      "kanji": "至",
+      "available": true
+    },
+    {
+      "id": 63,
+      "kanji": "視",
+      "available": true
+    },
+    {
+      "id": 64,
+      "kanji": "詞",
+      "available": true
+    },
+    {
+      "id": 65,
+      "kanji": "誌",
+      "available": true
+    },
+    {
+      "id": 66,
+      "kanji": "磁",
+      "available": true
+    },
+    {
+      "id": 67,
+      "kanji": "射",
+      "available": true
+    },
+    {
+      "id": 68,
+      "kanji": "捨",
+      "available": true
+    },
+    {
+      "id": 69,
+      "kanji": "尺",
+      "available": true
+    },
+    {
+      "id": 70,
+      "kanji": "若",
+      "available": true
+    },
+    {
+      "id": 71,
+      "kanji": "樹",
+      "available": true
+    },
+    {
+      "id": 72,
+      "kanji": "収",
+      "available": true
+    },
+    {
+      "id": 73,
+      "kanji": "宗",
+      "available": true
+    },
+    {
+      "id": 74,
+      "kanji": "就",
+      "available": true
+    },
+    {
+      "id": 75,
+      "kanji": "衆",
+      "available": true
+    },
+    {
+      "id": 76,
+      "kanji": "従",
+      "available": true
+    },
+    {
+      "id": 77,
+      "kanji": "縦",
+      "available": true
+    },
+    {
+      "id": 78,
+      "kanji": "縮",
+      "available": true
+    },
+    {
+      "id": 79,
+      "kanji": "熟",
+      "available": true
+    },
+    {
+      "id": 80,
+      "kanji": "純",
+      "available": true
+    },
+    {
+      "id": 81,
+      "kanji": "処",
+      "available": true
+    },
+    {
+      "id": 82,
+      "kanji": "署",
+      "available": true
+    },
+    {
+      "id": 83,
+      "kanji": "諸",
+      "available": true
+    },
+    {
+      "id": 84,
+      "kanji": "除",
+      "available": true
+    },
+    {
+      "id": 85,
+      "kanji": "傷",
+      "available": true
+    },
+    {
+      "id": 86,
+      "kanji": "将",
+      "available": true
+    },
+    {
+      "id": 87,
+      "kanji": "障",
+      "available": true
+    },
+    {
+      "id": 88,
+      "kanji": "城",
+      "available": true
+    },
+    {
+      "id": 89,
+      "kanji": "蒸",
+      "available": true
+    },
+    {
+      "id": 90,
+      "kanji": "針",
+      "available": true
+    },
+    {
+      "id": 91,
+      "kanji": "仁",
+      "available": true
+    },
+    {
+      "id": 92,
+      "kanji": "垂",
+      "available": true
+    },
+    {
+      "id": 93,
+      "kanji": "推",
+      "available": true
+    },
+    {
+      "id": 94,
+      "kanji": "寸",
+      "available": true
+    },
+    {
+      "id": 95,
+      "kanji": "盛",
+      "available": true
+    },
+    {
+      "id": 96,
+      "kanji": "聖",
+      "available": true
+    },
+    {
+      "id": 97,
+      "kanji": "誠",
+      "available": true
+    },
+    {
+      "id": 98,
+      "kanji": "宣",
+      "available": true
+    },
+    {
+      "id": 99,
+      "kanji": "専",
+      "available": true
+    },
+    {
+      "id": 100,
+      "kanji": "泉",
+      "available": true
+    },
+    {
+      "id": 101,
+      "kanji": "洗",
+      "available": true
+    },
+    {
+      "id": 102,
+      "kanji": "染",
+      "available": true
+    },
+    {
+      "id": 103,
+      "kanji": "善",
+      "available": true
+    },
+    {
+      "id": 104,
+      "kanji": "創",
+      "available": true
+    },
+    {
+      "id": 105,
+      "kanji": "奏",
+      "available": true
+    },
+    {
+      "id": 106,
+      "kanji": "層",
+      "available": true
+    },
+    {
+      "id": 107,
+      "kanji": "操",
+      "available": true
+    },
+    {
+      "id": 108,
+      "kanji": "窓",
+      "available": true
+    },
+    {
+      "id": 109,
+      "kanji": "装",
+      "available": true
+    },
+    {
+      "id": 110,
+      "kanji": "臓",
+      "available": true
+    },
+    {
+      "id": 111,
+      "kanji": "蔵",
+      "available": true
+    },
+    {
+      "id": 112,
+      "kanji": "存",
+      "available": true
+    },
+    {
+      "id": 113,
+      "kanji": "尊",
+      "available": true
+    },
+    {
+      "id": 114,
+      "kanji": "宅",
+      "available": true
+    },
+    {
+      "id": 115,
+      "kanji": "担",
+      "available": true
+    },
+    {
+      "id": 116,
+      "kanji": "探",
+      "available": true
+    },
+    {
+      "id": 117,
+      "kanji": "誕",
+      "available": true
+    },
+    {
+      "id": 118,
+      "kanji": "暖",
+      "available": true
+    },
+    {
+      "id": 119,
+      "kanji": "段",
+      "available": true
+    },
+    {
+      "id": 120,
+      "kanji": "値",
+      "available": true
+    },
+    {
+      "id": 121,
+      "kanji": "宙",
+      "available": true
+    },
+    {
+      "id": 122,
+      "kanji": "忠",
+      "available": true
+    },
+    {
+      "id": 123,
+      "kanji": "著",
+      "available": true
+    },
+    {
+      "id": 124,
+      "kanji": "庁",
+      "available": true
+    },
+    {
+      "id": 125,
+      "kanji": "潮",
+      "available": true
+    },
+    {
+      "id": 126,
+      "kanji": "頂",
+      "available": true
+    },
+    {
+      "id": 127,
+      "kanji": "賃",
+      "available": true
+    },
+    {
+      "id": 128,
+      "kanji": "痛",
+      "available": true
+    },
+    {
+      "id": 129,
+      "kanji": "展",
+      "available": true
+    },
+    {
+      "id": 130,
+      "kanji": "党",
+      "available": true
+    },
+    {
+      "id": 131,
+      "kanji": "糖",
+      "available": true
+    },
+    {
+      "id": 132,
+      "kanji": "討",
+      "available": true
+    },
+    {
+      "id": 133,
+      "kanji": "届",
+      "available": true
+    },
+    {
+      "id": 134,
+      "kanji": "難",
+      "available": true
+    },
+    {
+      "id": 135,
+      "kanji": "乳",
+      "available": true
+    },
+    {
+      "id": 136,
+      "kanji": "認",
+      "available": true
+    },
+    {
+      "id": 137,
+      "kanji": "納",
+      "available": true
+    },
+    {
+      "id": 138,
+      "kanji": "脳",
+      "available": true
+    },
+    {
+      "id": 139,
+      "kanji": "派",
+      "available": true
+    },
+    {
+      "id": 140,
+      "kanji": "俳",
+      "available": true
+    },
+    {
+      "id": 141,
+      "kanji": "拝",
+      "available": true
+    },
+    {
+      "id": 142,
+      "kanji": "背",
+      "available": true
+    },
+    {
+      "id": 143,
+      "kanji": "肺",
+      "available": true
+    },
+    {
+      "id": 144,
+      "kanji": "班",
+      "available": true
+    },
+    {
+      "id": 145,
+      "kanji": "晩",
+      "available": true
+    },
+    {
+      "id": 146,
+      "kanji": "否",
+      "available": true
+    },
+    {
+      "id": 147,
+      "kanji": "批",
+      "available": true
+    },
+    {
+      "id": 148,
+      "kanji": "秘",
+      "available": true
+    },
+    {
+      "id": 149,
+      "kanji": "腹",
+      "available": true
+    },
+    {
+      "id": 150,
+      "kanji": "奮",
+      "available": true
+    },
+    {
+      "id": 151,
+      "kanji": "並",
+      "available": true
+    },
+    {
+      "id": 152,
+      "kanji": "閉",
+      "available": true
+    },
+    {
+      "id": 153,
+      "kanji": "陛",
+      "available": true
+    },
+    {
+      "id": 154,
+      "kanji": "片",
+      "available": true
+    },
+    {
+      "id": 155,
+      "kanji": "補",
+      "available": true
+    },
+    {
+      "id": 156,
+      "kanji": "暮",
+      "available": true
+    },
+    {
+      "id": 157,
+      "kanji": "宝",
+      "available": true
+    },
+    {
+      "id": 158,
+      "kanji": "訪",
+      "available": true
+    },
+    {
+      "id": 159,
+      "kanji": "亡",
+      "available": true
+    },
+    {
+      "id": 160,
+      "kanji": "忘",
+      "available": true
+    },
+    {
+      "id": 161,
+      "kanji": "棒",
+      "available": true
+    },
+    {
+      "id": 162,
+      "kanji": "枚",
+      "available": true
+    },
+    {
+      "id": 163,
+      "kanji": "幕",
+      "available": true
+    },
+    {
+      "id": 164,
+      "kanji": "密",
+      "available": true
+    },
+    {
+      "id": 165,
+      "kanji": "盟",
+      "available": true
+    },
+    {
+      "id": 166,
+      "kanji": "模",
+      "available": true
+    },
+    {
+      "id": 167,
+      "kanji": "訳",
+      "available": true
+    },
+    {
+      "id": 168,
+      "kanji": "優",
+      "available": true
+    },
+    {
+      "id": 169,
+      "kanji": "郵",
+      "available": true
+    },
+    {
+      "id": 170,
+      "kanji": "幼",
+      "available": true
+    },
+    {
+      "id": 171,
+      "kanji": "欲",
+      "available": true
+    },
+    {
+      "id": 172,
+      "kanji": "翌",
+      "available": true
+    },
+    {
+      "id": 173,
+      "kanji": "乱",
+      "available": true
+    },
+    {
+      "id": 174,
+      "kanji": "卵",
+      "available": true
+    },
+    {
+      "id": 175,
+      "kanji": "覧",
+      "available": true
+    },
+    {
+      "id": 176,
+      "kanji": "裏",
+      "available": true
+    },
+    {
+      "id": 177,
+      "kanji": "律",
+      "available": true
+    },
+    {
+      "id": 178,
+      "kanji": "臨",
+      "available": true
+    },
+    {
+      "id": 179,
+      "kanji": "朗",
+      "available": true
+    },
+    {
+      "id": 180,
+      "kanji": "論",
+      "available": true
+    },
+    {
+      "id": 181,
+      "kanji": "圧",
+      "available": true
+    },
+    {
+      "id": 182,
+      "kanji": "易",
+      "available": true
+    },
+    {
+      "id": 183,
+      "kanji": "移",
+      "available": true
+    },
+    {
+      "id": 184,
+      "kanji": "因",
+      "available": true
+    },
+    {
+      "id": 185,
+      "kanji": "営",
+      "available": true
+    },
+    {
+      "id": 186,
+      "kanji": "永",
+      "available": true
+    },
+    {
+      "id": 187,
+      "kanji": "衛",
+      "available": true
+    },
+    {
+      "id": 188,
+      "kanji": "液",
+      "available": true
+    },
+    {
+      "id": 189,
+      "kanji": "益",
+      "available": true
+    },
+    {
+      "id": 190,
+      "kanji": "演",
+      "available": true
+    },
+    {
+      "id": 191,
+      "kanji": "往",
+      "available": true
+    },
+    {
+      "id": 192,
+      "kanji": "応",
+      "available": true
+    },
+    {
+      "id": 193,
+      "kanji": "恩",
+      "available": true
+    },
+    {
+      "id": 194,
+      "kanji": "仮",
+      "available": true
+    },
+    {
+      "id": 195,
+      "kanji": "価",
+      "available": true
+    },
+    {
+      "id": 196,
+      "kanji": "可",
+      "available": true
+    },
+    {
+      "id": 197,
+      "kanji": "河",
+      "available": true
+    },
+    {
+      "id": 198,
+      "kanji": "過",
+      "available": true
+    },
+    {
+      "id": 199,
+      "kanji": "賀",
+      "available": true
+    },
+    {
+      "id": 200,
+      "kanji": "解",
+      "available": true
+    },
+    {
+      "id": 201,
+      "kanji": "快",
+      "available": true
+    },
+    {
+      "id": 202,
+      "kanji": "格",
+      "available": true
+    },
+    {
+      "id": 203,
+      "kanji": "確",
+      "available": true
+    },
+    {
+      "id": 204,
+      "kanji": "額",
+      "available": true
+    },
+    {
+      "id": 205,
+      "kanji": "刊",
+      "available": true
+    },
+    {
+      "id": 206,
+      "kanji": "幹",
+      "available": true
+    },
+    {
+      "id": 207,
+      "kanji": "慣",
+      "available": true
+    },
+    {
+      "id": 208,
+      "kanji": "眼",
+      "available": true
+    },
+    {
+      "id": 209,
+      "kanji": "基",
+      "available": true
+    },
+    {
+      "id": 210,
+      "kanji": "寄",
+      "available": true
+    },
+    {
+      "id": 211,
+      "kanji": "規",
+      "available": true
+    },
+    {
+      "id": 212,
+      "kanji": "技",
+      "available": true
+    },
+    {
+      "id": 213,
+      "kanji": "義",
+      "available": true
+    },
+    {
+      "id": 214,
+      "kanji": "逆",
+      "available": true
+    },
+    {
+      "id": 215,
+      "kanji": "久",
+      "available": true
+    },
+    {
+      "id": 216,
+      "kanji": "旧",
+      "available": true
+    },
+    {
+      "id": 217,
+      "kanji": "居",
+      "available": true
+    },
+    {
+      "id": 218,
+      "kanji": "許",
+      "available": true
+    },
+    {
+      "id": 219,
+      "kanji": "境",
+      "available": true
+    },
+    {
+      "id": 220,
+      "kanji": "興",
+      "available": true
+    },
+    {
+      "id": 221,
+      "kanji": "均",
+      "available": true
+    },
+    {
+      "id": 222,
+      "kanji": "禁",
+      "available": true
+    },
+    {
+      "id": 223,
+      "kanji": "句",
+      "available": true
+    },
+    {
+      "id": 224,
+      "kanji": "群",
+      "available": true
+    },
+    {
+      "id": 225,
+      "kanji": "経",
+      "available": true
+    },
+    {
+      "id": 226,
+      "kanji": "潔",
+      "available": true
+    },
+    {
+      "id": 227,
+      "kanji": "件",
+      "available": true
+    },
+    {
+      "id": 228,
+      "kanji": "券",
+      "available": true
+    },
+    {
+      "id": 229,
+      "kanji": "検",
+      "available": true
+    },
+    {
+      "id": 230,
+      "kanji": "険",
+      "available": true
+    },
+    {
+      "id": 231,
+      "kanji": "減",
+      "available": true
+    },
+    {
+      "id": 232,
+      "kanji": "現",
+      "available": true
+    },
+    {
+      "id": 233,
+      "kanji": "限",
+      "available": true
+    },
+    {
+      "id": 234,
+      "kanji": "個",
+      "available": true
+    },
+    {
+      "id": 235,
+      "kanji": "故",
+      "available": true
+    },
+    {
+      "id": 236,
+      "kanji": "護",
+      "available": true
+    },
+    {
+      "id": 237,
+      "kanji": "効",
+      "available": true
+    },
+    {
+      "id": 238,
+      "kanji": "厚",
+      "available": true
+    },
+    {
+      "id": 239,
+      "kanji": "構",
+      "available": true
+    },
+    {
+      "id": 240,
+      "kanji": "耕",
+      "available": true
+    },
+    {
+      "id": 241,
+      "kanji": "講",
+      "available": true
+    },
+    {
+      "id": 242,
+      "kanji": "鉱",
+      "available": true
+    },
+    {
+      "id": 243,
+      "kanji": "混",
+      "available": true
+    },
+    {
+      "id": 244,
+      "kanji": "査",
+      "available": true
+    },
+    {
+      "id": 245,
+      "kanji": "再",
+      "available": true
+    },
+    {
+      "id": 246,
+      "kanji": "妻",
+      "available": true
+    },
+    {
+      "id": 247,
+      "kanji": "採",
+      "available": true
+    },
+    {
+      "id": 248,
+      "kanji": "災",
+      "available": true
+    },
+    {
+      "id": 249,
+      "kanji": "際",
+      "available": true
+    },
+    {
+      "id": 250,
+      "kanji": "在",
+      "available": true
+    },
+    {
+      "id": 251,
+      "kanji": "罪",
+      "available": true
+    },
+    {
+      "id": 252,
+      "kanji": "財",
+      "available": true
+    },
+    {
+      "id": 253,
+      "kanji": "桜",
+      "available": true
+    },
+    {
+      "id": 254,
+      "kanji": "雑",
+      "available": true
+    },
+    {
+      "id": 255,
+      "kanji": "賛",
+      "available": true
+    },
+    {
+      "id": 256,
+      "kanji": "酸",
+      "available": true
+    },
+    {
+      "id": 257,
+      "kanji": "師",
+      "available": true
+    },
+    {
+      "id": 258,
+      "kanji": "志",
+      "available": true
+    },
+    {
+      "id": 259,
+      "kanji": "支",
+      "available": true
+    },
+    {
+      "id": 260,
+      "kanji": "枝",
+      "available": true
+    },
+    {
+      "id": 261,
+      "kanji": "資",
+      "available": true
+    },
+    {
+      "id": 262,
+      "kanji": "飼",
+      "available": true
+    },
+    {
+      "id": 263,
+      "kanji": "似",
+      "available": true
+    },
+    {
+      "id": 264,
+      "kanji": "示",
+      "available": true
+    },
+    {
+      "id": 265,
+      "kanji": "識",
+      "available": true
+    },
+    {
+      "id": 266,
+      "kanji": "質",
+      "available": true
+    },
+    {
+      "id": 267,
+      "kanji": "舎",
+      "available": true
+    },
+    {
+      "id": 268,
+      "kanji": "謝",
+      "available": true
+    },
+    {
+      "id": 269,
+      "kanji": "授",
+      "available": true
+    },
+    {
+      "id": 270,
+      "kanji": "修",
+      "available": true
+    },
+    {
+      "id": 271,
+      "kanji": "術",
+      "available": true
+    },
+    {
+      "id": 272,
+      "kanji": "述",
+      "available": true
+    },
+    {
+      "id": 273,
+      "kanji": "準",
+      "available": true
+    },
+    {
+      "id": 274,
+      "kanji": "序",
+      "available": true
+    },
+    {
+      "id": 275,
+      "kanji": "承",
+      "available": true
+    },
+    {
+      "id": 276,
+      "kanji": "招",
+      "available": true
+    },
+    {
+      "id": 277,
+      "kanji": "証",
+      "available": true
+    },
+    {
+      "id": 278,
+      "kanji": "常",
+      "available": true
+    },
+    {
+      "id": 279,
+      "kanji": "情",
+      "available": true
+    },
+    {
+      "id": 280,
+      "kanji": "条",
+      "available": true
+    },
+    {
+      "id": 281,
+      "kanji": "状",
+      "available": true
+    },
+    {
+      "id": 282,
+      "kanji": "織",
+      "available": true
+    },
+    {
+      "id": 283,
+      "kanji": "職",
+      "available": true
+    },
+    {
+      "id": 284,
+      "kanji": "制",
+      "available": true
+    },
+    {
+      "id": 285,
+      "kanji": "勢",
+      "available": true
+    },
+    {
+      "id": 286,
+      "kanji": "性",
+      "available": true
+    },
+    {
+      "id": 287,
+      "kanji": "政",
+      "available": true
+    },
+    {
+      "id": 288,
+      "kanji": "精",
+      "available": true
+    },
+    {
+      "id": 289,
+      "kanji": "製",
+      "available": true
+    },
+    {
+      "id": 290,
+      "kanji": "税",
+      "available": true
+    },
+    {
+      "id": 291,
+      "kanji": "績",
+      "available": true
+    },
+    {
+      "id": 292,
+      "kanji": "責",
+      "available": true
+    },
+    {
+      "id": 293,
+      "kanji": "接",
+      "available": true
+    },
+    {
+      "id": 294,
+      "kanji": "設",
+      "available": true
+    },
+    {
+      "id": 295,
+      "kanji": "絶",
+      "available": true
+    },
+    {
+      "id": 296,
+      "kanji": "舌",
+      "available": true
+    },
+    {
+      "id": 297,
+      "kanji": "銭",
+      "available": true
+    },
+    {
+      "id": 298,
+      "kanji": "祖",
+      "available": true
+    },
+    {
+      "id": 299,
+      "kanji": "素",
+      "available": true
+    },
+    {
+      "id": 300,
+      "kanji": "総",
+      "available": true
+    },
+    {
+      "id": 301,
+      "kanji": "像",
+      "available": true
+    },
+    {
+      "id": 302,
+      "kanji": "増",
+      "available": true
+    },
+    {
+      "id": 303,
+      "kanji": "造",
+      "available": true
+    },
+    {
+      "id": 304,
+      "kanji": "則",
+      "available": true
+    },
+    {
+      "id": 305,
+      "kanji": "測",
+      "available": true
+    },
+    {
+      "id": 306,
+      "kanji": "属",
+      "available": true
+    },
+    {
+      "id": 307,
+      "kanji": "損",
+      "available": true
+    },
+    {
+      "id": 308,
+      "kanji": "態",
+      "available": true
+    },
+    {
+      "id": 309,
+      "kanji": "貸",
+      "available": true
+    },
+    {
+      "id": 310,
+      "kanji": "退",
+      "available": true
+    },
+    {
+      "id": 311,
+      "kanji": "団",
+      "available": true
+    },
+    {
+      "id": 312,
+      "kanji": "断",
+      "available": true
+    },
+    {
+      "id": 313,
+      "kanji": "築",
+      "available": true
+    },
+    {
+      "id": 314,
+      "kanji": "張",
+      "available": true
+    },
+    {
+      "id": 315,
+      "kanji": "提",
+      "available": true
+    },
+    {
+      "id": 316,
+      "kanji": "程",
+      "available": true
+    },
+    {
+      "id": 317,
+      "kanji": "敵",
+      "available": true
+    },
+    {
+      "id": 318,
+      "kanji": "適",
+      "available": true
+    },
+    {
+      "id": 319,
+      "kanji": "統",
+      "available": true
+    },
+    {
+      "id": 320,
+      "kanji": "導",
+      "available": true
+    },
+    {
+      "id": 321,
+      "kanji": "銅",
+      "available": true
+    },
+    {
+      "id": 322,
+      "kanji": "徳",
+      "available": true
+    },
+    {
+      "id": 323,
+      "kanji": "独",
+      "available": true
+    },
+    {
+      "id": 324,
+      "kanji": "任",
+      "available": true
+    },
+    {
+      "id": 325,
+      "kanji": "燃",
+      "available": true
+    },
+    {
+      "id": 326,
+      "kanji": "能",
+      "available": true
+    },
+    {
+      "id": 327,
+      "kanji": "破",
+      "available": true
+    },
+    {
+      "id": 328,
+      "kanji": "判",
+      "available": true
+    },
+    {
+      "id": 329,
+      "kanji": "版",
+      "available": true
+    },
+    {
+      "id": 330,
+      "kanji": "犯",
+      "available": true
+    },
+    {
+      "id": 331,
+      "kanji": "比",
+      "available": true
+    },
+    {
+      "id": 332,
+      "kanji": "肥",
+      "available": true
+    },
+    {
+      "id": 333,
+      "kanji": "非",
+      "available": true
+    },
+    {
+      "id": 334,
+      "kanji": "備",
+      "available": true
+    },
+    {
+      "id": 335,
+      "kanji": "俵",
+      "available": true
+    },
+    {
+      "id": 336,
+      "kanji": "評",
+      "available": true
+    },
+    {
+      "id": 337,
+      "kanji": "貧",
+      "available": true
+    },
+    {
+      "id": 338,
+      "kanji": "婦",
+      "available": true
+    },
+    {
+      "id": 339,
+      "kanji": "富",
+      "available": true
+    },
+    {
+      "id": 340,
+      "kanji": "布",
+      "available": true
+    },
+    {
+      "id": 341,
+      "kanji": "武",
+      "available": true
+    },
+    {
+      "id": 342,
+      "kanji": "復",
+      "available": true
+    },
+    {
+      "id": 343,
+      "kanji": "複",
+      "available": true
+    },
+    {
+      "id": 344,
+      "kanji": "仏",
+      "available": true
+    },
+    {
+      "id": 345,
+      "kanji": "編",
+      "available": true
+    },
+    {
+      "id": 346,
+      "kanji": "弁",
+      "available": true
+    },
+    {
+      "id": 347,
+      "kanji": "保",
+      "available": true
+    },
+    {
+      "id": 348,
+      "kanji": "墓",
+      "available": true
+    },
+    {
+      "id": 349,
+      "kanji": "報",
+      "available": true
+    },
+    {
+      "id": 350,
+      "kanji": "豊",
+      "available": true
+    },
+    {
+      "id": 351,
+      "kanji": "暴",
+      "available": true
+    },
+    {
+      "id": 352,
+      "kanji": "貿",
+      "available": true
+    },
+    {
+      "id": 353,
+      "kanji": "防",
+      "available": true
+    },
+    {
+      "id": 354,
+      "kanji": "務",
+      "available": true
+    },
+    {
+      "id": 355,
+      "kanji": "夢",
+      "available": true
+    },
+    {
+      "id": 356,
+      "kanji": "迷",
+      "available": true
+    },
+    {
+      "id": 357,
+      "kanji": "綿",
+      "available": true
+    },
+    {
+      "id": 358,
+      "kanji": "輸",
+      "available": true
+    },
+    {
+      "id": 359,
+      "kanji": "余",
+      "available": true
+    },
+    {
+      "id": 360,
+      "kanji": "預",
+      "available": true
+    },
+    {
+      "id": 361,
+      "kanji": "容",
+      "available": true
+    },
+    {
+      "id": 362,
+      "kanji": "率",
+      "available": true
+    },
+    {
+      "id": 363,
+      "kanji": "略",
+      "available": true
+    },
+    {
+      "id": 364,
+      "kanji": "留",
+      "available": true
+    },
+    {
+      "id": 365,
+      "kanji": "領",
+      "available": true
+    },
+    {
+      "id": 366,
+      "kanji": "愛",
+      "available": true
+    },
+    {
+      "id": 367,
+      "kanji": "案",
+      "available": true
+    },
+    {
+      "id": 368,
+      "kanji": "以",
+      "available": true
+    },
+    {
+      "id": 369,
+      "kanji": "位",
+      "available": true
+    },
+    {
+      "id": 370,
+      "kanji": "囲",
+      "available": true
+    },
+    {
+      "id": 371,
+      "kanji": "胃",
+      "available": true
+    },
+    {
+      "id": 372,
+      "kanji": "衣",
+      "available": true
+    },
+    {
+      "id": 373,
+      "kanji": "印",
+      "available": true
+    },
+    {
+      "id": 374,
+      "kanji": "栄",
+      "available": true
+    },
+    {
+      "id": 375,
+      "kanji": "英",
+      "available": true
+    },
+    {
+      "id": 376,
+      "kanji": "塩",
+      "available": true
+    },
+    {
+      "id": 377,
+      "kanji": "億",
+      "available": true
+    },
+    {
+      "id": 378,
+      "kanji": "加",
+      "available": true
+    },
+    {
+      "id": 379,
+      "kanji": "果",
+      "available": true
+    },
+    {
+      "id": 380,
+      "kanji": "課",
+      "available": true
+    },
+    {
+      "id": 381,
+      "kanji": "貨",
+      "available": true
+    },
+    {
+      "id": 382,
+      "kanji": "芽",
+      "available": true
+    },
+    {
+      "id": 383,
+      "kanji": "改",
+      "available": true
+    },
+    {
+      "id": 384,
+      "kanji": "械",
+      "available": true
+    },
+    {
+      "id": 385,
+      "kanji": "害",
+      "available": true
+    },
+    {
+      "id": 386,
+      "kanji": "街",
+      "available": true
+    },
+    {
+      "id": 387,
+      "kanji": "各",
+      "available": true
+    },
+    {
+      "id": 388,
+      "kanji": "覚",
+      "available": true
+    },
+    {
+      "id": 389,
+      "kanji": "完",
+      "available": true
+    },
+    {
+      "id": 390,
+      "kanji": "官",
+      "available": true
+    },
+    {
+      "id": 391,
+      "kanji": "管",
+      "available": true
+    },
+    {
+      "id": 392,
+      "kanji": "観",
+      "available": true
+    },
+    {
+      "id": 393,
+      "kanji": "関",
+      "available": true
+    },
+    {
+      "id": 394,
+      "kanji": "願",
+      "available": true
+    },
+    {
+      "id": 395,
+      "kanji": "喜",
+      "available": true
+    },
+    {
+      "id": 396,
+      "kanji": "器",
+      "available": true
+    },
+    {
+      "id": 397,
+      "kanji": "希",
+      "available": true
+    },
+    {
+      "id": 398,
+      "kanji": "旗",
+      "available": true
+    },
+    {
+      "id": 399,
+      "kanji": "機",
+      "available": true
+    },
+    {
+      "id": 400,
+      "kanji": "季",
+      "available": true
+    },
+    {
+      "id": 401,
+      "kanji": "紀",
+      "available": true
+    },
+    {
+      "id": 402,
+      "kanji": "議",
+      "available": true
+    },
+    {
+      "id": 403,
+      "kanji": "救",
+      "available": true
+    },
+    {
+      "id": 404,
+      "kanji": "求",
+      "available": true
+    },
+    {
+      "id": 405,
+      "kanji": "泣",
+      "available": true
+    },
+    {
+      "id": 406,
+      "kanji": "給",
+      "available": true
+    },
+    {
+      "id": 407,
+      "kanji": "挙",
+      "available": true
+    },
+    {
+      "id": 408,
+      "kanji": "漁",
+      "available": true
+    },
+    {
+      "id": 409,
+      "kanji": "競",
+      "available": true
+    },
+    {
+      "id": 410,
+      "kanji": "共",
+      "available": true
+    },
+    {
+      "id": 411,
+      "kanji": "協",
+      "available": true
+    },
+    {
+      "id": 412,
+      "kanji": "鏡",
+      "available": true
+    },
+    {
+      "id": 413,
+      "kanji": "極",
+      "available": true
+    },
+    {
+      "id": 414,
+      "kanji": "訓",
+      "available": true
+    },
+    {
+      "id": 415,
+      "kanji": "軍",
+      "available": true
+    },
+    {
+      "id": 416,
+      "kanji": "郡",
+      "available": true
+    },
+    {
+      "id": 417,
+      "kanji": "型",
+      "available": true
+    },
+    {
+      "id": 418,
+      "kanji": "径",
+      "available": true
+    },
+    {
+      "id": 419,
+      "kanji": "景",
+      "available": true
+    },
+    {
+      "id": 420,
+      "kanji": "芸",
+      "available": true
+    },
+    {
+      "id": 421,
+      "kanji": "欠",
+      "available": true
+    },
+    {
+      "id": 422,
+      "kanji": "結",
+      "available": true
+    },
+    {
+      "id": 423,
+      "kanji": "健",
+      "available": true
+    },
+    {
+      "id": 424,
+      "kanji": "建",
+      "available": true
+    },
+    {
+      "id": 425,
+      "kanji": "験",
+      "available": true
+    },
+    {
+      "id": 426,
+      "kanji": "固",
+      "available": true
+    },
+    {
+      "id": 427,
+      "kanji": "候",
+      "available": true
+    },
+    {
+      "id": 428,
+      "kanji": "功",
+      "available": true
+    },
+    {
+      "id": 429,
+      "kanji": "好",
+      "available": true
+    },
+    {
+      "id": 430,
+      "kanji": "康",
+      "available": true
+    },
+    {
+      "id": 431,
+      "kanji": "航",
+      "available": true
+    },
+    {
+      "id": 432,
+      "kanji": "告",
+      "available": true
+    },
+    {
+      "id": 433,
+      "kanji": "差",
+      "available": true
+    },
+    {
+      "id": 434,
+      "kanji": "最",
+      "available": true
+    },
+    {
+      "id": 435,
+      "kanji": "菜",
+      "available": true
+    },
+    {
+      "id": 436,
+      "kanji": "材",
+      "available": true
+    },
+    {
+      "id": 437,
+      "kanji": "昨",
+      "available": true
+    },
+    {
+      "id": 438,
+      "kanji": "刷",
+      "available": true
+    },
+    {
+      "id": 439,
+      "kanji": "察",
+      "available": true
+    },
+    {
+      "id": 440,
+      "kanji": "札",
+      "available": true
+    },
+    {
+      "id": 441,
+      "kanji": "殺",
+      "available": true
+    },
+    {
+      "id": 442,
+      "kanji": "参",
+      "available": true
+    },
+    {
+      "id": 443,
+      "kanji": "散",
+      "available": true
+    },
+    {
+      "id": 444,
+      "kanji": "産",
+      "available": true
+    },
+    {
+      "id": 445,
+      "kanji": "残",
+      "available": true
+    },
+    {
+      "id": 446,
+      "kanji": "司",
+      "available": true
+    },
+    {
+      "id": 447,
+      "kanji": "史",
+      "available": true
+    },
+    {
+      "id": 448,
+      "kanji": "士",
+      "available": true
+    },
+    {
+      "id": 449,
+      "kanji": "氏",
+      "available": true
+    },
+    {
+      "id": 450,
+      "kanji": "試",
+      "available": true
+    },
+    {
+      "id": 451,
+      "kanji": "児",
+      "available": true
+    },
+    {
+      "id": 452,
+      "kanji": "治",
+      "available": true
+    },
+    {
+      "id": 453,
+      "kanji": "辞",
+      "available": true
+    },
+    {
+      "id": 454,
+      "kanji": "失",
+      "available": true
+    },
+    {
+      "id": 455,
+      "kanji": "借",
+      "available": true
+    },
+    {
+      "id": 456,
+      "kanji": "種",
+      "available": true
+    },
+    {
+      "id": 457,
+      "kanji": "周",
+      "available": true
+    },
+    {
+      "id": 458,
+      "kanji": "祝",
+      "available": true
+    },
+    {
+      "id": 459,
+      "kanji": "順",
+      "available": true
+    },
+    {
+      "id": 460,
+      "kanji": "初",
+      "available": true
+    },
+    {
+      "id": 461,
+      "kanji": "唱",
+      "available": true
+    },
+    {
+      "id": 462,
+      "kanji": "松",
+      "available": true
+    },
+    {
+      "id": 463,
+      "kanji": "焼",
+      "available": true
+    },
+    {
+      "id": 464,
+      "kanji": "照",
+      "available": true
+    },
+    {
+      "id": 465,
+      "kanji": "省",
+      "available": true
+    },
+    {
+      "id": 466,
+      "kanji": "笑",
+      "available": true
+    },
+    {
+      "id": 467,
+      "kanji": "象",
+      "available": true
+    },
+    {
+      "id": 468,
+      "kanji": "賞",
+      "available": true
+    },
+    {
+      "id": 469,
+      "kanji": "信",
+      "available": true
+    },
+    {
+      "id": 470,
+      "kanji": "臣",
+      "available": true
+    },
+    {
+      "id": 471,
+      "kanji": "成",
+      "available": true
+    },
+    {
+      "id": 472,
+      "kanji": "清",
+      "available": true
+    },
+    {
+      "id": 473,
+      "kanji": "静",
+      "available": true
+    },
+    {
+      "id": 474,
+      "kanji": "席",
+      "available": true
+    },
+    {
+      "id": 475,
+      "kanji": "積",
+      "available": true
+    },
+    {
+      "id": 476,
+      "kanji": "折",
+      "available": true
+    },
+    {
+      "id": 477,
+      "kanji": "節",
+      "available": true
+    },
+    {
+      "id": 478,
+      "kanji": "説",
+      "available": true
+    },
+    {
+      "id": 479,
+      "kanji": "戦",
+      "available": true
+    },
+    {
+      "id": 480,
+      "kanji": "浅",
+      "available": true
+    },
+    {
+      "id": 481,
+      "kanji": "選",
+      "available": true
+    },
+    {
+      "id": 482,
+      "kanji": "然",
+      "available": true
+    },
+    {
+      "id": 483,
+      "kanji": "倉",
+      "available": true
+    },
+    {
+      "id": 484,
+      "kanji": "巣",
+      "available": true
+    },
+    {
+      "id": 485,
+      "kanji": "争",
+      "available": true
+    },
+    {
+      "id": 486,
+      "kanji": "側",
+      "available": true
+    },
+    {
+      "id": 487,
+      "kanji": "束",
+      "available": true
+    },
+    {
+      "id": 488,
+      "kanji": "続",
+      "available": true
+    },
+    {
+      "id": 489,
+      "kanji": "卒",
+      "available": true
+    },
+    {
+      "id": 490,
+      "kanji": "孫",
+      "available": true
+    },
+    {
+      "id": 491,
+      "kanji": "帯",
+      "available": true
+    },
+    {
+      "id": 492,
+      "kanji": "隊",
+      "available": true
+    },
+    {
+      "id": 493,
+      "kanji": "達",
+      "available": true
+    },
+    {
+      "id": 494,
+      "kanji": "単",
+      "available": true
+    },
+    {
+      "id": 495,
+      "kanji": "置",
+      "available": true
+    },
+    {
+      "id": 496,
+      "kanji": "仲",
+      "available": true
+    },
+    {
+      "id": 497,
+      "kanji": "貯",
+      "available": true
+    },
+    {
+      "id": 498,
+      "kanji": "兆",
+      "available": true
+    },
+    {
+      "id": 499,
+      "kanji": "腸",
+      "available": true
+    },
+    {
+      "id": 500,
+      "kanji": "低",
+      "available": true
+    },
+    {
+      "id": 501,
+      "kanji": "停",
+      "available": true
+    },
+    {
+      "id": 502,
+      "kanji": "底",
+      "available": true
+    },
+    {
+      "id": 503,
+      "kanji": "的",
+      "available": true
+    },
+    {
+      "id": 504,
+      "kanji": "典",
+      "available": true
+    },
+    {
+      "id": 505,
+      "kanji": "伝",
+      "available": true
+    },
+    {
+      "id": 506,
+      "kanji": "徒",
+      "available": true
+    },
+    {
+      "id": 507,
+      "kanji": "努",
+      "available": true
+    },
+    {
+      "id": 508,
+      "kanji": "灯",
+      "available": true
+    },
+    {
+      "id": 509,
+      "kanji": "働",
+      "available": true
+    },
+    {
+      "id": 510,
+      "kanji": "堂",
+      "available": true
+    },
+    {
+      "id": 511,
+      "kanji": "得",
+      "available": true
+    },
+    {
+      "id": 512,
+      "kanji": "特",
+      "available": true
+    },
+    {
+      "id": 513,
+      "kanji": "毒",
+      "available": true
+    },
+    {
+      "id": 514,
+      "kanji": "熱",
+      "available": true
+    },
+    {
+      "id": 515,
+      "kanji": "念",
+      "available": true
+    },
+    {
+      "id": 516,
+      "kanji": "敗",
+      "available": true
+    },
+    {
+      "id": 517,
+      "kanji": "梅",
+      "available": true
+    },
+    {
+      "id": 518,
+      "kanji": "博",
+      "available": true
+    },
+    {
+      "id": 519,
+      "kanji": "飯",
+      "available": true
+    },
+    {
+      "id": 520,
+      "kanji": "費",
+      "available": true
+    },
+    {
+      "id": 521,
+      "kanji": "飛",
+      "available": true
+    },
+    {
+      "id": 522,
+      "kanji": "必",
+      "available": true
+    },
+    {
+      "id": 523,
+      "kanji": "標",
+      "available": true
+    },
+    {
+      "id": 524,
+      "kanji": "票",
+      "available": true
+    },
+    {
+      "id": 525,
+      "kanji": "不",
+      "available": true
+    },
+    {
+      "id": 526,
+      "kanji": "付",
+      "available": true
+    },
+    {
+      "id": 527,
+      "kanji": "夫",
+      "available": true
+    },
+    {
+      "id": 528,
+      "kanji": "府",
+      "available": true
+    },
+    {
+      "id": 529,
+      "kanji": "副",
+      "available": true
+    },
+    {
+      "id": 530,
+      "kanji": "粉",
+      "available": true
+    },
+    {
+      "id": 531,
+      "kanji": "兵",
+      "available": true
+    },
+    {
+      "id": 532,
+      "kanji": "別",
+      "available": true
+    },
+    {
+      "id": 533,
+      "kanji": "変",
+      "available": true
+    },
+    {
+      "id": 534,
+      "kanji": "辺",
+      "available": true
+    },
+    {
+      "id": 535,
+      "kanji": "便",
+      "available": true
+    },
+    {
+      "id": 536,
+      "kanji": "包",
+      "available": true
+    },
+    {
+      "id": 537,
+      "kanji": "法",
+      "available": true
+    },
+    {
+      "id": 538,
+      "kanji": "望",
+      "available": true
+    },
+    {
+      "id": 539,
+      "kanji": "牧",
+      "available": true
+    },
+    {
+      "id": 540,
+      "kanji": "末",
+      "available": true
+    },
+    {
+      "id": 541,
+      "kanji": "満",
+      "available": true
+    },
+    {
+      "id": 542,
+      "kanji": "未",
+      "available": true
+    },
+    {
+      "id": 543,
+      "kanji": "脈",
+      "available": true
+    },
+    {
+      "id": 544,
+      "kanji": "民",
+      "available": true
+    },
+    {
+      "id": 545,
+      "kanji": "無",
+      "available": true
+    },
+    {
+      "id": 546,
+      "kanji": "約",
+      "available": true
+    },
+    {
+      "id": 547,
+      "kanji": "勇",
+      "available": true
+    },
+    {
+      "id": 548,
+      "kanji": "要",
+      "available": true
+    },
+    {
+      "id": 549,
+      "kanji": "養",
+      "available": true
+    },
+    {
+      "id": 550,
+      "kanji": "浴",
+      "available": true
+    },
+    {
+      "id": 551,
+      "kanji": "利",
+      "available": true
+    },
+    {
+      "id": 552,
+      "kanji": "陸",
+      "available": true
+    },
+    {
+      "id": 553,
+      "kanji": "料",
+      "available": true
+    },
+    {
+      "id": 554,
+      "kanji": "良",
+      "available": true
+    },
+    {
+      "id": 555,
+      "kanji": "量",
+      "available": true
+    },
+    {
+      "id": 556,
+      "kanji": "輪",
+      "available": true
+    },
+    {
+      "id": 557,
+      "kanji": "類",
+      "available": true
+    },
+    {
+      "id": 558,
+      "kanji": "令",
+      "available": true
+    },
+    {
+      "id": 559,
+      "kanji": "例",
+      "available": true
+    },
+    {
+      "id": 560,
+      "kanji": "冷",
+      "available": true
+    },
+    {
+      "id": 561,
+      "kanji": "歴",
+      "available": true
+    },
+    {
+      "id": 562,
+      "kanji": "連",
+      "available": true
+    },
+    {
+      "id": 563,
+      "kanji": "労",
+      "available": true
+    },
+    {
+      "id": 564,
+      "kanji": "老",
+      "available": true
+    },
+    {
+      "id": 565,
+      "kanji": "録",
+      "available": true
+    },
+    {
+      "id": 566,
+      "kanji": "悪",
+      "available": true
+    },
+    {
+      "id": 567,
+      "kanji": "安",
+      "available": true
+    },
+    {
+      "id": 568,
+      "kanji": "暗",
+      "available": true
+    },
+    {
+      "id": 569,
+      "kanji": "委",
+      "available": true
+    },
+    {
+      "id": 570,
+      "kanji": "意",
+      "available": true
+    },
+    {
+      "id": 571,
+      "kanji": "医",
+      "available": true
+    },
+    {
+      "id": 572,
+      "kanji": "育",
+      "available": true
+    },
+    {
+      "id": 573,
+      "kanji": "員",
+      "available": true
+    },
+    {
+      "id": 574,
+      "kanji": "飲",
+      "available": true
+    },
+    {
+      "id": 575,
+      "kanji": "院",
+      "available": true
+    },
+    {
+      "id": 576,
+      "kanji": "運",
+      "available": true
+    },
+    {
+      "id": 577,
+      "kanji": "泳",
+      "available": true
+    },
+    {
+      "id": 578,
+      "kanji": "駅",
+      "available": true
+    },
+    {
+      "id": 579,
+      "kanji": "央",
+      "available": true
+    },
+    {
+      "id": 580,
+      "kanji": "横",
+      "available": true
+    },
+    {
+      "id": 581,
+      "kanji": "屋",
+      "available": true
+    },
+    {
+      "id": 582,
+      "kanji": "温",
+      "available": true
+    },
+    {
+      "id": 583,
+      "kanji": "化",
+      "available": true
+    },
+    {
+      "id": 584,
+      "kanji": "荷",
+      "available": true
+    },
+    {
+      "id": 585,
+      "kanji": "界",
+      "available": true
+    },
+    {
+      "id": 586,
+      "kanji": "開",
+      "available": true
+    },
+    {
+      "id": 587,
+      "kanji": "階",
+      "available": true
+    },
+    {
+      "id": 588,
+      "kanji": "寒",
+      "available": true
+    },
+    {
+      "id": 589,
+      "kanji": "感",
+      "available": true
+    },
+    {
+      "id": 590,
+      "kanji": "漢",
+      "available": true
+    },
+    {
+      "id": 591,
+      "kanji": "館",
+      "available": true
+    },
+    {
+      "id": 592,
+      "kanji": "岸",
+      "available": true
+    },
+    {
+      "id": 593,
+      "kanji": "期",
+      "available": true
+    },
+    {
+      "id": 594,
+      "kanji": "起",
+      "available": true
+    },
+    {
+      "id": 595,
+      "kanji": "客",
+      "available": true
+    },
+    {
+      "id": 596,
+      "kanji": "宮",
+      "available": true
+    },
+    {
+      "id": 597,
+      "kanji": "急",
+      "available": true
+    },
+    {
+      "id": 598,
+      "kanji": "球",
+      "available": true
+    },
+    {
+      "id": 599,
+      "kanji": "究",
+      "available": true
+    },
+    {
+      "id": 600,
+      "kanji": "級",
+      "available": true
+    },
+    {
+      "id": 601,
+      "kanji": "去",
+      "available": true
+    },
+    {
+      "id": 602,
+      "kanji": "橋",
+      "available": true
+    },
+    {
+      "id": 603,
+      "kanji": "業",
+      "available": true
+    },
+    {
+      "id": 604,
+      "kanji": "局",
+      "available": true
+    },
+    {
+      "id": 605,
+      "kanji": "曲",
+      "available": true
+    },
+    {
+      "id": 606,
+      "kanji": "銀",
+      "available": true
+    },
+    {
+      "id": 607,
+      "kanji": "区",
+      "available": true
+    },
+    {
+      "id": 608,
+      "kanji": "苦",
+      "available": true
+    },
+    {
+      "id": 609,
+      "kanji": "具",
+      "available": true
+    },
+    {
+      "id": 610,
+      "kanji": "君",
+      "available": true
+    },
+    {
+      "id": 611,
+      "kanji": "係",
+      "available": true
+    },
+    {
+      "id": 612,
+      "kanji": "軽",
+      "available": true
+    },
+    {
+      "id": 613,
+      "kanji": "決",
+      "available": true
+    },
+    {
+      "id": 614,
+      "kanji": "血",
+      "available": true
+    },
+    {
+      "id": 615,
+      "kanji": "研",
+      "available": true
+    },
+    {
+      "id": 616,
+      "kanji": "県",
+      "available": true
+    },
+    {
+      "id": 617,
+      "kanji": "庫",
+      "available": true
+    },
+    {
+      "id": 618,
+      "kanji": "湖",
+      "available": true
+    },
+    {
+      "id": 619,
+      "kanji": "向",
+      "available": true
+    },
+    {
+      "id": 620,
+      "kanji": "幸",
+      "available": true
+    },
+    {
+      "id": 621,
+      "kanji": "港",
+      "available": true
+    },
+    {
+      "id": 622,
+      "kanji": "号",
+      "available": true
+    },
+    {
+      "id": 623,
+      "kanji": "根",
+      "available": true
+    },
+    {
+      "id": 624,
+      "kanji": "祭",
+      "available": true
+    },
+    {
+      "id": 625,
+      "kanji": "坂",
+      "available": true
+    },
+    {
+      "id": 626,
+      "kanji": "皿",
+      "available": true
+    },
+    {
+      "id": 627,
+      "kanji": "仕",
+      "available": true
+    },
+    {
+      "id": 628,
+      "kanji": "使",
+      "available": true
+    },
+    {
+      "id": 629,
+      "kanji": "始",
+      "available": true
+    },
+    {
+      "id": 630,
+      "kanji": "指",
+      "available": true
+    },
+    {
+      "id": 631,
+      "kanji": "死",
+      "available": true
+    },
+    {
+      "id": 632,
+      "kanji": "詩",
+      "available": true
+    },
+    {
+      "id": 633,
+      "kanji": "歯",
+      "available": true
+    },
+    {
+      "id": 634,
+      "kanji": "事",
+      "available": true
+    },
+    {
+      "id": 635,
+      "kanji": "持",
+      "available": true
+    },
+    {
+      "id": 636,
+      "kanji": "次",
+      "available": true
+    },
+    {
+      "id": 637,
+      "kanji": "式",
+      "available": true
+    },
+    {
+      "id": 638,
+      "kanji": "実",
+      "available": true
+    },
+    {
+      "id": 639,
+      "kanji": "写",
+      "available": true
+    },
+    {
+      "id": 640,
+      "kanji": "者",
+      "available": true
+    },
+    {
+      "id": 641,
+      "kanji": "主",
+      "available": true
+    },
+    {
+      "id": 642,
+      "kanji": "取",
+      "available": true
+    },
+    {
+      "id": 643,
+      "kanji": "守",
+      "available": true
+    },
+    {
+      "id": 644,
+      "kanji": "酒",
+      "available": true
+    },
+    {
+      "id": 645,
+      "kanji": "受",
+      "available": true
+    },
+    {
+      "id": 646,
+      "kanji": "州",
+      "available": true
+    },
+    {
+      "id": 647,
+      "kanji": "拾",
+      "available": true
+    },
+    {
+      "id": 648,
+      "kanji": "終",
+      "available": true
+    },
+    {
+      "id": 649,
+      "kanji": "習",
+      "available": true
+    },
+    {
+      "id": 650,
+      "kanji": "集",
+      "available": true
+    },
+    {
+      "id": 651,
+      "kanji": "住",
+      "available": true
+    },
+    {
+      "id": 652,
+      "kanji": "重",
+      "available": true
+    },
+    {
+      "id": 653,
+      "kanji": "宿",
+      "available": true
+    },
+    {
+      "id": 654,
+      "kanji": "所",
+      "available": true
+    },
+    {
+      "id": 655,
+      "kanji": "暑",
+      "available": true
+    },
+    {
+      "id": 656,
+      "kanji": "助",
+      "available": true
+    },
+    {
+      "id": 657,
+      "kanji": "勝",
+      "available": true
+    },
+    {
+      "id": 658,
+      "kanji": "商",
+      "available": true
+    },
+    {
+      "id": 659,
+      "kanji": "昭",
+      "available": true
+    },
+    {
+      "id": 660,
+      "kanji": "消",
+      "available": true
+    },
+    {
+      "id": 661,
+      "kanji": "章",
+      "available": true
+    },
+    {
+      "id": 662,
+      "kanji": "乗",
+      "available": true
+    },
+    {
+      "id": 663,
+      "kanji": "植",
+      "available": true
+    },
+    {
+      "id": 664,
+      "kanji": "深",
+      "available": true
+    },
+    {
+      "id": 665,
+      "kanji": "申",
+      "available": true
+    },
+    {
+      "id": 666,
+      "kanji": "真",
+      "available": true
+    },
+    {
+      "id": 667,
+      "kanji": "神",
+      "available": true
+    },
+    {
+      "id": 668,
+      "kanji": "身",
+      "available": true
+    },
+    {
+      "id": 669,
+      "kanji": "進",
+      "available": true
+    },
+    {
+      "id": 670,
+      "kanji": "世",
+      "available": true
+    },
+    {
+      "id": 671,
+      "kanji": "整",
+      "available": true
+    },
+    {
+      "id": 672,
+      "kanji": "昔",
+      "available": true
+    },
+    {
+      "id": 673,
+      "kanji": "全",
+      "available": true
+    },
+    {
+      "id": 674,
+      "kanji": "想",
+      "available": true
+    },
+    {
+      "id": 675,
+      "kanji": "相",
+      "available": true
+    },
+    {
+      "id": 676,
+      "kanji": "送",
+      "available": true
+    },
+    {
+      "id": 677,
+      "kanji": "息",
+      "available": true
+    },
+    {
+      "id": 678,
+      "kanji": "速",
+      "available": true
+    },
+    {
+      "id": 679,
+      "kanji": "族",
+      "available": true
+    },
+    {
+      "id": 680,
+      "kanji": "他",
+      "available": true
+    },
+    {
+      "id": 681,
+      "kanji": "打",
+      "available": true
+    },
+    {
+      "id": 682,
+      "kanji": "対",
+      "available": true
+    },
+    {
+      "id": 683,
+      "kanji": "待",
+      "available": true
+    },
+    {
+      "id": 684,
+      "kanji": "代",
+      "available": true
+    },
+    {
+      "id": 685,
+      "kanji": "第",
+      "available": true
+    },
+    {
+      "id": 686,
+      "kanji": "題",
+      "available": true
+    },
+    {
+      "id": 687,
+      "kanji": "炭",
+      "available": true
+    },
+    {
+      "id": 688,
+      "kanji": "短",
+      "available": true
+    },
+    {
+      "id": 689,
+      "kanji": "談",
+      "available": true
+    },
+    {
+      "id": 690,
+      "kanji": "着",
+      "available": true
+    },
+    {
+      "id": 691,
+      "kanji": "柱",
+      "available": true
+    },
+    {
+      "id": 692,
+      "kanji": "注",
+      "available": true
+    },
+    {
+      "id": 693,
+      "kanji": "丁",
+      "available": true
+    },
+    {
+      "id": 694,
+      "kanji": "帳",
+      "available": true
+    },
+    {
+      "id": 695,
+      "kanji": "調",
+      "available": true
+    },
+    {
+      "id": 696,
+      "kanji": "追",
+      "available": true
+    },
+    {
+      "id": 697,
+      "kanji": "定",
+      "available": true
+    },
+    {
+      "id": 698,
+      "kanji": "庭",
+      "available": true
+    },
+    {
+      "id": 699,
+      "kanji": "笛",
+      "available": true
+    },
+    {
+      "id": 700,
+      "kanji": "鉄",
+      "available": true
+    },
+    {
+      "id": 701,
+      "kanji": "転",
+      "available": true
+    },
+    {
+      "id": 702,
+      "kanji": "登",
+      "available": true
+    },
+    {
+      "id": 703,
+      "kanji": "都",
+      "available": true
+    },
+    {
+      "id": 704,
+      "kanji": "度",
+      "available": true
+    },
+    {
+      "id": 705,
+      "kanji": "島",
+      "available": true
+    },
+    {
+      "id": 706,
+      "kanji": "投",
+      "available": true
+    },
+    {
+      "id": 707,
+      "kanji": "湯",
+      "available": true
+    },
+    {
+      "id": 708,
+      "kanji": "等",
+      "available": true
+    },
+    {
+      "id": 709,
+      "kanji": "豆",
+      "available": true
+    },
+    {
+      "id": 710,
+      "kanji": "動",
+      "available": true
+    },
+    {
+      "id": 711,
+      "kanji": "童",
+      "available": true
+    },
+    {
+      "id": 712,
+      "kanji": "農",
+      "available": true
+    },
+    {
+      "id": 713,
+      "kanji": "波",
+      "available": true
+    },
+    {
+      "id": 714,
+      "kanji": "配",
+      "available": true
+    },
+    {
+      "id": 715,
+      "kanji": "倍",
+      "available": true
+    },
+    {
+      "id": 716,
+      "kanji": "箱",
+      "available": true
+    },
+    {
+      "id": 717,
+      "kanji": "畑",
+      "available": true
+    },
+    {
+      "id": 718,
+      "kanji": "発",
+      "available": true
+    },
+    {
+      "id": 719,
+      "kanji": "反",
+      "available": true
+    },
+    {
+      "id": 720,
+      "kanji": "板",
+      "available": true
+    },
+    {
+      "id": 721,
+      "kanji": "悲",
+      "available": true
+    },
+    {
+      "id": 722,
+      "kanji": "皮",
+      "available": true
+    },
+    {
+      "id": 723,
+      "kanji": "美",
+      "available": true
+    },
+    {
+      "id": 724,
+      "kanji": "鼻",
+      "available": true
+    },
+    {
+      "id": 725,
+      "kanji": "筆",
+      "available": true
+    },
+    {
+      "id": 726,
+      "kanji": "氷",
+      "available": true
+    },
+    {
+      "id": 727,
+      "kanji": "表",
+      "available": true
+    },
+    {
+      "id": 728,
+      "kanji": "病",
+      "available": true
+    },
+    {
+      "id": 729,
+      "kanji": "秒",
+      "available": true
+    },
+    {
+      "id": 730,
+      "kanji": "品",
+      "available": true
+    },
+    {
+      "id": 731,
+      "kanji": "負",
+      "available": true
+    },
+    {
+      "id": 732,
+      "kanji": "部",
+      "available": true
+    },
+    {
+      "id": 733,
+      "kanji": "服",
+      "available": true
+    },
+    {
+      "id": 734,
+      "kanji": "福",
+      "available": true
+    },
+    {
+      "id": 735,
+      "kanji": "物",
+      "available": true
+    },
+    {
+      "id": 736,
+      "kanji": "平",
+      "available": true
+    },
+    {
+      "id": 737,
+      "kanji": "返",
+      "available": true
+    },
+    {
+      "id": 738,
+      "kanji": "勉",
+      "available": true
+    },
+    {
+      "id": 739,
+      "kanji": "放",
+      "available": true
+    },
+    {
+      "id": 740,
+      "kanji": "味",
+      "available": true
+    },
+    {
+      "id": 741,
+      "kanji": "命",
+      "available": true
+    },
+    {
+      "id": 742,
+      "kanji": "面",
+      "available": true
+    },
+    {
+      "id": 743,
+      "kanji": "問",
+      "available": true
+    },
+    {
+      "id": 744,
+      "kanji": "役",
+      "available": true
+    },
+    {
+      "id": 745,
+      "kanji": "薬",
+      "available": true
+    },
+    {
+      "id": 746,
+      "kanji": "油",
+      "available": true
+    },
+    {
+      "id": 747,
+      "kanji": "有",
+      "available": true
+    },
+    {
+      "id": 748,
+      "kanji": "由",
+      "available": true
+    },
+    {
+      "id": 749,
+      "kanji": "遊",
+      "available": true
+    },
+    {
+      "id": 750,
+      "kanji": "予",
+      "available": true
+    },
+    {
+      "id": 751,
+      "kanji": "様",
+      "available": true
+    },
+    {
+      "id": 752,
+      "kanji": "洋",
+      "available": true
+    },
+    {
+      "id": 753,
+      "kanji": "羊",
+      "available": true
+    },
+    {
+      "id": 754,
+      "kanji": "葉",
+      "available": true
+    },
+    {
+      "id": 755,
+      "kanji": "陽",
+      "available": true
+    },
+    {
+      "id": 756,
+      "kanji": "落",
+      "available": true
+    },
+    {
+      "id": 757,
+      "kanji": "流",
+      "available": true
+    },
+    {
+      "id": 758,
+      "kanji": "旅",
+      "available": true
+    },
+    {
+      "id": 759,
+      "kanji": "両",
+      "available": true
+    },
+    {
+      "id": 760,
+      "kanji": "緑",
+      "available": true
+    },
+    {
+      "id": 761,
+      "kanji": "礼",
+      "available": true
+    },
+    {
+      "id": 762,
+      "kanji": "列",
+      "available": true
+    },
+    {
+      "id": 763,
+      "kanji": "練",
+      "available": true
+    },
+    {
+      "id": 764,
+      "kanji": "路",
+      "available": true
+    },
+    {
+      "id": 765,
+      "kanji": "和",
+      "available": true
+    },
+    {
+      "id": 766,
+      "kanji": "引",
+      "available": true
+    },
+    {
+      "id": 767,
+      "kanji": "羽",
+      "available": true
+    },
+    {
+      "id": 768,
+      "kanji": "雲",
+      "available": true
+    },
+    {
+      "id": 769,
+      "kanji": "園",
+      "available": true
+    },
+    {
+      "id": 770,
+      "kanji": "遠",
+      "available": true
+    },
+    {
+      "id": 771,
+      "kanji": "黄",
+      "available": true
+    },
+    {
+      "id": 772,
+      "kanji": "何",
+      "available": true
+    },
+    {
+      "id": 773,
+      "kanji": "夏",
+      "available": true
+    },
+    {
+      "id": 774,
+      "kanji": "家",
+      "available": true
+    },
+    {
+      "id": 775,
+      "kanji": "科",
+      "available": true
+    },
+    {
+      "id": 776,
+      "kanji": "歌",
+      "available": true
+    },
+    {
+      "id": 777,
+      "kanji": "画",
+      "available": true
+    },
+    {
+      "id": 778,
+      "kanji": "会",
+      "available": true
+    },
+    {
+      "id": 779,
+      "kanji": "回",
+      "available": true
+    },
+    {
+      "id": 780,
+      "kanji": "海",
+      "available": true
+    },
+    {
+      "id": 781,
+      "kanji": "絵",
+      "available": true
+    },
+    {
+      "id": 782,
+      "kanji": "外",
+      "available": true
+    },
+    {
+      "id": 783,
+      "kanji": "角",
+      "available": true
+    },
+    {
+      "id": 784,
+      "kanji": "楽",
+      "available": true
+    },
+    {
+      "id": 785,
+      "kanji": "活",
+      "available": true
+    },
+    {
+      "id": 786,
+      "kanji": "間",
+      "available": true
+    },
+    {
+      "id": 787,
+      "kanji": "丸",
+      "available": true
+    },
+    {
+      "id": 788,
+      "kanji": "岩",
+      "available": true
+    },
+    {
+      "id": 789,
+      "kanji": "顔",
+      "available": true
+    },
+    {
+      "id": 790,
+      "kanji": "帰",
+      "available": true
+    },
+    {
+      "id": 791,
+      "kanji": "汽",
+      "available": true
+    },
+    {
+      "id": 792,
+      "kanji": "記",
+      "available": true
+    },
+    {
+      "id": 793,
+      "kanji": "弓",
+      "available": true
+    },
+    {
+      "id": 794,
+      "kanji": "牛",
+      "available": true
+    },
+    {
+      "id": 795,
+      "kanji": "魚",
+      "available": true
+    },
+    {
+      "id": 796,
+      "kanji": "京",
+      "available": true
+    },
+    {
+      "id": 797,
+      "kanji": "強",
+      "available": true
+    },
+    {
+      "id": 798,
+      "kanji": "教",
+      "available": true
+    },
+    {
+      "id": 799,
+      "kanji": "近",
+      "available": true
+    },
+    {
+      "id": 800,
+      "kanji": "兄",
+      "available": true
+    },
+    {
+      "id": 801,
+      "kanji": "形",
+      "available": true
+    },
+    {
+      "id": 802,
+      "kanji": "計",
+      "available": true
+    },
+    {
+      "id": 803,
+      "kanji": "元",
+      "available": true
+    },
+    {
+      "id": 804,
+      "kanji": "原",
+      "available": true
+    },
+    {
+      "id": 805,
+      "kanji": "言",
+      "available": true
+    },
+    {
+      "id": 806,
+      "kanji": "古",
+      "available": true
+    },
+    {
+      "id": 807,
+      "kanji": "戸",
+      "available": true
+    },
+    {
+      "id": 808,
+      "kanji": "午",
+      "available": true
+    },
+    {
+      "id": 809,
+      "kanji": "後",
+      "available": true
+    },
+    {
+      "id": 810,
+      "kanji": "語",
+      "available": true
+    },
+    {
+      "id": 811,
+      "kanji": "交",
+      "available": true
+    },
+    {
+      "id": 812,
+      "kanji": "光",
+      "available": true
+    },
+    {
+      "id": 813,
+      "kanji": "公",
+      "available": true
+    },
+    {
+      "id": 814,
+      "kanji": "工",
+      "available": true
+    },
+    {
+      "id": 815,
+      "kanji": "広",
+      "available": true
+    },
+    {
+      "id": 816,
+      "kanji": "考",
+      "available": true
+    },
+    {
+      "id": 817,
+      "kanji": "行",
+      "available": true
+    },
+    {
+      "id": 818,
+      "kanji": "高",
+      "available": true
+    },
+    {
+      "id": 819,
+      "kanji": "合",
+      "available": true
+    },
+    {
+      "id": 820,
+      "kanji": "国",
+      "available": true
+    },
+    {
+      "id": 821,
+      "kanji": "黒",
+      "available": true
+    },
+    {
+      "id": 822,
+      "kanji": "今",
+      "available": true
+    },
+    {
+      "id": 823,
+      "kanji": "才",
+      "available": true
+    },
+    {
+      "id": 824,
+      "kanji": "細",
+      "available": true
+    },
+    {
+      "id": 825,
+      "kanji": "作",
+      "available": true
+    },
+    {
+      "id": 826,
+      "kanji": "算",
+      "available": true
+    },
+    {
+      "id": 827,
+      "kanji": "姉",
+      "available": true
+    },
+    {
+      "id": 828,
+      "kanji": "市",
+      "available": true
+    },
+    {
+      "id": 829,
+      "kanji": "思",
+      "available": true
+    },
+    {
+      "id": 830,
+      "kanji": "止",
+      "available": true
+    },
+    {
+      "id": 831,
+      "kanji": "紙",
+      "available": true
+    },
+    {
+      "id": 832,
+      "kanji": "寺",
+      "available": true
+    },
+    {
+      "id": 833,
+      "kanji": "時",
+      "available": true
+    },
+    {
+      "id": 834,
+      "kanji": "自",
+      "available": true
+    },
+    {
+      "id": 835,
+      "kanji": "室",
+      "available": true
+    },
+    {
+      "id": 836,
+      "kanji": "社",
+      "available": true
+    },
+    {
+      "id": 837,
+      "kanji": "弱",
+      "available": true
+    },
+    {
+      "id": 838,
+      "kanji": "首",
+      "available": true
+    },
+    {
+      "id": 839,
+      "kanji": "秋",
+      "available": true
+    },
+    {
+      "id": 840,
+      "kanji": "週",
+      "available": true
+    },
+    {
+      "id": 841,
+      "kanji": "春",
+      "available": true
+    },
+    {
+      "id": 842,
+      "kanji": "書",
+      "available": true
+    },
+    {
+      "id": 843,
+      "kanji": "少",
+      "available": true
+    },
+    {
+      "id": 844,
+      "kanji": "場",
+      "available": true
+    },
+    {
+      "id": 845,
+      "kanji": "色",
+      "available": true
+    },
+    {
+      "id": 846,
+      "kanji": "食",
+      "available": true
+    },
+    {
+      "id": 847,
+      "kanji": "心",
+      "available": true
+    },
+    {
+      "id": 848,
+      "kanji": "新",
+      "available": true
+    },
+    {
+      "id": 849,
+      "kanji": "親",
+      "available": true
+    },
+    {
+      "id": 850,
+      "kanji": "図",
+      "available": true
+    },
+    {
+      "id": 851,
+      "kanji": "数",
+      "available": true
+    },
+    {
+      "id": 852,
+      "kanji": "星",
+      "available": true
+    },
+    {
+      "id": 853,
+      "kanji": "晴",
+      "available": true
+    },
+    {
+      "id": 854,
+      "kanji": "声",
+      "available": true
+    },
+    {
+      "id": 855,
+      "kanji": "西",
+      "available": true
+    },
+    {
+      "id": 856,
+      "kanji": "切",
+      "available": true
+    },
+    {
+      "id": 857,
+      "kanji": "雪",
+      "available": true
+    },
+    {
+      "id": 858,
+      "kanji": "線",
+      "available": true
+    },
+    {
+      "id": 859,
+      "kanji": "船",
+      "available": true
+    },
+    {
+      "id": 860,
+      "kanji": "前",
+      "available": true
+    },
+    {
+      "id": 861,
+      "kanji": "組",
+      "available": true
+    },
+    {
+      "id": 862,
+      "kanji": "走",
+      "available": true
+    },
+    {
+      "id": 863,
+      "kanji": "多",
+      "available": true
+    },
+    {
+      "id": 864,
+      "kanji": "太",
+      "available": true
+    },
+    {
+      "id": 865,
+      "kanji": "体",
+      "available": true
+    },
+    {
+      "id": 866,
+      "kanji": "台",
+      "available": true
+    },
+    {
+      "id": 867,
+      "kanji": "谷",
+      "available": true
+    },
+    {
+      "id": 868,
+      "kanji": "知",
+      "available": true
+    },
+    {
+      "id": 869,
+      "kanji": "地",
+      "available": true
+    },
+    {
+      "id": 870,
+      "kanji": "池",
+      "available": true
+    },
+    {
+      "id": 871,
+      "kanji": "茶",
+      "available": true
+    },
+    {
+      "id": 872,
+      "kanji": "昼",
+      "available": true
+    },
+    {
+      "id": 873,
+      "kanji": "朝",
+      "available": true
+    },
+    {
+      "id": 874,
+      "kanji": "長",
+      "available": true
+    },
+    {
+      "id": 875,
+      "kanji": "鳥",
+      "available": true
+    },
+    {
+      "id": 876,
+      "kanji": "直",
+      "available": true
+    },
+    {
+      "id": 877,
+      "kanji": "通",
+      "available": true
+    },
+    {
+      "id": 878,
+      "kanji": "弟",
+      "available": true
+    },
+    {
+      "id": 879,
+      "kanji": "店",
+      "available": true
+    },
+    {
+      "id": 880,
+      "kanji": "点",
+      "available": true
+    },
+    {
+      "id": 881,
+      "kanji": "電",
+      "available": true
+    },
+    {
+      "id": 882,
+      "kanji": "冬",
+      "available": true
+    },
+    {
+      "id": 883,
+      "kanji": "刀",
+      "available": true
+    },
+    {
+      "id": 884,
+      "kanji": "東",
+      "available": true
+    },
+    {
+      "id": 885,
+      "kanji": "当",
+      "available": true
+    },
+    {
+      "id": 886,
+      "kanji": "答",
+      "available": true
+    },
+    {
+      "id": 887,
+      "kanji": "頭",
+      "available": true
+    },
+    {
+      "id": 888,
+      "kanji": "同",
+      "available": true
+    },
+    {
+      "id": 889,
+      "kanji": "道",
+      "available": true
+    },
+    {
+      "id": 890,
+      "kanji": "読",
+      "available": true
+    },
+    {
+      "id": 891,
+      "kanji": "内",
+      "available": true
+    },
+    {
+      "id": 892,
+      "kanji": "南",
+      "available": true
+    },
+    {
+      "id": 893,
+      "kanji": "肉",
+      "available": true
+    },
+    {
+      "id": 894,
+      "kanji": "馬",
+      "available": true
+    },
+    {
+      "id": 895,
+      "kanji": "買",
+      "available": true
+    },
+    {
+      "id": 896,
+      "kanji": "売",
+      "available": true
+    },
+    {
+      "id": 897,
+      "kanji": "麦",
+      "available": true
+    },
+    {
+      "id": 898,
+      "kanji": "半",
+      "available": true
+    },
+    {
+      "id": 899,
+      "kanji": "番",
+      "available": true
+    },
+    {
+      "id": 900,
+      "kanji": "父",
+      "available": true
+    },
+    {
+      "id": 901,
+      "kanji": "風",
+      "available": true
+    },
+    {
+      "id": 902,
+      "kanji": "分",
+      "available": true
+    },
+    {
+      "id": 903,
+      "kanji": "聞",
+      "available": true
+    },
+    {
+      "id": 904,
+      "kanji": "米",
+      "available": true
+    },
+    {
+      "id": 905,
+      "kanji": "歩",
+      "available": true
+    },
+    {
+      "id": 906,
+      "kanji": "母",
+      "available": true
+    },
+    {
+      "id": 907,
+      "kanji": "方",
+      "available": true
+    },
+    {
+      "id": 908,
+      "kanji": "北",
+      "available": true
+    },
+    {
+      "id": 909,
+      "kanji": "妹",
+      "available": true
+    },
+    {
+      "id": 910,
+      "kanji": "毎",
+      "available": true
+    },
+    {
+      "id": 911,
+      "kanji": "万",
+      "available": true
+    },
+    {
+      "id": 912,
+      "kanji": "明",
+      "available": true
+    },
+    {
+      "id": 913,
+      "kanji": "鳴",
+      "available": true
+    },
+    {
+      "id": 914,
+      "kanji": "毛",
+      "available": true
+    },
+    {
+      "id": 915,
+      "kanji": "門",
+      "available": true
+    },
+    {
+      "id": 916,
+      "kanji": "夜",
+      "available": true
+    },
+    {
+      "id": 917,
+      "kanji": "野",
+      "available": true
+    },
+    {
+      "id": 918,
+      "kanji": "矢",
+      "available": true
+    },
+    {
+      "id": 919,
+      "kanji": "友",
+      "available": true
+    },
+    {
+      "id": 920,
+      "kanji": "曜",
+      "available": true
+    },
+    {
+      "id": 921,
+      "kanji": "用",
+      "available": true
+    },
+    {
+      "id": 922,
+      "kanji": "来",
+      "available": true
+    },
+    {
+      "id": 923,
+      "kanji": "理",
+      "available": true
+    },
+    {
+      "id": 924,
+      "kanji": "里",
+      "available": true
+    },
+    {
+      "id": 925,
+      "kanji": "話",
+      "available": true
+    },
+    {
+      "id": 926,
+      "kanji": "一",
+      "available": true
+    },
+    {
+      "id": 927,
+      "kanji": "右",
+      "available": true
+    },
+    {
+      "id": 928,
+      "kanji": "雨",
+      "available": true
+    },
+    {
+      "id": 929,
+      "kanji": "円",
+      "available": true
+    },
+    {
+      "id": 930,
+      "kanji": "王",
+      "available": true
+    },
+    {
+      "id": 931,
+      "kanji": "音",
+      "available": true
+    },
+    {
+      "id": 932,
+      "kanji": "下",
+      "available": true
+    },
+    {
+      "id": 933,
+      "kanji": "火",
+      "available": true
+    },
+    {
+      "id": 934,
+      "kanji": "花",
+      "available": true
+    },
+    {
+      "id": 935,
+      "kanji": "貝",
+      "available": true
+    },
+    {
+      "id": 936,
+      "kanji": "学",
+      "available": true
+    },
+    {
+      "id": 937,
+      "kanji": "気",
+      "available": true
+    },
+    {
+      "id": 938,
+      "kanji": "休",
+      "available": true
+    },
+    {
+      "id": 939,
+      "kanji": "玉",
+      "available": true
+    },
+    {
+      "id": 940,
+      "kanji": "金",
+      "available": true
+    },
+    {
+      "id": 941,
+      "kanji": "九",
+      "available": true
+    },
+    {
+      "id": 942,
+      "kanji": "空",
+      "available": true
+    },
+    {
+      "id": 943,
+      "kanji": "月",
+      "available": true
+    },
+    {
+      "id": 944,
+      "kanji": "犬",
+      "available": true
+    },
+    {
+      "id": 945,
+      "kanji": "見",
+      "available": true
+    },
+    {
+      "id": 946,
+      "kanji": "五",
+      "available": true
+    },
+    {
+      "id": 947,
+      "kanji": "口",
+      "available": true
+    },
+    {
+      "id": 948,
+      "kanji": "校",
+      "available": true
+    },
+    {
+      "id": 949,
+      "kanji": "左",
+      "available": true
+    },
+    {
+      "id": 950,
+      "kanji": "三",
+      "available": true
+    },
+    {
+      "id": 951,
+      "kanji": "山",
+      "available": true
+    },
+    {
+      "id": 952,
+      "kanji": "四",
+      "available": true
+    },
+    {
+      "id": 953,
+      "kanji": "子",
+      "available": true
+    },
+    {
+      "id": 954,
+      "kanji": "糸",
+      "available": true
+    },
+    {
+      "id": 955,
+      "kanji": "字",
+      "available": true
+    },
+    {
+      "id": 956,
+      "kanji": "耳",
+      "available": true
+    },
+    {
+      "id": 957,
+      "kanji": "七",
+      "available": true
+    },
+    {
+      "id": 958,
+      "kanji": "車",
+      "available": true
+    },
+    {
+      "id": 959,
+      "kanji": "手",
+      "available": true
+    },
+    {
+      "id": 960,
+      "kanji": "十",
+      "available": true
+    },
+    {
+      "id": 961,
+      "kanji": "出",
+      "available": true
+    },
+    {
+      "id": 962,
+      "kanji": "女",
+      "available": true
+    },
+    {
+      "id": 963,
+      "kanji": "小",
+      "available": true
+    },
+    {
+      "id": 964,
+      "kanji": "上",
+      "available": true
+    },
+    {
+      "id": 965,
+      "kanji": "森",
+      "available": true
+    },
+    {
+      "id": 966,
+      "kanji": "人",
+      "available": true
+    },
+    {
+      "id": 967,
+      "kanji": "水",
+      "available": true
+    },
+    {
+      "id": 968,
+      "kanji": "正",
+      "available": true
+    },
+    {
+      "id": 969,
+      "kanji": "生",
+      "available": true
+    },
+    {
+      "id": 970,
+      "kanji": "青",
+      "available": true
+    },
+    {
+      "id": 971,
+      "kanji": "石",
+      "available": true
+    },
+    {
+      "id": 972,
+      "kanji": "赤",
+      "available": true
+    },
+    {
+      "id": 973,
+      "kanji": "先",
+      "available": true
+    },
+    {
+      "id": 974,
+      "kanji": "千",
+      "available": true
+    },
+    {
+      "id": 975,
+      "kanji": "川",
+      "available": true
+    },
+    {
+      "id": 976,
+      "kanji": "早",
+      "available": true
+    },
+    {
+      "id": 977,
+      "kanji": "草",
+      "available": true
+    },
+    {
+      "id": 978,
+      "kanji": "足",
+      "available": true
+    },
+    {
+      "id": 979,
+      "kanji": "村",
+      "available": true
+    },
+    {
+      "id": 980,
+      "kanji": "大",
+      "available": true
+    },
+    {
+      "id": 981,
+      "kanji": "男",
+      "available": true
+    },
+    {
+      "id": 982,
+      "kanji": "竹",
+      "available": true
+    },
+    {
+      "id": 983,
+      "kanji": "中",
+      "available": true
+    },
+    {
+      "id": 984,
+      "kanji": "虫",
+      "available": true
+    },
+    {
+      "id": 985,
+      "kanji": "町",
+      "available": true
+    },
+    {
+      "id": 986,
+      "kanji": "天",
+      "available": true
+    },
+    {
+      "id": 987,
+      "kanji": "田",
+      "available": true
+    },
+    {
+      "id": 988,
+      "kanji": "土",
+      "available": true
+    },
+    {
+      "id": 989,
+      "kanji": "二",
+      "available": true
+    },
+    {
+      "id": 990,
+      "kanji": "日",
+      "available": true
+    },
+    {
+      "id": 991,
+      "kanji": "入",
+      "available": true
+    },
+    {
+      "id": 992,
+      "kanji": "年",
+      "available": true
+    },
+    {
+      "id": 993,
+      "kanji": "白",
+      "available": true
+    },
+    {
+      "id": 994,
+      "kanji": "八",
+      "available": true
+    },
+    {
+      "id": 995,
+      "kanji": "百",
+      "available": true
+    },
+    {
+      "id": 996,
+      "kanji": "文",
+      "available": true
+    },
+    {
+      "id": 997,
+      "kanji": "本",
+      "available": true
+    },
+    {
+      "id": 998,
+      "kanji": "名",
+      "available": true
+    },
+    {
+      "id": 999,
+      "kanji": "木",
+      "available": true
+    },
+    {
+      "id": 1000,
+      "kanji": "目",
+      "available": true
+    },
+    {
+      "id": 1001,
+      "kanji": "夕",
+      "available": true
+    },
+    {
+      "id": 1002,
+      "kanji": "立",
+      "available": true
+    },
+    {
+      "id": 1003,
+      "kanji": "力",
+      "available": true
+    },
+    {
+      "id": 1004,
+      "kanji": "林",
+      "available": true
+    },
+    {
+      "id": 1005,
+      "kanji": "六",
+      "available": true
+    }
+  ],
+  "actions": []
+}

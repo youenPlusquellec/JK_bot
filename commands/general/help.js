@@ -29,6 +29,10 @@ module.exports = class Help extends Command {
 								value: 'User Info',
 							},
 							{
+								name: 'rkanji',
+								value: 'rkanji',
+							},
+							{
 								name: 'Help',
 								value: 'help',
 							},
@@ -51,6 +55,7 @@ module.exports = class Help extends Command {
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
 	}
+	
 	async run(client, interaction) {
 		const query = interaction.options.getString('command');
 

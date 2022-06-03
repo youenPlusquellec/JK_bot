@@ -1,4 +1,5 @@
 const Event = require('../../structures/EventClass');
+const logger = require('../../common/utils/logger');
 
 module.exports = class InteractionCreate extends Event {
 	constructor(client) {
@@ -22,7 +23,7 @@ module.exports = class InteractionCreate extends Event {
 				command.run(client, interaction);
 			}
 			catch (e) {
-				console.log(e);
+				logger.error(e);
 				return interaction.reply({ content: `An error has occurred.\n\n**\`${e.message}\`**` });
 			}
 		}

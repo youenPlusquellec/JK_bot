@@ -32,6 +32,7 @@ module.exports = class CommandClass {
 						category: cmd.category,
 						permissions: cmd.permissions,
 						run: cmd.run,
+						cronFunction: cmd.cronFunction,
 					};
 
 					this.client.commands.set(cmdSet.name, cmdSet);
