@@ -37,7 +37,6 @@
         "fs": "^0.0.1-security",
         "log4js": "^6.5.2",
         "lowdb": "^1.0.0",
-        "text-to-image": "^5.2.0",
         "ultimate-text-to-image": "^1.0.0",
         "uuid": "^8.3.2"
     },

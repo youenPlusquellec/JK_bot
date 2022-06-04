@@ -1,7 +1,6 @@
 const KanjiRepository = require('../model/kanjiRepository');
 const kanjiRepository = new KanjiRepository();
 
-const textToImage = require('text-to-image');
 const { UltimateTextToImage } = require('ultimate-text-to-image');
 const logger = require('../common/utils/logger');
 const config = require('../config');
@@ -28,24 +27,7 @@ module.exports = {
 		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
 		logger.debug("Random Kanji found : " + randKanji.kanji);
 
-		// It's generating an image from the kanji.
-		/*const dataUri = await textToImage.generate(randKanji.kanji, {
-			fontSize: config.font_size,
-			margin: 5,
-			bgColor: '#F4E0C7',
-			textColor: 'black',
-			verticalAlign: 'center',
-			fontFamily: 'Sans'
-		});
-
-		// It's saving the image to a file.
-		var base64Data = dataUri.replace(/^data:image\/png;base64,/, "");
-		require("fs").writeFile("out.png", base64Data, 'base64', function (err) {
-			if (err) logger.error(`write file error: ${err}`);
-		});*/
-
 		const textToImage = new UltimateTextToImage(randKanji.kanji, {
-			//width: 400,
 			fontFamily: "Arial, Sans",
 			fontColor: "#000000",
 			fontSize: 390,
