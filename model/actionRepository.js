@@ -11,6 +11,7 @@ module.exports = class ActionRepository {
         let uuid = uuidv4();
         const action = new Action(uuid, type, cron, server_id, channel_id, mention_role);
         db.insert('actions', action);
+        return action;
     }
 
     getActions() {
@@ -36,6 +37,32 @@ module.exports = class ActionRepository {
             (action) => action.server_id === server_id && action.channel_id === channel_id
         );
         return actions;
+    }
+
+    deleteActionByIdAndServerId(id, server_id) {
+        const actions = db.getAllBy(
+            'actions',
+            (action) => action.server_id === server_id
+        );
+
+        db.remove('actions', actions[id].id);
+        global.cronTasks.get(actions[id].id).stop();
+        global.cronTasks.delete(actions[id].id);
+
+        return actions[id];
+    }
+
+    deleteActionsByIdAndServerIdAndChannelId(id, server_id, channel_id) {
+        const actions = db.getAllBy(
+            'actions',
+            (action) => action.server_id === server_id && action.channel_id === channel_id
+        );
+        
+        db.remove('actions', actions[id].id);
+        global.cronTasks.get(actions[id].id).stop();
+        global.cronTasks.delete(actions[id].id);
+
+        return actions[id];
     }
 
 };

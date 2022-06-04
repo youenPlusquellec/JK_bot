@@ -46,10 +46,8 @@ module.exports = class ListScheduledTasks extends Command {
 		let actions = []
 		if (channel && channel.id) {
 			actions = actionRepository.getActionsByServerIdAndChannelId(interaction.guildId, channel.id)
-			console.log(actions)
 		} else {
 			actions = actionRepository.getActionsByServerId(interaction.guildId)
-			console.log(actions)
 		}
 
 		if (actions.length) {
