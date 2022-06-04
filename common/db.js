@@ -34,6 +34,7 @@ module.exports = class Db {
         this.db = low(this.adapter);
 
         // Initialisation de la base de donnée si fichier vide
+        logger.warn("Reseting values")
         this.db.defaults({
             kanjis: kyouiki_list,
             actions: []
@@ -42,19 +43,19 @@ module.exports = class Db {
 
     // fonction d'insertion dans la bdd
     insert(table, object) {
-        logger.debug('Inserting value in ' + table);
+        logger.debug(`Inserting value in '${table}'`);
         this.db.get(table).push(object).write();
     }
 
     // fonction de récupération d'une valeur de la bdd
     getBy(table, conditionObject) {
-        logger.debug('Getting one value from ' + table);
+        logger.debug(`Getting one value from '${table}'`);
         return this.db.get(table).find(conditionObject).value();
     }
 
     // fonction de récupération de valeurs de la bdd
     getAllBy(table, conditionObject) {
-        logger.debug('Get some values from ' + table);
+        logger.debug(`Get some values from '${table}'`);
         return this.db.get(table).filter(conditionObject).value();
     }
 
@@ -68,7 +69,7 @@ module.exports = class Db {
 
     // fonction de suppression d'une valeur de la bdd
     remove(table, id) {
-        logger.debug('Removing value from ' + table);
+        logger.debug(`Removing value from '${table}'`);
         this.db.get(table).remove({
             id
         }).write();
@@ -76,7 +77,7 @@ module.exports = class Db {
 
     // fonction de récupération de toutes les valeur de la bdd
     getAll(table) {
-        logger.debug('Getting every values from ' + table);
+        logger.debug(`Getting every values from '${table}'`);
         return this.db.get(table).value();
     }
 };

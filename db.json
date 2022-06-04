@@ -58,7 +58,7 @@
     {
       "id": 11,
       "kanji": "革",
-      "available": true
+      "available": false
     },
     {
       "id": 12,
@@ -198,7 +198,7 @@
     {
       "id": 39,
       "kanji": "源",
-      "available": true
+      "available": false
     },
     {
       "id": 40,
@@ -663,7 +663,7 @@
     {
       "id": 132,
       "kanji": "討",
-      "available": true
+      "available": false
     },
     {
       "id": 133,
@@ -933,7 +933,7 @@
     {
       "id": 186,
       "kanji": "永",
-      "available": true
+      "available": false
     },
     {
       "id": 187,
@@ -988,7 +988,7 @@
     {
       "id": 197,
       "kanji": "河",
-      "available": true
+      "available": false
     },
     {
       "id": 198,
@@ -1048,7 +1048,7 @@
     {
       "id": 209,
       "kanji": "基",
-      "available": true
+      "available": false
     },
     {
       "id": 210,
@@ -1083,7 +1083,7 @@
     {
       "id": 216,
       "kanji": "旧",
-      "available": true
+      "available": false
     },
     {
       "id": 217,
@@ -1218,7 +1218,7 @@
     {
       "id": 243,
       "kanji": "混",
-      "available": true
+      "available": false
     },
     {
       "id": 244,
@@ -1463,7 +1463,7 @@
     {
       "id": 292,
       "kanji": "責",
-      "available": true
+      "available": false
     },
     {
       "id": 293,
@@ -1603,7 +1603,7 @@
     {
       "id": 320,
       "kanji": "導",
-      "available": true
+      "available": false
     },
     {
       "id": 321,
@@ -1748,7 +1748,7 @@
     {
       "id": 349,
       "kanji": "報",
-      "available": true
+      "available": false
     },
     {
       "id": 350,
@@ -1763,7 +1763,7 @@
     {
       "id": 352,
       "kanji": "貿",
-      "available": true
+      "available": false
     },
     {
       "id": 353,
@@ -1813,7 +1813,7 @@
     {
       "id": 362,
       "kanji": "率",
-      "available": true
+      "available": false
     },
     {
       "id": 363,
@@ -1883,7 +1883,7 @@
     {
       "id": 376,
       "kanji": "塩",
-      "available": true
+      "available": false
     },
     {
       "id": 377,
@@ -2093,7 +2093,7 @@
     {
       "id": 418,
       "kanji": "径",
-      "available": true
+      "available": false
     },
     {
       "id": 419,
@@ -2158,7 +2158,7 @@
     {
       "id": 431,
       "kanji": "航",
-      "available": true
+      "available": false
     },
     {
       "id": 432,
@@ -2313,7 +2313,7 @@
     {
       "id": 462,
       "kanji": "松",
-      "available": true
+      "available": false
     },
     {
       "id": 463,
@@ -2428,7 +2428,7 @@
     {
       "id": 485,
       "kanji": "争",
-      "available": true
+      "available": false
     },
     {
       "id": 486,
@@ -2643,7 +2643,7 @@
     {
       "id": 528,
       "kanji": "府",
-      "available": true
+      "available": false
     },
     {
       "id": 529,
@@ -2718,7 +2718,7 @@
     {
       "id": 543,
       "kanji": "脈",
-      "available": true
+      "available": false
     },
     {
       "id": 544,
@@ -2733,7 +2733,7 @@
     {
       "id": 546,
       "kanji": "約",
-      "available": true
+      "available": false
     },
     {
       "id": 547,
@@ -2748,7 +2748,7 @@
     {
       "id": 549,
       "kanji": "養",
-      "available": true
+      "available": false
     },
     {
       "id": 550,
@@ -3223,7 +3223,7 @@
     {
       "id": 644,
       "kanji": "酒",
-      "available": true
+      "available": false
     },
     {
       "id": 645,
@@ -3273,7 +3273,7 @@
     {
       "id": 654,
       "kanji": "所",
-      "available": true
+      "available": false
     },
     {
       "id": 655,
@@ -3318,7 +3318,7 @@
     {
       "id": 663,
       "kanji": "植",
-      "available": true
+      "available": false
     },
     {
       "id": 664,
@@ -3463,7 +3463,7 @@
     {
       "id": 692,
       "kanji": "注",
-      "available": true
+      "available": false
     },
     {
       "id": 693,
@@ -3503,7 +3503,7 @@
     {
       "id": 700,
       "kanji": "鉄",
-      "available": true
+      "available": false
     },
     {
       "id": 701,
@@ -3688,7 +3688,7 @@
     {
       "id": 737,
       "kanji": "返",
-      "available": true
+      "available": false
     },
     {
       "id": 738,
@@ -3733,7 +3733,7 @@
     {
       "id": 746,
       "kanji": "油",
-      "available": true
+      "available": false
     },
     {
       "id": 747,
@@ -3838,7 +3838,7 @@
     {
       "id": 767,
       "kanji": "羽",
-      "available": true
+      "available": false
     },
     {
       "id": 768,
@@ -3963,7 +3963,7 @@
     {
       "id": 792,
       "kanji": "記",
-      "available": true
+      "available": false
     },
     {
       "id": 793,
@@ -4143,7 +4143,7 @@
     {
       "id": 828,
       "kanji": "市",
-      "available": true
+      "available": false
     },
     {
       "id": 829,
@@ -4318,7 +4318,7 @@
     {
       "id": 863,
       "kanji": "多",
-      "available": true
+      "available": false
     },
     {
       "id": 864,
@@ -4368,7 +4368,7 @@
     {
       "id": 873,
       "kanji": "朝",
-      "available": true
+      "available": false
     },
     {
       "id": 874,
@@ -4403,7 +4403,7 @@
     {
       "id": 880,
       "kanji": "点",
-      "available": true
+      "available": false
     },
     {
       "id": 881,
@@ -4498,7 +4498,7 @@
     {
       "id": 899,
       "kanji": "番",
-      "available": true
+      "available": false
     },
     {
       "id": 900,
@@ -4553,7 +4553,7 @@
     {
       "id": 910,
       "kanji": "毎",
-      "available": true
+      "available": false
     },
     {
       "id": 911,
@@ -4923,7 +4923,7 @@
     {
       "id": 984,
       "kanji": "虫",
-      "available": true
+      "available": false
     },
     {
       "id": 985,
@@ -4958,7 +4958,7 @@
     {
       "id": 991,
       "kanji": "入",
-      "available": true
+      "available": false
     },
     {
       "id": 992,

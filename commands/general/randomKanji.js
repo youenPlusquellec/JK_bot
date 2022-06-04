@@ -44,7 +44,8 @@ module.exports = class RandomKanji extends Command {
 		const cronTimer = interaction.options.getString('scheduling');
 
 		// Getting role parameter
-		const role = `<@&${interaction.options.getRole('role').id}>`;
+		const roleParam = interaction.options.getRole('role');
+		const role = roleParam ? `<@&${roleParam.id}>` : null;
 
 		/* It's a way to send a message to the user without sending it right away. */
 		await interaction.deferReply();
@@ -89,6 +90,6 @@ module.exports = class RandomKanji extends Command {
 		});
 
 		// Launch scheduled message
-		//scheduledMessage.start()
+		scheduledMessage.start()
 	}
 };

@@ -30,7 +30,8 @@ module.exports = class KanjiRepository {
     }
 
     useKanjiById(id) {
-        db.update('kanjis', { id }, { available: false });
+        // TODO : Resolve this bug 
+        //db.update('kanjis', { id }, { available: false });
     }
 
     getAvailableRandomKanji() {

@@ -14,9 +14,12 @@ module.exports = {
 
 	generateEmbedKanji: async function(client, role) {
 
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
 		// It's getting a random kanji from a JSON file and getting the information about it.
 		let randKanji = kanjiRepository.getAvailableRandomKanji()
-        kanjiRepository.useKanjiById(randKanji.id)
 
         // It's getting the information about the kanji from a JSON file.
 		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
