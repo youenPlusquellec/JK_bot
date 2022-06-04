@@ -1,6 +1,10 @@
 node_modules
 package-lock.json
 .env
+config.js
+hp.env
+hp.config.js
+prod.env
+prod.config.js
 out.png
 db.json
-config.js
