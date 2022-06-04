@@ -57,17 +57,18 @@ module.exports = class RandomKanji extends Command {
 
 		// Launching task in background if defined
 		if (cronTimer) {
-			actionRepository.createAction(this.name, cronTimer, interaction.channelId, role)
+			actionRepository.createAction(this.name, cronTimer, interaction.guildId, interaction.channelId, role)
 			this.cronFunction(client, cronTimer, interaction.channelId, role);
+			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
+		} else {
+			/* It's sending the message to the user. */
+			return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] }).then(() => {
+				// If there is a role to ping, ping it
+				if(role) {
+					client.channels.cache.get(interaction.channelId).send(role);
+				} 
+			});
 		}
-
-		/* It's sending the message to the user. */
-		return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] }).then(() => {
-			// If there is a role to ping, ping it
-			if(role) {
-				client.channels.cache.get(interaction.channelId).send(role);
-			} 
-		});
 	}
 
 	cronFunction(client, cronTimer, channelId, role) {

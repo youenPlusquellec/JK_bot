@@ -18,14 +18,14 @@ module.exports = class Db {
         const kyouiki_list = []
 
         // Reset database if set in config file
-        if (config.RESET_DB) {
+        if (config.reset_db) {
 
             /* Iterating through the kanjis array and pushing the values into the kyouiku_list array. */
             kyouiku.kanjis.forEach(element => {
                 kyouiki_list.push(new Kanji(element.id, element.kanji, element.available))
             })
 
-            logger.info('Resetting db');
+            logger.warn('Resetting db');
             fs.unlinkSync('db.json');
         }
 
@@ -34,7 +34,6 @@ module.exports = class Db {
         this.db = low(this.adapter);
 
         // Initialisation de la base de donnée si fichier vide
-        logger.warn("Reseting values")
         this.db.defaults({
             kanjis: kyouiki_list,
             actions: []

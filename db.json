@@ -58,7 +58,7 @@
     {
       "id": 11,
       "kanji": "革",
-      "available": false
+      "available": true
     },
     {
       "id": 12,
@@ -198,7 +198,7 @@
     {
       "id": 39,
       "kanji": "源",
-      "available": false
+      "available": true
     },
     {
       "id": 40,
@@ -663,7 +663,7 @@
     {
       "id": 132,
       "kanji": "討",
-      "available": false
+      "available": true
     },
     {
       "id": 133,
@@ -933,7 +933,7 @@
     {
       "id": 186,
       "kanji": "永",
-      "available": false
+      "available": true
     },
     {
       "id": 187,
@@ -988,7 +988,7 @@
     {
       "id": 197,
       "kanji": "河",
-      "available": false
+      "available": true
     },
     {
       "id": 198,
@@ -1048,7 +1048,7 @@
     {
       "id": 209,
       "kanji": "基",
-      "available": false
+      "available": true
     },
     {
       "id": 210,
@@ -1083,7 +1083,7 @@
     {
       "id": 216,
       "kanji": "旧",
-      "available": false
+      "available": true
     },
     {
       "id": 217,
@@ -1218,7 +1218,7 @@
     {
       "id": 243,
       "kanji": "混",
-      "available": false
+      "available": true
     },
     {
       "id": 244,
@@ -1463,7 +1463,7 @@
     {
       "id": 292,
       "kanji": "責",
-      "available": false
+      "available": true
     },
     {
       "id": 293,
@@ -1603,7 +1603,7 @@
     {
       "id": 320,
       "kanji": "導",
-      "available": false
+      "available": true
     },
     {
       "id": 321,
@@ -1748,7 +1748,7 @@
     {
       "id": 349,
       "kanji": "報",
-      "available": false
+      "available": true
     },
     {
       "id": 350,
@@ -1763,7 +1763,7 @@
     {
       "id": 352,
       "kanji": "貿",
-      "available": false
+      "available": true
     },
     {
       "id": 353,
@@ -1813,7 +1813,7 @@
     {
       "id": 362,
       "kanji": "率",
-      "available": false
+      "available": true
     },
     {
       "id": 363,
@@ -1883,7 +1883,7 @@
     {
       "id": 376,
       "kanji": "塩",
-      "available": false
+      "available": true
     },
     {
       "id": 377,
@@ -2093,7 +2093,7 @@
     {
       "id": 418,
       "kanji": "径",
-      "available": false
+      "available": true
     },
     {
       "id": 419,
@@ -2158,7 +2158,7 @@
     {
       "id": 431,
       "kanji": "航",
-      "available": false
+      "available": true
     },
     {
       "id": 432,
@@ -2313,7 +2313,7 @@
     {
       "id": 462,
       "kanji": "松",
-      "available": false
+      "available": true
     },
     {
       "id": 463,
@@ -2428,7 +2428,7 @@
     {
       "id": 485,
       "kanji": "争",
-      "available": false
+      "available": true
     },
     {
       "id": 486,
@@ -2643,7 +2643,7 @@
     {
       "id": 528,
       "kanji": "府",
-      "available": false
+      "available": true
     },
     {
       "id": 529,
@@ -2718,7 +2718,7 @@
     {
       "id": 543,
       "kanji": "脈",
-      "available": false
+      "available": true
     },
     {
       "id": 544,
@@ -2733,7 +2733,7 @@
     {
       "id": 546,
       "kanji": "約",
-      "available": false
+      "available": true
     },
     {
       "id": 547,
@@ -2748,7 +2748,7 @@
     {
       "id": 549,
       "kanji": "養",
-      "available": false
+      "available": true
     },
     {
       "id": 550,
@@ -3223,7 +3223,7 @@
     {
       "id": 644,
       "kanji": "酒",
-      "available": false
+      "available": true
     },
     {
       "id": 645,
@@ -3273,7 +3273,7 @@
     {
       "id": 654,
       "kanji": "所",
-      "available": false
+      "available": true
     },
     {
       "id": 655,
@@ -3318,7 +3318,7 @@
     {
       "id": 663,
       "kanji": "植",
-      "available": false
+      "available": true
     },
     {
       "id": 664,
@@ -3463,7 +3463,7 @@
     {
       "id": 692,
       "kanji": "注",
-      "available": false
+      "available": true
     },
     {
       "id": 693,
@@ -3503,7 +3503,7 @@
     {
       "id": 700,
       "kanji": "鉄",
-      "available": false
+      "available": true
     },
     {
       "id": 701,
@@ -3688,7 +3688,7 @@
     {
       "id": 737,
       "kanji": "返",
-      "available": false
+      "available": true
     },
     {
       "id": 738,
@@ -3733,7 +3733,7 @@
     {
       "id": 746,
       "kanji": "油",
-      "available": false
+      "available": true
     },
     {
       "id": 747,
@@ -3838,7 +3838,7 @@
     {
       "id": 767,
       "kanji": "羽",
-      "available": false
+      "available": true
     },
     {
       "id": 768,
@@ -3963,7 +3963,7 @@
     {
       "id": 792,
       "kanji": "記",
-      "available": false
+      "available": true
     },
     {
       "id": 793,
@@ -4143,7 +4143,7 @@
     {
       "id": 828,
       "kanji": "市",
-      "available": false
+      "available": true
     },
     {
       "id": 829,
@@ -4318,7 +4318,7 @@
     {
       "id": 863,
       "kanji": "多",
-      "available": false
+      "available": true
     },
     {
       "id": 864,
@@ -4368,7 +4368,7 @@
     {
       "id": 873,
       "kanji": "朝",
-      "available": false
+      "available": true
     },
     {
       "id": 874,
@@ -4403,7 +4403,7 @@
     {
       "id": 880,
       "kanji": "点",
-      "available": false
+      "available": true
     },
     {
       "id": 881,
@@ -4498,7 +4498,7 @@
     {
       "id": 899,
       "kanji": "番",
-      "available": false
+      "available": true
     },
     {
       "id": 900,
@@ -4553,7 +4553,7 @@
     {
       "id": 910,
       "kanji": "毎",
-      "available": false
+      "available": true
     },
     {
       "id": 911,
@@ -4923,7 +4923,7 @@
     {
       "id": 984,
       "kanji": "虫",
-      "available": false
+      "available": true
     },
     {
       "id": 985,
@@ -4958,7 +4958,7 @@
     {
       "id": 991,
       "kanji": "入",
-      "available": false
+      "available": true
     },
     {
       "id": 992,
@@ -5031,5 +5031,46 @@
       "available": true
     }
   ],
-  "actions": []
+  "actions": [
+    {
+      "id": "4f5a8763-7f42-4a1a-9a53-8d0e72b9d3e9",
+      "type": "rkanji",
+      "cron": "0 2 * * * *",
+      "server_id": "939187381351874691",
+      "channel_id": "982582390914433054",
+      "mention_role": null
+    },
+    {
+      "id": "26d7c57a-b4ce-4cba-aa28-729e60effc9f",
+      "type": "rkanji",
+      "cron": "0 0 7 * * *",
+      "server_id": "939187381351874691",
+      "channel_id": "973686786196918302",
+      "mention_role": null
+    },
+    {
+      "id": "4519e6fa-8efd-4ad1-a164-44438e0cd6f7",
+      "type": "rkanji",
+      "cron": "0 0 13 * * *",
+      "server_id": "939187381351874691",
+      "channel_id": "973686786196918302",
+      "mention_role": null
+    },
+    {
+      "id": "fa371abb-0d86-4bf9-a487-58dd987dd017",
+      "type": "rkanji",
+      "cron": "0 38 13 * * *",
+      "server_id": "939187381351874691",
+      "channel_id": "982582390914433054",
+      "mention_role": "<@&980566096962801694>"
+    },
+    {
+      "id": "92fb8dc3-60e5-4420-af2d-372c57d64534",
+      "type": "rkanji",
+      "cron": "0 0 13 * * *",
+      "server_id": "792912664262606848",
+      "channel_id": "982450301896368158",
+      "mention_role": null
+    }
+  ]
 }

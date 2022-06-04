@@ -3,6 +3,7 @@ const kanjiRepository = new KanjiRepository();
 
 const textToImage = require('text-to-image');
 const logger = require('../common/utils/logger');
+const config = require('../config');
 
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { stripIndents } = require('common-tags');
@@ -27,7 +28,7 @@ module.exports = {
 
 		// It's generating an image from the kanji.
 		const dataUri = await textToImage.generate(randKanji.kanji, {
-			fontSize: 395,
+			fontSize: config.font_size,
 			margin: 5,
 			bgColor: '#F4E0C7',
 			textColor: 'black',

@@ -22,18 +22,6 @@ module.exports = class Ping extends Command {
 	async run(client, interaction) {
 		const now = Date.now();
 		await interaction.deferReply();
-		
-
-		// It's a loop that runs through all the actions in the database and runs the cronFunction of the
-		// command that is associated with the action.
-		logger.info(`Starting cron tasks...`)
-		const actionList = actionRepository.getActions()
-		for (let id in actionRepository.getActions()) {
-			const action = actionList[id]
-			
-			const command = client.commands.get(action.type);
-			command.cronFunction(client, action.cron, action.channel_id, action.mention_role)
-		}
 
 		const pingEmbed = new MessageEmbed()
 			.setAuthor({
