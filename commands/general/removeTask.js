@@ -7,7 +7,7 @@ const { stripIndents } = require('common-tags');
 
 const ActionRepository = require('../../model/actionRepository');
 const actionRepository = new ActionRepository();
-const { Logger } = require('log4js');
+const logger = require('../../common/utils/logger');
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
@@ -55,6 +55,9 @@ module.exports = class ListScheduledTasks extends Command {
 		} else {
 			action = actionRepository.deleteActionByIdAndServerId(id, interaction.guildId)
 		}
+
+		// Debugging
+		logger.info(`Removing scheduled task with id n°${id} ${ channel ? `for channel ${channel}` : "" }`)
 
 		// It's creating an embed with the information about the kanji.
 		const listEmbed = new MessageEmbed()

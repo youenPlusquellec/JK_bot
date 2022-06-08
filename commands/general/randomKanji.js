@@ -8,7 +8,7 @@ const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
 
 const ActionRepository = require('../../model/actionRepository');
 const actionRepository = new ActionRepository();
-const { Logger } = require('log4js');
+const logger = require('../../common/utils/logger');
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
@@ -80,6 +80,8 @@ module.exports = class RandomKanji extends Command {
 	}
 
 	cronFunction(client, cronTimer, channelId, role) {
+
+		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
 
 		// Scheduling message
 		let scheduledMessage = new cron.CronJob(cronTimer, async () => {
