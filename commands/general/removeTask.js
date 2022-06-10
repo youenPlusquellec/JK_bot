@@ -62,7 +62,6 @@ module.exports = class ListScheduledTasks extends Command {
 		// It's creating an embed with the information about the kanji.
 		const listEmbed = new MessageEmbed()
 			.setTitle(`**La tâche suivante vient d'être supprimée**`)
-			//.setURL(`https://discord.com/channels/${interaction.guildId}/${channel ? channel.id : ""}`)
 			.setColor(client.config.embedColor)
 			.addFields({
 				name: `N°${id}`,

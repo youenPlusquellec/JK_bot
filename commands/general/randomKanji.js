@@ -53,7 +53,7 @@ module.exports = class RandomKanji extends Command {
 		/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 		generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 		the information about the kanji */
-		let kanjiEmbed = await generateEmbedKanji(client, role)
+		const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
 
 		// Launching task in background if defined
 		if (cronTimer) {
@@ -64,7 +64,7 @@ module.exports = class RandomKanji extends Command {
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {
 			/* It's sending the message to the user. */
-			return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] }).then(() => {
+			return await interaction.followUp({ embeds: [kanjiEmbed], files: [`out/${kanjiId}.png`] }).then(() => {
 				// If there is a role to ping, ping it
 				if(role) {
 					client.channels.cache.get(interaction.channelId).send(role);
@@ -83,10 +83,10 @@ module.exports = class RandomKanji extends Command {
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
 
 			// Generating random kanji message
-			let kanjiEmbed = await generateEmbedKanji(client, role)
+			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
 
 			// Sending the message to the user.
-			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] })
+			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [`${kanjiId}.png`] })
 				.then(() => {
 					// If there is a role to ping, ping it
 					if(role) {

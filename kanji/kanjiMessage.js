@@ -36,7 +36,7 @@ module.exports = {
 			backgroundColor: "F4E0C7",
 		})
 		.render()
-		.toFile(path.join(__dirname, "../out.png"));
+		.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
@@ -54,13 +54,13 @@ module.exports = {
 		
 					À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
 				`)
-			.setImage('attachment://out.png')
+			.setImage(`attachment://${randKanji.id}.png`)
 			.setTimestamp();
 
 		// Set the kanji as used in the JSON file.
 		kanjiRepository.useKanjiById(randKanji.id)
 
 		// It's returning the embed to the function that called it.
-		return kanjiEmbed;
+		return [kanjiEmbed, randKanji.id];
 	}
 }
