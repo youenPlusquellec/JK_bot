@@ -86,7 +86,7 @@ module.exports = class RandomKanji extends Command {
 			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
 
 			// Sending the message to the user.
-			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [`${kanjiId}.png`] })
+			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [`out/${kanjiId}.png`] })
 				.then(() => {
 					// If there is a role to ping, ping it
 					if(role) {
