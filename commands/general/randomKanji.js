@@ -80,6 +80,8 @@ module.exports = class RandomKanji extends Command {
 		// Scheduling message
 		let scheduledMessage = new cron.CronJob(cronTimer, async () => {
 
+			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
+
 			// Generating random kanji message
 			let kanjiEmbed = await generateEmbedKanji(client, role)
 
