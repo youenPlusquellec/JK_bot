@@ -58,24 +58,18 @@ module.exports = class RandomKanji extends Command {
 		// Launching task in background if defined
 		if (cronTimer) {
 			const action = actionRepository.createAction(this.name, cronTimer, interaction.guildId, interaction.channelId, role)
-
+			
 			global.cronTasks.set(action.id, this.cronFunction(client, cronTimer, interaction.channelId, role));
-
+			
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {
-			// If there is a role to ping, ping it
-			if (role) {
-				return interaction.followUp(role).then(() => {
-					
-					// Sending the message to the user.
-					client.channels.cache.get(interaction.channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] });
-				});
-			} else {
-
-				// It's sending the message to the user.
-				return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] });
-			}
-
+			/* It's sending the message to the user. */
+			return await interaction.followUp({ embeds: [kanjiEmbed], files: ['./out.png'] }).then(() => {
+				// If there is a role to ping, ping it
+				if(role) {
+					client.channels.cache.get(interaction.channelId).send(role);
+				} 
+			});
 		}
 	}
 
@@ -89,18 +83,15 @@ module.exports = class RandomKanji extends Command {
 			// Generating random kanji message
 			let kanjiEmbed = await generateEmbedKanji(client, role)
 
-			// If there is a role to ping, ping it
-			if (role) {
-				client.channels.cache.get(channelId).send(role).then(() => {
-
-					// Sending the message to the user.
-					client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] });
+			// Sending the message to the user.
+			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] })
+				.then(() => {
+					// If there is a role to ping, ping it
+					if(role) {
+						client.channels.cache.get(channelId).send(role);
+					} 
 				});
-			} else {
 
-				// Sending the message to the user.
-				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: ['./out.png'] });
-			}
 		});
 
 		// Launch scheduled message
