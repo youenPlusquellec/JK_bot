@@ -21,9 +21,9 @@ module.exports = {
 
         // It's getting the information about the kanji from a JSON file.
 		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
-		logger.debug("Random Kanji found : " + randKanji.kanji);
+		logger.info(`Generated Kanji : ${randKanji.kanji}`);
 
-		const textToImage = new UltimateTextToImage(randKanji.kanji, {
+		new UltimateTextToImage(randKanji.kanji, {
 			fontFamily: "Arial, Sans",
 			fontColor: "#000000",
 			fontSize: 390,
