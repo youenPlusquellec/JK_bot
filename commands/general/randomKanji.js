@@ -9,6 +9,7 @@ const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
 const ActionRepository = require('../../model/actionRepository');
 const actionRepository = new ActionRepository();
 const logger = require('../../common/utils/logger');
+const path = require('path')
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
@@ -64,7 +65,7 @@ module.exports = class RandomKanji extends Command {
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {
 			/* It's sending the message to the user. */
-			return await interaction.followUp({ embeds: [kanjiEmbed], files: [`out/${kanjiId}.png`] }).then(() => {
+			return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
 				// If there is a role to ping, ping it
 				if(role) {
 					client.channels.cache.get(interaction.channelId).send(role);
@@ -86,7 +87,7 @@ module.exports = class RandomKanji extends Command {
 			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
 
 			// Sending the message to the user.
-			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [`out/${kanjiId}.png`] })
+			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })
 				.then(() => {
 					// If there is a role to ping, ping it
 					if(role) {

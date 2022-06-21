@@ -8,6 +8,7 @@ const kyouiku = require('../kanji/every_kyouiku.json');
 const Kanji = require('../model/kanji');
 const logger = require('./utils/logger');
 const Action = require('../model/action');
+const path = require('path')
 
 module.exports = class Db {
     constructor() {
@@ -26,11 +27,11 @@ module.exports = class Db {
             })
 
             logger.warn('Resetting db');
-            fs.unlinkSync('db.json');
+            fs.unlinkSync(path.resolve(__dirname, '../db.json'));
         }
 
         // Chargement du fichier
-        this.adapter = new FileSync('db.json');
+        this.adapter = new FileSync(path.resolve(__dirname, '../db.json'));
         this.db = low(this.adapter);
 
         // Initialisation de la base de donnée si fichier vide
