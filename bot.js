@@ -1,5 +1,6 @@
 const Client = require('./structures/Client');
-require('dotenv').config();
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 const client = new Client();
 client.login();
