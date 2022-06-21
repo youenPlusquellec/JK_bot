@@ -5,6 +5,7 @@ const { UltimateTextToImage } = require('ultimate-text-to-image');
 const logger = require('../common/utils/logger');
 const config = require('../config');
 const path = require("path");
+const fs = require('fs');
 
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { stripIndents } = require('common-tags');
@@ -14,12 +15,12 @@ const actionRepository = new ActionRepository();
 
 module.exports = {
 
-	generateEmbedKanji: async function(client, role) {
+	generateEmbedKanji: async function (client, role) {
 
 		// It's getting a random kanji from a JSON file and getting the information about it.
 		let randKanji = kanjiRepository.getAvailableRandomKanji()
 
-        // It's getting the information about the kanji from a JSON file.
+		// It's getting the information about the kanji from a JSON file.
 		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
 		logger.info(`Generated Kanji : ${randKanji.kanji}`);
 
@@ -35,8 +36,8 @@ module.exports = {
 			valign: "middle",
 			backgroundColor: "F4E0C7",
 		})
-		.render()
-		.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
+			.render()
+			.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
@@ -58,7 +59,11 @@ module.exports = {
 			.setTimestamp();
 
 		// Set the kanji as used in the JSON file.
-		kanjiRepository.useKanjiById(randKanji.id)
+		//kanjiRepository.useKanjiById(randKanji.id)
+		fs.appendFile(path.join(__dirname, `../out/kanji_to_update.txt`), `${randKanji.id},`, function (err) {
+			if (err) throw err;
+			logger.debug(`kanji_to_update.txt updated with ${randKanji.kanji}`);
+		});
 
 		// It's returning the embed to the function that called it.
 		return [kanjiEmbed, randKanji.id];

@@ -16,7 +16,6 @@ function warn (msg) {
   logger.warn(msg);
 }
 
-
 function error (msg) {
   logger.error(msg);
 }
