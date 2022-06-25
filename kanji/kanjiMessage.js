@@ -26,9 +26,16 @@ module.exports = {
 
 		// register font
 		registerFont(path.join(__dirname, `fonts/Aozora Mincho Medium.ttf`));
+		registerFont(path.join(__dirname, `fonts/irohamaru-mikami-Light.ttf`));
+		registerFont(path.join(__dirname, `fonts/irohamaru-mikami-Medium.ttf`));
+		registerFont(path.join(__dirname, `fonts/SourceHanSerif-Medium.otf`));
 
 		new UltimateTextToImage(randKanji.kanji, {
-			fontFamily: "あおぞら明朝 Medium, Sans",
+			//fontFamily: "あおぞら明朝 Medium, Sans",
+			//fontFamily: "いろはマルみかみ Light, Sans",
+			fontFamily: "いろはマルみかみ Medium, Sans",
+			//fontFamily: "いろはマルみかみ Regular, Sans",
+			//fontFamily: "源ノ明朝 Medium, Sans",
 			fontColor: "#000000",
 			fontSize: 390,
 			minFontSize: 10,
