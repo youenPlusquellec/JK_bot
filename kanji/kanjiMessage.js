@@ -1,7 +1,7 @@
 const KanjiRepository = require('../model/kanjiRepository');
 const kanjiRepository = new KanjiRepository();
 
-const { UltimateTextToImage } = require('ultimate-text-to-image');
+const { UltimateTextToImage, registerFont } = require('ultimate-text-to-image');
 const logger = require('../common/utils/logger');
 const config = require('../config');
 const path = require("path");
@@ -24,8 +24,11 @@ module.exports = {
 		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
 		logger.info(`Generated Kanji : ${randKanji.kanji}`);
 
+		// register font
+		registerFont(path.join(__dirname, `fonts/Aozora Mincho Medium.ttf`));
+
 		new UltimateTextToImage(randKanji.kanji, {
-			fontFamily: "Arial, Sans",
+			fontFamily: "あおぞら明朝 Medium, Sans",
 			fontColor: "#000000",
 			fontSize: 390,
 			minFontSize: 10,
