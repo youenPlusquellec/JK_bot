@@ -1,0 +1,16 @@
+[Unit]
+Description=Japan Kankei discord bot
+Documentation=https://example.com
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/jk_bot
+ExecStart=/home/pi/.nvm/versions/node/v18.3.0/bin/node /home/pi/jk_bot/bot.js
+StandardOutput=file:/home/pi/jk_bot/bot.log
+StandardError=file:/home/pi/jk_bot/bot.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
