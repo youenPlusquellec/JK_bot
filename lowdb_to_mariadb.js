@@ -6,6 +6,8 @@ const usersModel = require("./user.model");
 
 const KanjiRepository = require('./model/kanjiRepository');
 const kanjiRepository = new KanjiRepository();
+const ActionRepository = require('./model/actionRepository');
+const actionRepository = new ActionRepository();
 
 
 const kanjis = kanjiRepository.getKanjis()
@@ -19,3 +21,12 @@ kanjis.forEach(kanji => {
     })
 })
 
+const actions = actionRepository.getActions()
+actions.forEach(action => {
+    console.log(action)
+
+    const res = usersModel.addAction(action)
+    res.then(result => {
+        console.log(result)
+    })
+})

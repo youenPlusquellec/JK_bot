@@ -56,25 +56,31 @@ module.exports = {
             }
 
             conn.end();
-            return true;
+            return insertedKanji;
         } catch (err) {
             throw err;
         }
     },
-    async addKanji(kanji) {
+    async addAction(action) {
         try {
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO Kanji (kanji) VALUES (?)";
-            const insertedKanji = await conn.query(sql, kanji.kanji);
-
-            if (!kanji.available) {
-                sql = "INSERT INTO Used_kanji (kanjiId, serverId, used) VALUES (?, 1, true)";
-                await conn.query(sql, insertedKanji.insertId);
-            }
+            sql = "INSERT INTO Action (serverId, userId, type, cron, channelId, mentionRole) VALUES (1, 1, ?, ?, ?, ?)";
+            const insertedAction = await conn.query(sql, [action.type, action.cron, action.channel_id, action.mention_role ? action.mention_role : null ]);
 
             conn.end();
-            return true;
+            return insertedAction;
+        } catch (err) {
+            throw err;
+        }
+    },
+    async getHistory() {
+        try {
+            conn = await pool.getConnection();
+            sql = "SELECT * FROM History";
+            const rows = await conn.query(sql);
+            conn.end();
+            return rows;
         } catch (err) {
             throw err;
         }
