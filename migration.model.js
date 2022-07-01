@@ -1,48 +1,6 @@
-pool = require("./mariadb");
+pool = require("./common/utils/db");
 
 module.exports = {
-    async read(name) {
-        try {
-            conn = await pool.getConnection();
-            sql = "SELECT id, name FROM USERS WHERE name = ?";
-            const rows = await conn.query(sql, name);
-            conn.end();
-            if (rows.length == 1) {
-                return rows[0];
-            } else {
-                return false;
-            }
-        } catch (err) {
-            throw err;
-        }
-    },
-    async readId(id) {
-        try {
-            conn = await pool.getConnection();
-            sql = "SELECT id, name FROM USERS WHERE id = ?";
-            const rows = await conn.query(sql, id);
-            conn.end();
-            if (rows.length == 1) {
-                return rows[0];
-            } else {
-                return false;
-            }
-        } catch (err) {
-            throw err;
-        }
-    },
-    async list() {
-        try {
-            conn = await pool.getConnection();
-            sql = "SELECT id, name FROM USERS";
-            const rows = await conn.query(sql);
-            conn.end();
-            return rows;
-        } catch (err) {
-            throw err;
-        }
-    },
-
     async addKanji(kanji) {
         try {
             conn = await pool.getConnection();

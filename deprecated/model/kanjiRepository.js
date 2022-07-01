@@ -4,7 +4,6 @@ const Kanji = require('./kanji');
 const axios = require('axios');
 const Db = require('../common/db');
 const db = new Db();
-const logger = require('../common/utils/logger');
 
 module.exports = class KanjiRepository {
     createKanji(id, kanji, available) {

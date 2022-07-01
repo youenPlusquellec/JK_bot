@@ -2,11 +2,11 @@
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
-const usersModel = require("./user.model");
+const usersModel = require("./migration.model");
 
-const KanjiRepository = require('./model/kanjiRepository');
+const KanjiRepository = require('./deprecated/model/kanjiRepository');
 const kanjiRepository = new KanjiRepository();
-const ActionRepository = require('./model/actionRepository');
+const ActionRepository = require('./deprecated/model/actionRepository');
 const actionRepository = new ActionRepository();
 
 
