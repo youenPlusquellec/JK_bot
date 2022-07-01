@@ -51,11 +51,6 @@ module.exports = class RandomKanji extends Command {
 		/* It's a way to send a message to the user without sending it right away. */
 		await interaction.deferReply();
 
-		/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-		generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-		the information about the kanji */
-		const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
-
 		// Launching task in background if defined
 		if (cronTimer) {
 			const action = actionRepository.createAction(this.name, cronTimer, interaction.guildId, interaction.channelId, role)
@@ -64,6 +59,12 @@ module.exports = class RandomKanji extends Command {
 			
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {
+
+			/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+			generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+			the information about the kanji */
+			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
+			
 			/* It's sending the message to the user. */
 			return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
 				// If there is a role to ping, ping it
