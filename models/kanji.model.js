@@ -1,7 +1,6 @@
 const axios = require('axios');
 const pool = require("../common/utils/db");
 
-
 module.exports = {
     async getKanjis() {
         try {
@@ -29,15 +28,24 @@ module.exports = {
             throw err;
         }
     },
-    async addKanji(kanji) {
+    async addKanji(kanji, available) {
         try {
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO Kanji (kanji) VALUES (?)";
-            const insertedKanji = await conn.query(sql, kanji);
+            const kanjiInfo = await this.getKanjiInfo(kanji)
 
-            if (!kanji.available) {
-                sql = "INSERT INTO Used_kanji (kanjiId, serverId, used) VALUES (?, 1, true)";
+            sql = "INSERT INTO Kanji (kanji, strokeCount, meanings, kunReadings, onReadings, jlpt) VALUES (?, ?, ?, ?, ?, ?);";
+            const insertedKanji = await conn.query(sql, [
+                    kanji, 
+                    kanjiInfo.stroke_count, 
+                    JSON.stringify(kanjiInfo.meanings), 
+                    JSON.stringify(kanjiInfo.kun_readings), 
+                    JSON.stringify(kanjiInfo.on_readings), 
+                    kanjiInfo.jlpt
+                ]);
+
+            if (!available) {
+                sql = "INSERT INTO Used_kanji (kanjiId, serverId, used) VALUES (?, 1, true);";
                 await conn.query(sql, insertedKanji.insertId);
             }
 
@@ -121,5 +129,10 @@ module.exports = {
         } catch (err) {
             throw err;
         }
+    },
+    async getKanjiInfo(kanji) {
+        const path = encodeURI(`https://kanjiapi.dev/v1/kanji/${kanji}`);
+        const res = await axios.get(path);
+        return res.data;
     },
 };
