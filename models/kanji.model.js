@@ -36,7 +36,7 @@ module.exports = {
             conn = await pool.getConnection();
 
             sql = "INSERT INTO Kanji (kanji, strokeCount, meanings, kunReadings, onReadings, jlpt) VALUES (?, ?, ?, ?, ?, ?);";
-            const insertedKanji = await conn.query(sql, [
+            const rows = await conn.query(sql, [
                     kanji, 
                     kanjiInfo.stroke_count, 
                     JSON.stringify(kanjiInfo.meanings), 
@@ -47,11 +47,11 @@ module.exports = {
 
             if (!available) {
                 sql = "INSERT INTO Used_kanji (kanjiId, serverId, used) VALUES (?, 1, true);";
-                await conn.query(sql, insertedKanji.insertId);
+                await conn.query(sql, rows.insertId);
             }
 
             conn.end();
-            return insertedKanji;
+            return rows;
         } catch (err) {
             throw err;
         }
@@ -105,10 +105,10 @@ module.exports = {
                         (select id from server where serverId=?)
                     );`;
 
-            const insertedKanji = await conn.query(sql, [kanji, serverId]);
+            const rows = await conn.query(sql, [kanji, serverId]);
 
             conn.end();
-            return insertedKanji;
+            return rows;
         } catch (err) {
             throw err;
         }
@@ -123,10 +123,10 @@ module.exports = {
                         (select id from server where serverId=?)
                     );`;
 
-            const insertedKanji = await conn.query(sql, [id, serverId]);
+            const rows = await conn.query(sql, [id, serverId]);
 
             conn.end();
-            return insertedKanji;
+            return rows;
         } catch (err) {
             throw err;
         }
