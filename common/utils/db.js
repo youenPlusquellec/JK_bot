@@ -5,6 +5,7 @@ const pool = mariadb.createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
+    socketPath: process.env.DB_SOCKET_PATH ? process.env.DB_SOCKET_PATH : undefined,
     acquireTimeout: 1000000
 });
 
