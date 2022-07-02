@@ -76,11 +76,11 @@ module.exports = {
             sql = ` SELECT *
                     FROM Kanji 
                     WHERE kanji NOT IN
-                        (select kanji
-                        from used_kanji
-                        inner join Server on Used_kanji.serverId=Server.id
-                        inner join Kanji on Used_kanji.kanjiId=Kanji.id
-                        where used=1 and Server.serverId=?);`;
+                        (SELECT kanji
+                        FROM used_kanji
+                        INNER JOIN Server ON Used_kanji.serverId=Server.id
+                        INNER JOIN Kanji ON Used_kanji.kanjiId=Kanji.id
+                        WHERE used=1 AND Server.serverId=?);`;
             const rows = await conn.query(sql, serverId);
 
             conn.end();

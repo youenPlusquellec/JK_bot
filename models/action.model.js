@@ -2,7 +2,7 @@ const axios = require('axios');
 const pool = require("../common/utils/db");
 
 module.exports = {
-    async addAction(serverId, userId, type, cron, channelId, mentionRole) {
+    async createAction(serverId, userId, type, cron, channelId, mentionRole) {
         try {
             conn = await pool.getConnection();
 
@@ -19,7 +19,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Actions";
+            sql = "SELECT * FROM Action";
             const rows = await conn.query(sql);
 
             conn.end();
@@ -64,7 +64,7 @@ module.exports = {
             sql = ` SELECT Action.*
                     FROM Action
                     INNER JOIN Server ON Action.serverId=Server.id
-                    WHERE Server.serverId=?; AND channelId=?`;
+                    WHERE Server.serverId=? AND channelId=?`;
             const rows = await conn.query(sql, [serverId, channelId]);
 
             conn.end();
@@ -76,14 +76,15 @@ module.exports = {
     async deleteActionByIdAndServerId(id, serverId) {
         try {
             const actions = await this.getActionsByServerId(serverId);
-            console.log(actions[id].id)
+            if (id > actions.length - 1) throw "Given id is higher than actions length"
+            
             conn = await pool.getConnection();
 
             sql = `DELETE FROM Action WHERE id=?`;
-            const rows = await conn.query(sql, actions[id].id);
+            await conn.query(sql, actions[id].id);
 
             conn.end();
-            return rows;
+            return actions[id];
         } catch (err) {
             throw err;
         }
@@ -91,14 +92,15 @@ module.exports = {
     async deleteActionByIdAndServerIdAndChannelId(id, serverId, channelId) {
         try {
             const actions = await this.getActionsByServerIdAndChannelId(serverId, channelId);
-            console.log(actions[id].id)
+            if (id > actions.length - 1) throw "Given id is higher than actions length"
+
             conn = await pool.getConnection();
 
             sql = `DELETE FROM Action WHERE id=?`;
-            const rows = await conn.query(sql, actions[id].id);
+            await conn.query(sql, actions[id].id);
 
             conn.end();
-            return rows;
+            return actions[id];
         } catch (err) {
             throw err;
         }

@@ -1,6 +1,3 @@
-const KanjiRepository = require('../model/kanjiRepository');
-const kanjiRepository = new KanjiRepository();
-
 const { UltimateTextToImage, registerFont } = require('ultimate-text-to-image');
 const logger = require('../common/utils/logger');
 const config = require('../config');
@@ -9,20 +6,14 @@ const fs = require('fs');
 
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { stripIndents } = require('common-tags');
-
-const ActionRepository = require('../model/actionRepository');
-const actionRepository = new ActionRepository();
+const kanjiModel = require("../models/kanji.model");
 
 module.exports = {
 
-	generateEmbedKanji: async function (client, role) {
+	generateEmbedKanji: async function (client, serverId) {
 
 		// It's getting a random kanji from a JSON file and getting the information about it.
-		let randKanji = kanjiRepository.getAvailableRandomKanji()
-
-		// It's getting the information about the kanji from a JSON file.
-		let kInfo = await kanjiRepository.getKanjiInfo(randKanji.kanji);
-		logger.info(`Generated Kanji : ${randKanji.kanji}`);
+		let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
 
 		// register font
 		registerFont(path.join(__dirname, `fonts/Aozora Mincho Medium.ttf`));
@@ -42,22 +33,22 @@ module.exports = {
 			valign: "middle",
 			backgroundColor: "F4E0C7",
 		})
-			.render()
-			.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
+		.render()
+		.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
-			.setTitle(`**\`Le kanji du jour : ${kInfo.kanji}\`**`)
-			.setURL(`https://jisho.org/search/${kInfo.kanji}%20%23kanji`)
+			.setTitle(`**\`Le kanji du jour : ${randKanji.kanji}\`**`)
+			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
 			.setColor(client.config.embedColor)
 			.setDescription(stripIndents`
-					**✍️ Lectures KUN:** ${kInfo.kun_readings}
+					**✍️ Lectures KUN:** ${randKanji.kunReadings}
 		
-					**✍️ Lectures ON:** ${kInfo.on_readings}
+					**✍️ Lectures ON:** ${randKanji.onReadings}
 		
-					**📚 Sens (anglais):** ${kInfo.meanings}
+					**📚 Sens (anglais):** ${randKanji.meanings}
 		
-					**🎓 JLPT:** ${kInfo.jlpt ? kInfo.jlpt : "Pas dans le JLPT"}
+					**🎓 JLPT:** ${randKanji.jlpt ? randKanji.jlpt : "Pas dans le JLPT"}
 		
 					À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
 				`)
@@ -65,7 +56,6 @@ module.exports = {
 			.setTimestamp();
 
 		// Set the kanji as used in the JSON file.
-		//kanjiRepository.useKanjiById(randKanji.id)
 		fs.appendFile(path.join(__dirname, `../out/kanji_to_update.txt`), `${randKanji.id},`, function (err) {
 			if (err) throw err;
 			logger.debug(`kanji_to_update.txt updated with ${randKanji.kanji}`);

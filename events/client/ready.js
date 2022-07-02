@@ -1,7 +1,7 @@
 const Event = require('../../structures/EventClass');
 const logger = require('../../common/utils/logger');
-const ActionRepository = require('../../model/actionRepository');
-const actionRepository = new ActionRepository();
+const actionModel = require("../../models/action.model");
+const serverModel = require("../../models/server.model");
 
 module.exports = class ReadyEvent extends Event {
 	constructor(client) {
@@ -21,13 +21,15 @@ module.exports = class ReadyEvent extends Event {
 		// command that is associated with the action.
 		logger.info(`Starting cron tasks...`)
 		global.cronTasks = new Map();
-		const actionList = actionRepository.getActions()
-		for (let id in actionRepository.getActions()) {
-			const action = actionList[id]
-			
+
+		// Start every cron task stored in db
+		const actionList = await actionModel.getActions()
+		actionList.forEach(async (action) => {			
 			const command = client.commands.get(action.type);
 			
-			global.cronTasks.set(action.id, command.cronFunction(client, action.cron, action.channel_id, action.mention_role))
-		}
+			const server = await serverModel.getServerById(action.serverId)
+			
+			global.cronTasks.set(action.id, command.cronFunction(client, server[0].serverId, action.cron, action.channelId, action.mentionRole))
+		})
 	}
 };

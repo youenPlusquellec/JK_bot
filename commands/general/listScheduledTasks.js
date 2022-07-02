@@ -1,13 +1,11 @@
 const Command = require('../../structures/CommandClass');
-const cron = require('cron');
 
 const { MessageEmbed, MessageAttachment, ApplicationCommandOptionType } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
-const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
 
-const ActionRepository = require('../../model/actionRepository');
-const actionRepository = new ActionRepository();
+const cron = require('cron');
+const actionModel = require("../../models/action.model");
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
@@ -44,9 +42,9 @@ module.exports = class ListScheduledTasks extends Command {
 		// It's getting the actions from the database.
 		let actions = []
 		if (channel && channel.id) {
-			actions = actionRepository.getActionsByServerIdAndChannelId(interaction.guildId, channel.id)
+			actions = await actionModel.getActionsByServerIdAndChannelId(interaction.guildId, channel.id)
 		} else {
-			actions = actionRepository.getActionsByServerId(interaction.guildId)
+			actions = await actionModel.getActionsByServerId(interaction.guildId)
 		}
 
 		if (actions.length) {
@@ -56,10 +54,10 @@ module.exports = class ListScheduledTasks extends Command {
 				json.push({
 					name: `N°${index}`,
 					value: stripIndents`
-			${!channel ? `**#️⃣ Salon:** <#${action.channel_id}>` : ""}
+			${!channel ? `**#️⃣ Salon:** <#${action.channelId}>` : ""}
 			**⚙️ Commande:** ${action.type}
 			**📅 Planification:** ${action.cron}
-			${action.mention_role ? `**👤 Mentionne:** ${action.mention_role}` : ""}
+			${action.mentionRole ? `**👤 Mentionne:** ${action.mentionRole}` : ""}
 		`,
 					inline: false
 				});

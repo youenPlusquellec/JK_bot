@@ -1,12 +1,10 @@
 const Command = require('../../structures/CommandClass');
-const cron = require('cron');
 
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
 
-const ActionRepository = require('../../model/actionRepository');
-const actionRepository = new ActionRepository();
+const actionModel = require("../../models/action.model");
 const logger = require('../../common/utils/logger');
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
@@ -48,33 +46,46 @@ module.exports = class ListScheduledTasks extends Command {
 		// It's a way to send a message to the user without sending it right away.
 		await interaction.deferReply();
 
-		// It's getting the actions from the database.
-		let action = {}
-		if (channel && channel.id) {
-			action = actionRepository.deleteActionsByIdAndServerIdAndChannelId(id, interaction.guildId, channel.id)
-		} else {
-			action = actionRepository.deleteActionByIdAndServerId(id, interaction.guildId)
-		}
+		try {
+			// It's getting the actions from the database.
+			let action = {}
+			if (channel && channel.id) {
+				action = await actionModel.deleteActionByIdAndServerIdAndChannelId(id, interaction.guildId, channel.id)
+			} else {
+				action = await actionModel.deleteActionByIdAndServerId(id, interaction.guildId)
+			}
 
-		// Debugging
-		logger.info(`Removing scheduled task with id n°${id} ${ channel ? `for channel ${channel}` : "" }`)
+			global.cronTasks.get(action.id).stop();
+			global.cronTasks.delete(action.id);
 
-		// It's creating an embed with the information about the kanji.
-		const listEmbed = new MessageEmbed()
-			.setTitle(`**La tâche suivante vient d'être supprimée**`)
-			.setColor(client.config.embedColor)
-			.addFields({
-				name: `N°${id}`,
-				value: stripIndents`
-					${!channel ? `**#️⃣ Salon:** <#${action.channel_id}>` : ""}
+			// Debugging
+			logger.info(`Removing scheduled task with id n°${id} ${channel ? `for channel ${channel}` : ""}`)
+
+			// It's creating an embed with the information about the kanji.
+			const listEmbed = new MessageEmbed()
+				.setTitle(`**La tâche suivante vient d'être supprimée**`)
+				.setColor(client.config.embedColor)
+				.addFields({
+					name: `N°${id}`,
+					value: stripIndents`
+					${!channel ? `**#️⃣ Salon:** <#${action.channelId}>` : ""}
 					**⚙️ Commande:** ${action.type}
 					**📅 Planification:** ${action.cron}
-					${action.mention_role ? `**👤 Mentionne:** ${action.mention_role}` : ""}
+					${action.mentionRole ? `**👤 Mentionne:** ${action.mentionRole}` : ""}
 				`,
-				inline: false
-			})
-			.setTimestamp();
+					inline: false
+				})
+				.setTimestamp();
 
-		return await interaction.followUp({ embeds: [listEmbed] })
+			return await interaction.followUp({ embeds: [listEmbed] })
+		} catch (e) {
+			logger.error("Echec de la suppression d'une tâche : " + e)
+
+			// TODO  Mettre en forme l'erreur
+			// It's creating an embed with the information about the kanji.
+			const listEmbed = new MessageEmbed().setTitle(`**L'id renseignée est trop elevée**`)
+
+			return await interaction.followUp({ embeds: [listEmbed] })
+		}
 	}
 };
