@@ -5,7 +5,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM User_account";
+            sql = "SELECT * FROM user_account";
             const rows = await conn.query(sql);
 
             conn.end();
@@ -18,7 +18,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM User_account WHERE userId=?";
+            sql = "SELECT * FROM user_account WHERE userId=?";
             const rows = await conn.query(sql, id);
 
             conn.end();
@@ -32,7 +32,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO User_account (userId, name) VALUES (?, ?);";
+            sql = "INSERT INTO user_account (userId, name) VALUES (?, ?);";
             const rows = await conn.query(sql, [userId, name]);
 
             conn.end();

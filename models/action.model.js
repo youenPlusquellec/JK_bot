@@ -5,7 +5,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO Action (serverId, userId, type, cron, channelId, mentionRole) VALUES ((select id from server where serverId=?), (select id from User_account where userId=?), ?, ?, ?, ?)";
+            sql = "INSERT INTO action (serverId, userId, type, cron, channelId, mentionRole) VALUES ((select id from server where serverId=?), (select id from user_account where userId=?), ?, ?, ?, ?)";
             const insertedAction = await conn.query(sql, [serverId, userId, type, cron, channelId, mentionRole ? mentionRole : null ]);
 
             conn.end();
@@ -18,7 +18,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Action";
+            sql = "SELECT * FROM action";
             const rows = await conn.query(sql);
 
             conn.end();
@@ -31,7 +31,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Action WHERE id=?";
+            sql = "SELECT * FROM action WHERE id=?";
             const rows = await conn.query(sql, id);
 
             conn.end();
@@ -44,10 +44,10 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = ` SELECT Action.*
-                    FROM Action
-                    INNER JOIN Server ON Action.serverId=Server.id
-                    WHERE Server.serverId=?;`;
+            sql = ` SELECT action.*
+                    FROM action
+                    INNER JOIN server ON action.serverId=server.id
+                    WHERE server.serverId=?;`;
             const rows = await conn.query(sql, id);
 
             conn.end();
@@ -60,10 +60,10 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = ` SELECT Action.*
-                    FROM Action
-                    INNER JOIN Server ON Action.serverId=Server.id
-                    WHERE Server.serverId=? AND channelId=?`;
+            sql = ` SELECT action.*
+                    FROM action
+                    INNER JOIN server ON action.serverId=server.id
+                    WHERE server.serverId=? AND channelId=?`;
             const rows = await conn.query(sql, [serverId, channelId]);
 
             conn.end();
@@ -79,7 +79,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = `DELETE FROM Action WHERE id=?`;
+            sql = `DELETE FROM action WHERE id=?`;
             await conn.query(sql, actions[id].id);
 
             conn.end();
@@ -95,7 +95,7 @@ module.exports = {
 
             conn = await pool.getConnection();
 
-            sql = `DELETE FROM Action WHERE id=?`;
+            sql = `DELETE FROM action WHERE id=?`;
             await conn.query(sql, actions[id].id);
 
             conn.end();

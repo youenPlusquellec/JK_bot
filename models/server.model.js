@@ -6,7 +6,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Server";
+            sql = "SELECT * FROM server";
             serverList = await conn.query(sql);
 
             conn.end();
@@ -28,7 +28,7 @@ module.exports = {
                 return server;
             } else {
 
-                sql = "SELECT * FROM Server WHERE id=?";
+                sql = "SELECT * FROM server WHERE id=?";
                 const rows = await conn.query(sql, id);
                 serverList.push(rows[0])
 
@@ -52,7 +52,7 @@ module.exports = {
                 return server;
             } else {
 
-                sql = "SELECT * FROM Server WHERE serverId=?";
+                sql = "SELECT * FROM server WHERE serverId=?";
                 const rows = await conn.query(sql, id);
                 serverList.push(rows[0])
 
@@ -68,7 +68,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO Server (serverId, name) VALUES (?, ?);";
+            sql = "INSERT INTO server (serverId, name) VALUES (?, ?);";
             const rows = await conn.query(sql, [serverId, name]);
             serverList.push({id: rows.insertId, serverId: serverId, name: name})
 

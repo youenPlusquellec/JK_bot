@@ -6,7 +6,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Kanji";
+            sql = "SELECT * FROM kanji";
             const rows = await conn.query(sql);
 
             conn.end();
@@ -19,7 +19,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "SELECT * FROM Kanji WHERE id=?";
+            sql = "SELECT * FROM kanji WHERE id=?";
             const rows = await conn.query(sql, id);
 
             conn.end();
@@ -35,7 +35,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO Kanji (kanji, strokeCount, meanings, kunReadings, onReadings, jlpt) VALUES (?, ?, ?, ?, ?, ?);";
+            sql = "INSERT INTO kanji (kanji, strokeCount, meanings, kunReadings, onReadings, jlpt) VALUES (?, ?, ?, ?, ?, ?);";
             const rows = await conn.query(sql, [
                     kanji, 
                     kanjiInfo.stroke_count, 
@@ -60,7 +60,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = "Update Kanji SET strokeCount=?, meanings=?, kunReadings=?, onReadings=?, jlpt=? WHERE kanji=?";
+            sql = "Update kanji SET strokeCount=?, meanings=?, kunReadings=?, onReadings=?, jlpt=? WHERE kanji=?";
             const updatedKanji = await conn.query(sql, [strokeCount, meanings, kunReadings, onReadings, jlpt, kanji]);
 
             conn.end();
@@ -74,13 +74,13 @@ module.exports = {
             conn = await pool.getConnection();
 
             sql = ` SELECT *
-                    FROM Kanji 
+                    FROM kanji 
                     WHERE kanji NOT IN
                         (SELECT kanji
                         FROM used_kanji
-                        INNER JOIN Server ON Used_kanji.serverId=Server.id
-                        INNER JOIN Kanji ON Used_kanji.kanjiId=Kanji.id
-                        WHERE used=1 AND Server.serverId=?);`;
+                        INNER JOIN server ON Used_kanji.serverId=server.id
+                        INNER JOIN kanji ON Used_kanji.kanjiId=kanji.id
+                        WHERE used=1 AND server.serverId=?);`;
             const rows = await conn.query(sql, serverId);
 
             conn.end();
