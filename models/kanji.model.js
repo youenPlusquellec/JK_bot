@@ -133,7 +133,7 @@ module.exports = {
     },
     async getKanjiInfo(kanji) {
         const path = encodeURI(`https://kanjiapi.dev/v1/kanji/${kanji}`);
-        const res = await axios.get(path);
+        const res = await axios.get(path, {timeout: 100000});
         return res.data;
     },
 };
