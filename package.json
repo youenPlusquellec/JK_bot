@@ -36,7 +36,7 @@
         "dotenv": "^16.0.1",
         "fs": "^0.0.1-security",
         "log4js": "^6.5.2",
-        "lowdb": "^1.0.0",
+        "lowdb": "^3.0.0",
         "mariadb": "^3.0.0",
         "ultimate-text-to-image": "^1.0.0",
         "uuid": "^8.3.2"
