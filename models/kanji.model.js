@@ -46,7 +46,7 @@ module.exports = {
                 ]);
 
             if (!available) {
-                sql = "INSERT INTO Used_kanji (kanjiId, serverId, used) VALUES (?, 1, true);";
+                sql = "INSERT INTO used_kanji (kanjiId, serverId, used) VALUES (?, 1, true);";
                 await conn.query(sql, rows.insertId);
             }
 
@@ -78,8 +78,8 @@ module.exports = {
                     WHERE kanji NOT IN
                         (SELECT kanji
                         FROM used_kanji
-                        INNER JOIN server ON Used_kanji.serverId=server.id
-                        INNER JOIN kanji ON Used_kanji.kanjiId=kanji.id
+                        INNER JOIN server ON used_kanji.serverId=server.id
+                        INNER JOIN kanji ON used_kanji.kanjiId=kanji.id
                         WHERE used=1 AND server.serverId=?);`;
             const rows = await conn.query(sql, serverId);
 
@@ -99,7 +99,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = ` INSERT INTO Used_kanji (kanjiId, serverId) 
+            sql = ` INSERT INTO used_kanji (kanjiId, serverId) 
                     VALUES ( 
                         (select id from kanji where kanji.kanji=?), 
                         (select id from server where serverId=?)
@@ -117,7 +117,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = ` INSERT INTO Used_kanji (kanjiId, serverId) 
+            sql = ` INSERT INTO used_kanji (kanjiId, serverId) 
                     VALUES ( 
                         ?, 
                         (select id from server where serverId=?)
