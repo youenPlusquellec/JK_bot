@@ -79,13 +79,9 @@ module.exports = class ListScheduledTasks extends Command {
 
 			return await interaction.followUp({ embeds: [listEmbed] })
 		} catch (e) {
-			logger.error("Echec de la suppression d'une tâche : " + e)
+			logger.error("Echec de la suppression d'une tâche : " + e);
 
-			// TODO  Mettre en forme l'erreur
-			// It's creating an embed with the information about the kanji.
-			const listEmbed = new MessageEmbed().setTitle(`**L'id renseignée est trop elevée**`)
-
-			return await interaction.followUp({ embeds: [listEmbed] })
+			return await interaction.followUp(`⚠️ L'id renseignée est trop elevée`)
 		}
 	}
 };

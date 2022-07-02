@@ -52,9 +52,9 @@ module.exports = class RandomKanji extends Command {
 
 		// Launching task in background if defined
 		if (cronTimer) {
-			const action = actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role)
-			
-			global.cronTasks.set(action.id, this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role)
+
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
 
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {

@@ -19,7 +19,7 @@ async function manageData() {
     
     const actions = actionRepository.getActions()
     for (let i=0; i<actions.length; i++) {
-        const res = actionModel.createAction('792912664262606848', '191879625972908032', actions[i].type, actions[i].cron, actions[i].channel_id, actions[i].mention_role)
+        const res = await actionModel.createAction('792912664262606848', '191879625972908032', actions[i].type, actions[i].cron, actions[i].channel_id, actions[i].mention_role)
         console.log(res)
     }
 }

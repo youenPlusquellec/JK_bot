@@ -47,7 +47,7 @@ module.exports = {
 
             if (!available) {
                 sql = "INSERT INTO used_kanji (kanjiId, serverId, used) VALUES (?, 1, true);";
-                await conn.query(sql, rows.insertId);
+                await conn.query(sql, Number(rows.insertId));
             }
 
             conn.end();

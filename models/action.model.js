@@ -6,10 +6,10 @@ module.exports = {
             conn = await pool.getConnection();
 
             sql = "INSERT INTO action (serverId, userId, type, cron, channelId, mentionRole) VALUES ((select id from server where serverId=?), (select id from user_account where userId=?), ?, ?, ?, ?)";
-            const insertedAction = await conn.query(sql, [serverId, userId, type, cron, channelId, mentionRole ? mentionRole : null ]);
+            const row = await conn.query(sql, [serverId, userId, type, cron, channelId, mentionRole ? mentionRole : null ]);
 
             conn.end();
-            return insertedAction;
+            return row;
         } catch (err) {
             throw err;
         }

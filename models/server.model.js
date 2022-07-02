@@ -70,7 +70,7 @@ module.exports = {
 
             sql = "INSERT INTO server (serverId, name) VALUES (?, ?);";
             const rows = await conn.query(sql, [serverId, name]);
-            serverList.push({id: rows.insertId, serverId: serverId, name: name})
+            serverList.push({id: Number(rows.insertId), serverId: serverId, name: name})
 
             conn.end();
             return rows;
