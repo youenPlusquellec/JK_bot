@@ -30,9 +30,10 @@ module.exports = {
     },
     async addKanji(kanji, available) {
         try {
-            conn = await pool.getConnection();
 
             const kanjiInfo = await this.getKanjiInfo(kanji)
+            
+            conn = await pool.getConnection();
 
             sql = "INSERT INTO Kanji (kanji, strokeCount, meanings, kunReadings, onReadings, jlpt) VALUES (?, ?, ?, ?, ?, ?);";
             const insertedKanji = await conn.query(sql, [
