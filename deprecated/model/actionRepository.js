@@ -4,7 +4,6 @@ const { v4: uuidv4 } = require('uuid');
 const Action = require('./action');
 const Db = require('../common/db');
 const db = new Db();
-const logger = require('../common/utils/logger');
 
 module.exports = class ActionRepository {
     createAction(type, cron, server_id, channel_id, mention_role) {

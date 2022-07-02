@@ -14,7 +14,7 @@ module.exports = class Help extends Command {
 					str
 						.setName('command')
 						.setDescription('The command you want to get help for.')
-						.setRequired(false)
+						.setRequired(true)
 						.addChoices(
 							{
 								name: 'Hello',

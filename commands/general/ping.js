@@ -3,10 +3,6 @@ const Command = require('../../structures/CommandClass');
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
-const logger = require('../../common/utils/logger');
-
-const ActionRepository = require('../../model/actionRepository');
-const actionRepository = new ActionRepository();
 
 module.exports = class Ping extends Command {
 	constructor(client) {

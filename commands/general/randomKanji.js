@@ -3,13 +3,12 @@ const cron = require('cron');
 
 const { MessageEmbed, MessageAttachment, ApplicationCommandOptionType } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { stripIndents } = require('common-tags');
 const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
 
-const ActionRepository = require('../../model/actionRepository');
-const actionRepository = new ActionRepository();
+const actionModel = require("../../models/action.model");
+const kanjiModel = require('../../models/kanji.model');
 const logger = require('../../common/utils/logger');
-const path = require('path')
+const path = require('path');
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
@@ -51,19 +50,20 @@ module.exports = class RandomKanji extends Command {
 		/* It's a way to send a message to the user without sending it right away. */
 		await interaction.deferReply();
 
-		/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-		generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-		the information about the kanji */
-		const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
-
 		// Launching task in background if defined
 		if (cronTimer) {
-			const action = actionRepository.createAction(this.name, cronTimer, interaction.guildId, interaction.channelId, role)
-			
-			global.cronTasks.set(action.id, this.cronFunction(client, cronTimer, interaction.channelId, role));
-			
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role)
+
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
+
 			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 		} else {
+
+			/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+			generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+			the information about the kanji */
+			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, interaction.guildId)
+			
 			/* It's sending the message to the user. */
 			return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
 				// If there is a role to ping, ping it
@@ -74,7 +74,7 @@ module.exports = class RandomKanji extends Command {
 		}
 	}
 
-	cronFunction(client, cronTimer, channelId, role) {
+	cronFunction(client, serverId, cronTimer, channelId, role) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
 
@@ -84,7 +84,8 @@ module.exports = class RandomKanji extends Command {
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
 
 			// Generating random kanji message
-			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, role)
+			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, serverId)
+			kanjiModel.useKanjiById(kanjiId, serverId)
 
 			// Sending the message to the user.
 			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })

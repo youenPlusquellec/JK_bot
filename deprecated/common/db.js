@@ -2,11 +2,10 @@
 
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-const config = require('../config');
 const fs = require('fs');
-const kyouiku = require('../kanji/every_kyouiku.json');
+const kyouiku = require('../../kanji/every_kyouiku.json');
 const Kanji = require('../model/kanji');
-const logger = require('./utils/logger');
+const logger = require('../../common/utils/logger');
 const Action = require('../model/action');
 const path = require('path')
 
@@ -19,7 +18,7 @@ module.exports = class Db {
         const kyouiki_list = []
 
         // Reset database if set in config file
-        if (config.reset_db) {
+        if (false) {
 
             /* Iterating through the kanjis array and pushing the values into the kyouiku_list array. */
             kyouiku.kanjis.forEach(element => {
@@ -31,7 +30,7 @@ module.exports = class Db {
         }
 
         // Chargement du fichier
-        this.adapter = new FileSync(path.resolve(__dirname, '../db.json'));
+        this.adapter = new FileSync(path.resolve(__dirname, '../../db.json'));
         this.db = low(this.adapter);
 
         // Initialisation de la base de donnée si fichier vide
