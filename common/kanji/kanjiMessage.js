@@ -28,7 +28,7 @@ module.exports = {
 			backgroundColor: "F4E0C7",
 		})
 		.render()
-		.toFile(path.join(__dirname, `../../out/${randKanji.id}.png`));
+		.toFile(path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`));
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()

@@ -74,10 +74,10 @@ module.exports = class RandomKanji extends Command {
 				/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 				generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 				the information about the kanji */
-				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client.config.embedColor, randKanji)
+				const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji)
 
 				/* It's sending the message to the user. */
-				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
+				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
 					// If there is a role to ping, ping it
 					if (role) {
 						client.channels.cache.get(interaction.channelId).send(role);
@@ -116,7 +116,7 @@ module.exports = class RandomKanji extends Command {
 				kanjiModel.useKanjiById(randKanji.id, serverId)
 
 				// Sending the message to the user.
-				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })
+				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] })
 					.then(() => {
 						// If there is a role to ping, ping it
 						if (role) {
