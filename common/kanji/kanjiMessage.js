@@ -1,12 +1,12 @@
 const { UltimateTextToImage, registerFont } = require('ultimate-text-to-image');
-const logger = require('../common/utils/logger');
-const config = require('../config');
+const logger = require('../utils/logger');
+const config = require('../../config');
 const path = require("path");
 const fs = require('fs');
 
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { stripIndents } = require('common-tags');
-const kanjiModel = require("../models/kanji.model");
+const kanjiModel = require("../../models/kanji.model");
 
 module.exports = {
 
@@ -16,10 +16,10 @@ module.exports = {
 		let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
 
 		// register font
-		registerFont(path.join(__dirname, `fonts/Aozora Mincho Medium.ttf`));
-		registerFont(path.join(__dirname, `fonts/irohamaru-mikami-Light.ttf`));
-		registerFont(path.join(__dirname, `fonts/irohamaru-mikami-Medium.ttf`));
-		registerFont(path.join(__dirname, `fonts/SourceHanSerif-Medium.otf`));
+		registerFont(path.join(__dirname, `../fonts/Aozora Mincho Medium.ttf`));
+		registerFont(path.join(__dirname, `../fonts/irohamaru-mikami-Light.ttf`));
+		registerFont(path.join(__dirname, `../fonts/irohamaru-mikami-Medium.ttf`));
+		registerFont(path.join(__dirname, `../fonts/SourceHanSerif-Medium.otf`));
 
 		new UltimateTextToImage(randKanji.kanji, {
 			fontFamily: "源ノ明朝 Medium, Sans",
@@ -34,7 +34,7 @@ module.exports = {
 			backgroundColor: "F4E0C7",
 		})
 		.render()
-		.toFile(path.join(__dirname, `../out/${randKanji.id}.png`));
+		.toFile(path.join(__dirname, `../../out/${randKanji.id}.png`));
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()

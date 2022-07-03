@@ -3,7 +3,7 @@ const cron = require('cron');
 
 const { MessageEmbed, MessageAttachment, ApplicationCommandOptionType } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { generateEmbedKanji } = require("../../kanji/kanjiMessage")
+const { generateEmbedKanji } = require("../../common/kanji/kanjiMessage")
 
 const actionModel = require("../../models/action.model");
 const kanjiModel = require('../../models/kanji.model');
