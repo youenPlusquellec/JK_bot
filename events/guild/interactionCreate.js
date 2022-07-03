@@ -23,15 +23,8 @@ module.exports = class InteractionCreate extends Event {
 			if (!command) return interaction.reply({ content: 'This command is unavailable. *Check back later.*', ephemeral: true }) && client.commands.delete(interaction.commandName);
 
 			try {
-				const server = await serverModel.getServerByServerId(interaction.guildId);
-				if (!server.length) {
-					await serverModel.addServer(interaction.guildId, interaction.member.guild.name);
-				}
-				
-				const user = await userModel.getUserById(interaction.user.id);
-				if (!user.length) {
-					await userModel.addUser(interaction.guildId, interaction.user.username);
-				}
+				await serverModel.addServer(interaction.guildId, interaction.member.guild.name);
+				await userModel.addUser(interaction.user.id, interaction.user.username);
 
 				historyModel.addToHistory(command.name, interaction.user.id, interaction.guildId);
 

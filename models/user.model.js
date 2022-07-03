@@ -32,7 +32,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO user_account (userId, name) VALUES (?, ?);";
+            sql = "INSERT INTO user_account (userId, name) VALUES (?, ?) ON DUPLICATE KEY UPDATE id=id;";
             const rows = await conn.query(sql, [userId, name]);
 
             conn.end();
