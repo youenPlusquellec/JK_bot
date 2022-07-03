@@ -75,6 +75,7 @@ module.exports = class ListScheduledTasks extends Command {
 						value: stripIndents`
 						**🈳️ Kanji:** ${kanji.kanji}
 						**🆙 JTLP:** ${kanji.jlpt}
+						**🗓️ Date:** ${kanji.timestamp}
 					`,
 						inline: true
 					});
