@@ -68,6 +68,7 @@ module.exports = class RandomKanji extends Command {
 
 			// It's getting a random kanji from a JSON file and getting the information about it.
 			let randKanji = await kanjiModel.getRandomKanji()
+			logger.info(`Generated kanji : ${randKanji.kanji}`)
 
 			if (randKanji) {
 
@@ -108,6 +109,7 @@ module.exports = class RandomKanji extends Command {
 
 			// It's getting a random kanji from a JSON file and getting the information about it.
 			let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
+			logger.info(`Generated kanji : ${randKanji.kanji}`)
 
 			if (randKanji) {
 
