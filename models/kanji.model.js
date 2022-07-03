@@ -115,6 +115,15 @@ module.exports = {
         else
             return availableKanjis[Math.floor(Math.random() * length)];
     },
+    async getRandomKanji() {
+        const kanjis = await this.getKanjis()
+        const length = kanjis.length
+
+        if (!length) 
+            return null;
+        else
+            return kanjis[Math.floor(Math.random() * length)];
+    },
     async useKanji(kanji, serverId) {
         try {
             conn = await pool.getConnection();
