@@ -73,7 +73,7 @@ module.exports = {
         try {
             conn = await pool.getConnection();
 
-            sql = ` SELECT kanji.*
+            sql = ` SELECT kanji.*, used_kanji.timestamp
                     FROM used_kanji
                     INNER JOIN server ON used_kanji.serverId=server.id
                     INNER JOIN kanji ON used_kanji.kanjiId=kanji.id
@@ -125,7 +125,8 @@ module.exports = {
                         (select id from server where serverId=?)
                     )
                     ON DUPLICATE KEY update
-                    used=true;`;
+                    used=true,
+                    timestamp=current_timestamp();`;
 
             const rows = await conn.query(sql, [kanji, serverId]);
 
@@ -145,7 +146,8 @@ module.exports = {
                         (select id from server where serverId=?)
                     )
                     ON DUPLICATE KEY update
-	                used=true;`;
+	                used=true,
+                    timestamp=current_timestamp();`;
 
             const rows = await conn.query(sql, [id, serverId]);
 
