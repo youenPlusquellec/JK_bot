@@ -1,0 +1,11 @@
+node_modules
+out
+package-lock.json
+.env
+config.js
+hp.env
+hp.config.js
+prod.env
+prod.config.js
+out.png
+db.json
