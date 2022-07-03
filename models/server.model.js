@@ -68,7 +68,7 @@ module.exports = {
             
             conn = await pool.getConnection();
 
-            sql = "INSERT INTO server (serverId, name) VALUES (?, ?);";
+            sql = "INSERT INTO server (serverId, name) VALUES (?, ?) ON DUPLICATE KEY UPDATE id=id;";
             const rows = await conn.query(sql, [serverId, name]);
             serverList.push({id: Number(rows.insertId), serverId: serverId, name: name})
 
