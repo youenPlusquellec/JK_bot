@@ -81,7 +81,14 @@ module.exports = class ListScheduledTasks extends Command {
 		} catch (e) {
 			logger.error("Echec de la suppression d'une tâche : " + e);
 
-			return await interaction.followUp(`⚠️ L'id renseignée est trop elevée`)
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle(`❌ Erreur lors de la suppression de la tâche`)
+					.setColor(client.config.embedColor)
+					.setDescription("💬 L'id renseignée est trop élevée")
+					.setTimestamp()
+				]
+			});
 		}
 	}
 };

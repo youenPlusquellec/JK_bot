@@ -56,45 +56,75 @@ module.exports = class RandomKanji extends Command {
 
 			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
 
-			return await interaction.followUp(`Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle(`❗ Information`)
+					.setColor(client.config.embedColor)
+					.setDescription(`💬 Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
+					.setTimestamp()
+				]
+			})
 		} else {
 
-			/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-			generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-			the information about the kanji */
-			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, interaction.guildId)
-			
-			/* It's sending the message to the user. */
-			return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
-				// If there is a role to ping, ping it
-				if(role) {
-					client.channels.cache.get(interaction.channelId).send(role);
-				} 
-			});
+			try {
+				/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+				generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+				the information about the kanji */
+				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, interaction.guildId)
+
+				/* It's sending the message to the user. */
+				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
+					// If there is a role to ping, ping it
+					if (role) {
+						client.channels.cache.get(interaction.channelId).send(role);
+					}
+				});
+			} catch (e) {
+				interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle(`❌ Erreur lors de la génération du kanji`)
+						.setColor(client.config.embedColor)
+						.setDescription(e)
+						.setTimestamp()
+					]
+				});
+			}
 		}
 	}
 
 	cronFunction(client, serverId, cronTimer, channelId, role) {
 
-		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
+		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ""} ${role ? `pinging ${role}` : ""}`)
 
 		// Scheduling message
 		let scheduledMessage = new cron.CronJob(cronTimer, async () => {
 
-			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${ channelId ? `in #${channelId}` : "" } ${ role ? `pinging ${role}` : "" }`)
+			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${channelId ? `in #${channelId}` : ""} ${role ? `pinging ${role}` : ""}`)
 
-			// Generating random kanji message
-			const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, serverId)
-			kanjiModel.useKanjiById(kanjiId, serverId)
+			try {
+				// Generating random kanji message
+				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, serverId)
+				kanjiModel.useKanjiById(kanjiId, serverId)
 
-			// Sending the message to the user.
-			client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })
-				.then(() => {
-					// If there is a role to ping, ping it
-					if(role) {
-						client.channels.cache.get(channelId).send(role);
-					} 
+				// Sending the message to the user.
+				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })
+					.then(() => {
+						// If there is a role to ping, ping it
+						if (role) {
+							client.channels.cache.get(channelId).send(role);
+						}
+					});
+			} catch (e) {
+				logger.error(`Error when generating kanji message : ${e}`)
+				client.channels.cache.get(channelId).send({
+					embeds: [new MessageEmbed()
+						.setTitle(`❌ Erreur lors de la génération du kanji`)
+						.setColor(client.config.embedColor)
+						.setDescription(e)
+						.setTimestamp()
+					]
 				});
+			}
 
 		});
 

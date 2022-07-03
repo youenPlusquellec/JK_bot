@@ -14,6 +14,9 @@ module.exports = {
 
 		// It's getting a random kanji from a JSON file and getting the information about it.
 		let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
+		if (randKanji == null) {
+			throw "Plus aucun kanji n'est disponible"
+		}
 
 		// register font
 		registerFont(path.join(__dirname, `../fonts/Aozora Mincho Medium.ttf`));

@@ -69,6 +69,23 @@ module.exports = {
             throw err;
         }
     },
+    async getUsedKanjis(serverId) {
+        try {
+            conn = await pool.getConnection();
+
+            sql = ` SELECT kanji.*
+                    FROM used_kanji
+                    INNER JOIN server ON used_kanji.serverId=server.id
+                    INNER JOIN kanji ON used_kanji.kanjiId=kanji.id
+                    WHERE used=1 AND server.serverId=?;`;
+            const rows = await conn.query(sql, serverId);
+
+            conn.end();
+            return rows;
+        } catch (err) {
+            throw err;
+        }
+    },
     async getAvailableKanjis(serverId) {
         try {
             conn = await pool.getConnection();
@@ -93,7 +110,10 @@ module.exports = {
         const availableKanjis = await this.getAvailableKanjis(serverId)
         const length = availableKanjis.length
 
-        return availableKanjis[Math.floor(Math.random() * length)];
+        if (!length) 
+            return null;
+        else
+            return availableKanjis[Math.floor(Math.random() * length)];
     },
     async useKanji(kanji, serverId) {
         try {
@@ -103,7 +123,9 @@ module.exports = {
                     VALUES ( 
                         (select id from kanji where kanji.kanji=?), 
                         (select id from server where serverId=?)
-                    );`;
+                    )
+                    ON DUPLICATE KEY update
+                    used=true;`;
 
             const rows = await conn.query(sql, [kanji, serverId]);
 
@@ -121,9 +143,45 @@ module.exports = {
                     VALUES ( 
                         ?, 
                         (select id from server where serverId=?)
-                    );`;
+                    )
+                    ON DUPLICATE KEY update
+	                used=true;`;
 
             const rows = await conn.query(sql, [id, serverId]);
+
+            conn.end();
+            return rows;
+        } catch (err) {
+            throw err;
+        }
+    },
+    async clearKanjis(serverId) {
+        try {
+            conn = await pool.getConnection();
+
+            sql = ` UPDATE used_kanji 
+                    INNER JOIN server ON used_kanji.serverId=server.id
+                    SET used=false 
+                    WHERE server.serverId=?`;
+
+            const rows = await conn.query(sql, serverId);
+
+            conn.end();
+            return rows;
+        } catch (err) {
+            throw err;
+        }
+    },
+    async restoreKanjis(serverId) {
+        try {
+            conn = await pool.getConnection();
+
+            sql = ` UPDATE used_kanji 
+                    INNER JOIN server ON used_kanji.serverId=server.id
+                    SET used=true 
+                    WHERE server.serverId=?`;
+
+            const rows = await conn.query(sql, serverId);
 
             conn.end();
             return rows;

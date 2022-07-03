@@ -73,9 +73,23 @@ module.exports = class ListScheduledTasks extends Command {
 
 			return await interaction.followUp({ embeds: [listEmbed] })
 		} else if (channel) {
-			return await interaction.followUp("Il n'y a aucune action plannifiée pour ce salon")
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle(`❗ Information`)
+					.setColor(client.config.embedColor)
+					.setDescription("💬 Il n'y a aucune action plannifiée pour ce salon")
+					.setTimestamp()
+				]
+			})
 		} else {
-			return await interaction.followUp("Il n'y a aucune action plannifiée pour ce serveur")
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle(`❗ Information`)
+					.setColor(client.config.embedColor)
+					.setDescription("💬 Il n'y a aucune action plannifiée pour ce serveur")
+					.setTimestamp()
+				]
+			})
 		}
 
 	}
