@@ -1,22 +1,13 @@
 const { UltimateTextToImage, registerFont } = require('ultimate-text-to-image');
-const logger = require('../utils/logger');
-const config = require('../../config');
 const path = require("path");
 const fs = require('fs');
 
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { stripIndents } = require('common-tags');
-const kanjiModel = require("../../models/kanji.model");
 
 module.exports = {
 
-	generateEmbedKanji: async function (client, serverId) {
-
-		// It's getting a random kanji from a JSON file and getting the information about it.
-		let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
-		if (randKanji == null) {
-			throw "Plus aucun kanji n'est disponible"
-		}
+	generateEmbedKanji: async function (embedColor, randKanji) {
 
 		// register font
 		registerFont(path.join(__dirname, `../fonts/Aozora Mincho Medium.ttf`));
@@ -43,7 +34,7 @@ module.exports = {
 		const kanjiEmbed = new MessageEmbed()
 			.setTitle(`**\`Le kanji du jour : ${randKanji.kanji}\`**`)
 			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
-			.setColor(client.config.embedColor)
+			.setColor(embedColor)
 			.setDescription(stripIndents`
 					**✍️ Lectures KUN:** ${randKanji.kunReadings}
 		
@@ -59,6 +50,6 @@ module.exports = {
 			.setTimestamp();
 
 		// It's returning the embed to the function that called it.
-		return [kanjiEmbed, randKanji.id];
+		return kanjiEmbed;
 	}
 }

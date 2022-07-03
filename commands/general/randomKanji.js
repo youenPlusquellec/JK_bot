@@ -66,11 +66,15 @@ module.exports = class RandomKanji extends Command {
 			})
 		} else {
 
-			try {
+			// It's getting a random kanji from a JSON file and getting the information about it.
+			let randKanji = await kanjiModel.getRandomKanji()
+
+			if (randKanji) {
+
 				/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 				generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 				the information about the kanji */
-				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, interaction.guildId)
+				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client.config.embedColor, randKanji)
 
 				/* It's sending the message to the user. */
 				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] }).then(() => {
@@ -79,12 +83,13 @@ module.exports = class RandomKanji extends Command {
 						client.channels.cache.get(interaction.channelId).send(role);
 					}
 				});
-			} catch (e) {
+			} else {
+				logger.error(`Error when generating kanji message : No more kanji available`)
 				interaction.followUp({
 					embeds: [new MessageEmbed()
 						.setTitle(`❌ Erreur lors de la génération du kanji`)
 						.setColor(client.config.embedColor)
-						.setDescription(e)
+						.setDescription("💬 Plus aucun kanji n'est disponible")
 						.setTimestamp()
 					]
 				});
@@ -101,10 +106,14 @@ module.exports = class RandomKanji extends Command {
 
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${channelId ? `in #${channelId}` : ""} ${role ? `pinging ${role}` : ""}`)
 
-			try {
+			// It's getting a random kanji from a JSON file and getting the information about it.
+			let randKanji = await kanjiModel.getAvailableRandomKanji(serverId)
+
+			if (randKanji) {
+
 				// Generating random kanji message
-				const [kanjiEmbed, kanjiId] = await generateEmbedKanji(client, serverId)
-				kanjiModel.useKanjiById(kanjiId, serverId)
+				const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji)
+				kanjiModel.useKanjiById(randKanji.id, serverId)
 
 				// Sending the message to the user.
 				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(__dirname, `../../out/${kanjiId}.png`)] })
@@ -114,13 +123,14 @@ module.exports = class RandomKanji extends Command {
 							client.channels.cache.get(channelId).send(role);
 						}
 					});
-			} catch (e) {
-				logger.error(`Error when generating kanji message : ${e}`)
+
+			} else {
+				logger.error(`Error when generating kanji message : No more kanji available`)
 				client.channels.cache.get(channelId).send({
 					embeds: [new MessageEmbed()
 						.setTitle(`❌ Erreur lors de la génération du kanji`)
 						.setColor(client.config.embedColor)
-						.setDescription(e)
+						.setDescription("💬 Plus aucun kanji n'est disponible")
 						.setTimestamp()
 					]
 				});
