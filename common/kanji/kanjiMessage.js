@@ -29,17 +29,21 @@ module.exports = {
 			.render()
 			.toFile(path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`));
 
+		console.log(typeof(randKanji.kunReadings))
+		console.log(typeof(JSON.stringify(randKanji.kunReadings)))
+		console.log(JSON.parse(JSON.stringify(randKanji.kunReadings)))
+
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
 			.setTitle(`**\`Le kanji du jour : ${randKanji.kanji}\`**`)
 			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					**✍️ Lectures KUN:** ${randKanji.kunReadings}
+					**✍️ Lectures KUN:** ${JSON.parse(JSON.stringify(randKanji.kunReadings))}
 		
-					**✍️ Lectures ON:** ${randKanji.onReadings}
+					**✍️ Lectures ON:** ${JSON.parse(JSON.stringify(randKanji.onReadings))}
 		
-					**📚 Sens (anglais):** ${randKanji.meanings}
+					**📚 Sens (anglais):** ${JSON.parse(JSON.stringify(randKanji.meanings))}
 		
 					**🎓 JLPT:** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
 		
