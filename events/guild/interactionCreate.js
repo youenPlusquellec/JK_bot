@@ -30,7 +30,7 @@ module.exports = class InteractionCreate extends Event {
 				
 				const user = await userModel.getUserById(interaction.user.id);
 				if (!user.length) {
-					await userModel.addUser(interaction.guildId, interaction.user.username);
+					await userModel.addUser(interaction.user.id, interaction.user.username);
 				}
 
 				historyModel.addToHistory(command.name, interaction.user.id, interaction.guildId);
