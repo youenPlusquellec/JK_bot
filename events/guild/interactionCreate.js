@@ -1,8 +1,8 @@
 const Event = require('../../structures/EventClass');
 const logger = require('../../common/utils/logger');
-const historyModel = require("../../models/history.model");
-const serverModel = require("../../models/server.model");
-const userModel = require("../../models/user.model");
+const historyModel = require('../../models/history.model');
+const serverModel = require('../../models/server.model');
+const userModel = require('../../models/user.model');
 
 module.exports = class InteractionCreate extends Event {
 	constructor(client) {
