@@ -30,7 +30,9 @@ module.exports = {
 
                 sql = "SELECT * FROM server WHERE id=?";
                 const rows = await conn.query(sql, id);
-                serverList.push(rows[0])
+                if (rows[0]) {
+                    serverList.push(rows[0])
+                }
 
                 conn.end();
                 return rows;
@@ -54,7 +56,9 @@ module.exports = {
 
                 sql = "SELECT * FROM server WHERE serverId=?";
                 const rows = await conn.query(sql, id);
-                serverList.push(rows[0])
+                if (rows[0]) {
+                    serverList.push(rows[0])
+                }
 
                 conn.end();
                 return rows;
