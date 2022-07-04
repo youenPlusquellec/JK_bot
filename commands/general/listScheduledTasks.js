@@ -42,8 +42,7 @@ module.exports = class ListScheduledTasks extends Command {
 		let actions = [];
 		if (channel && channel.id) {
 			actions = await actionModel.getActionsByServerIdAndChannelId(interaction.guildId, channel.id);
-		}
-		else {
+		} else {
 			actions = await actionModel.getActionsByServerId(interaction.guildId);
 		}
 
@@ -72,8 +71,7 @@ module.exports = class ListScheduledTasks extends Command {
 				.setTimestamp();
 
 			return await interaction.followUp({ embeds: [listEmbed] });
-		}
-		else if (channel) {
+		} else if (channel) {
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
@@ -82,8 +80,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTimestamp(),
 				],
 			});
-		}
-		else {
+		} else {
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')

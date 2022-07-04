@@ -51,8 +51,7 @@ module.exports = class ListScheduledTasks extends Command {
 			let action = {};
 			if (channel && channel.id) {
 				action = await actionModel.deleteActionByIdAndServerIdAndChannelId(id, interaction.guildId, channel.id);
-			}
-			else {
+			} else {
 				action = await actionModel.deleteActionByIdAndServerId(id, interaction.guildId);
 			}
 
@@ -79,8 +78,7 @@ module.exports = class ListScheduledTasks extends Command {
 				.setTimestamp();
 
 			return await interaction.followUp({ embeds: [listEmbed] });
-		}
-		catch (e) {
+		} catch (e) {
 			logger.error('Echec de la suppression d\'une tâche : ' + e);
 
 			return await interaction.followUp({

@@ -38,8 +38,7 @@ module.exports = {
 					logger.info(`Slash Commands and Context Menus have now been deployed on ${guildId}.`);
 				});
 			});
-		}
-		catch (e) {
+		} catch (e) {
 			console.error(e);
 		}
 	},

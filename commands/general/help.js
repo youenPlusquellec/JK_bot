@@ -76,8 +76,7 @@ module.exports = class Help extends Command {
                     `);
 
 				await interaction.reply({ embeds: [commandEmbed] });
-			}
-			else {
+			} else {
 				interaction.reply({ content: `Command **\`${query}\`** was not found.` });
 			}
 		}

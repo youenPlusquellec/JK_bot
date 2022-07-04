@@ -40,13 +40,12 @@ module.exports = class RandomKanji extends Command {
 	}
 
 	async run(client, interaction) {
-		
+
 		// It's a way to send a message to the user without sending it right away.
 		await interaction.deferReply();
 
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
-		console.log(cronTimer)
 
 		// Check if cron timer respects cron requirements
 		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
@@ -70,8 +69,7 @@ module.exports = class RandomKanji extends Command {
 						.setTimestamp(),
 					],
 				});
-			}
-			else {
+			} else {
 
 				// It's getting a random kanji from a JSON file and getting the information about it.
 				const randKanji = await kanjiModel.getRandomKanji();
@@ -91,8 +89,7 @@ module.exports = class RandomKanji extends Command {
 							client.channels.cache.get(interaction.channelId).send(role);
 						}
 					});
-				}
-				else {
+				} else {
 					logger.error('Error when generating kanji message : No more kanji available');
 					interaction.followUp({
 						embeds: [new MessageEmbed()
@@ -107,7 +104,7 @@ module.exports = class RandomKanji extends Command {
 		} else {
 			interaction.followUp({
 				embeds: [new MessageEmbed()
-					.setTitle("❌ Le paramètre évènementiel n'est pas correct")
+					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
 					.setColor(client.config.embedColor)
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
@@ -147,8 +144,7 @@ module.exports = class RandomKanji extends Command {
 						}
 					});
 
-			}
-			else {
+			} else {
 				logger.error('Error when generating kanji message : No more kanji available');
 				client.channels.cache.get(channelId).send({
 					embeds: [new MessageEmbed()

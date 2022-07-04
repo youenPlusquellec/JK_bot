@@ -89,8 +89,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTimestamp()
 					.setFooter({ text: '⚠️ La limite est de 25 kanjis affichés' });
 				return await interaction.followUp({ embeds: [listEmbed] });
-			}
-			else {
+			} else {
 				// In case of no kanji used
 				return await interaction.followUp({
 					embeds: [new MessageEmbed()
@@ -102,8 +101,7 @@ module.exports = class ListScheduledTasks extends Command {
 				});
 			}
 
-		}
-		else if (command === 'clear') {
+		} else if (command === 'clear') {
 
 			// Clear database from used message for current server
 			await kanjiModel.clearKanjis(interaction.guildId);
@@ -117,8 +115,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTimestamp(),
 				],
 			});
-		}
-		else if (command === 'restore') {
+		} else if (command === 'restore') {
 
 			// Clear database from used message for current server
 			await kanjiModel.restoreKanjis(interaction.guildId);
@@ -132,8 +129,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTimestamp(),
 				],
 			});
-		}
-		else {
+		} else {
 			// Return default message
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()

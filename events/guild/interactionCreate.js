@@ -29,8 +29,7 @@ module.exports = class InteractionCreate extends Event {
 				historyModel.addToHistory(command.name, interaction.user.id, interaction.guildId);
 
 				command.run(client, interaction);
-			}
-			catch (e) {
+			} catch (e) {
 				logger.error(e);
 				return interaction.reply({ content: `An error has occurred.\n\n**\`${e.message}\`**` });
 			}
