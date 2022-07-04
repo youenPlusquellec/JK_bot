@@ -3,6 +3,7 @@ const cron = require('cron');
 
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { stripIndents } = require('common-tags');
 const { generateEmbedKanji } = require('../../common/kanji/kanjiMessage');
 
 const actionModel = require('../../models/action.model');
@@ -39,65 +40,83 @@ module.exports = class RandomKanji extends Command {
 	}
 
 	async run(client, interaction) {
+		
+		// It's a way to send a message to the user without sending it right away.
+		await interaction.deferReply();
 
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
+		console.log(cronTimer)
 
-		// Getting role parameter
-		const roleParam = interaction.options.getRole('role');
-		const role = roleParam ? `<@&${roleParam.id}>` : null;
+		// Check if cron timer respects cron requirements
+		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
 
-		/* It's a way to send a message to the user without sending it right away. */
-		await interaction.deferReply();
+			// Getting role parameter
+			const roleParam = interaction.options.getRole('role');
+			const role = roleParam ? `<@&${roleParam.id}>` : null;
 
-		// Launching task in background if defined
-		if (cronTimer) {
-			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
 
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
+			// Launching task in background if defined
+			if (cronTimer) {
+				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
 
-			return await interaction.followUp({
-				embeds: [new MessageEmbed()
-					.setTitle('❗ Information')
-					.setColor(client.config.embedColor)
-					.setDescription(`💬 Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
-					.setTimestamp(),
-				],
-			});
-		}
-		else {
+				global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
 
-			// It's getting a random kanji from a JSON file and getting the information about it.
-			const randKanji = await kanjiModel.getRandomKanji();
-			logger.info(`Generated kanji : ${randKanji.kanji}`);
-
-			if (randKanji) {
-
-				/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-				generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-				the information about the kanji */
-				const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji);
-
-				/* It's sending the message to the user. */
-				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
-					// If there is a role to ping, ping it
-					if (role) {
-						client.channels.cache.get(interaction.channelId).send(role);
-					}
-				});
-			}
-			else {
-				logger.error('Error when generating kanji message : No more kanji available');
-				interaction.followUp({
+				return await interaction.followUp({
 					embeds: [new MessageEmbed()
-						.setTitle('❌ Erreur lors de la génération du kanji')
+						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
-						.setDescription('💬 Plus aucun kanji n\'est disponible')
+						.setDescription(`💬 Le kanji a bien été programmé en suivant la règle \`${cronTimer}\``)
 						.setTimestamp(),
 					],
 				});
 			}
+			else {
+
+				// It's getting a random kanji from a JSON file and getting the information about it.
+				const randKanji = await kanjiModel.getRandomKanji();
+				logger.info(`Generated kanji : ${randKanji.kanji}`);
+
+				if (randKanji) {
+
+					/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+					generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+					the information about the kanji */
+					const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji);
+
+					/* It's sending the message to the user. */
+					return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
+						// If there is a role to ping, ping it
+						if (role) {
+							client.channels.cache.get(interaction.channelId).send(role);
+						}
+					});
+				}
+				else {
+					logger.error('Error when generating kanji message : No more kanji available');
+					interaction.followUp({
+						embeds: [new MessageEmbed()
+							.setTitle('❌ Erreur lors de la génération du kanji')
+							.setColor(client.config.embedColor)
+							.setDescription('💬 Plus aucun kanji n\'est disponible')
+							.setTimestamp(),
+						],
+					});
+				}
+			}
+		} else {
+			interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle("❌ Le paramètre évènementiel n'est pas correct")
+					.setColor(client.config.embedColor)
+					.setDescription(stripIndents`
+							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
+							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setTimestamp(),
+				],
+			});
 		}
+
 	}
 
 	cronFunction(client, serverId, cronTimer, channelId, role) {
