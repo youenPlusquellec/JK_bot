@@ -55,7 +55,7 @@ module.exports = class Help extends Command {
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
 	}
-	
+
 	async run(client, interaction) {
 		const query = interaction.options.getString('command');
 
@@ -76,8 +76,7 @@ module.exports = class Help extends Command {
                     `);
 
 				await interaction.reply({ embeds: [commandEmbed] });
-			}
-			else {
+			} else {
 				interaction.reply({ content: `Command **\`${query}\`** was not found.` });
 			}
 		}

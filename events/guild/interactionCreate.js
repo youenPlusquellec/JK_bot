@@ -1,8 +1,8 @@
 const Event = require('../../structures/EventClass');
 const logger = require('../../common/utils/logger');
-const historyModel = require("../../models/history.model");
-const serverModel = require("../../models/server.model");
-const userModel = require("../../models/user.model");
+const historyModel = require('../../models/history.model');
+const serverModel = require('../../models/server.model');
+const userModel = require('../../models/user.model');
 
 module.exports = class InteractionCreate extends Event {
 	constructor(client) {
@@ -23,21 +23,13 @@ module.exports = class InteractionCreate extends Event {
 			if (!command) return interaction.reply({ content: 'This command is unavailable. *Check back later.*', ephemeral: true }) && client.commands.delete(interaction.commandName);
 
 			try {
-				const server = await serverModel.getServerByServerId(interaction.guildId);
-				if (!server.length) {
-					await serverModel.addServer(interaction.guildId, interaction.member.guild.name);
-				}
-				
-				const user = await userModel.getUserById(interaction.user.id);
-				if (!user.length) {
-					await userModel.addUser(interaction.user.id, interaction.user.username);
-				}
+				await serverModel.addServer(interaction.guildId, interaction.member.guild.name);
+				await userModel.addUser(interaction.user.id, interaction.user.username);
 
 				historyModel.addToHistory(command.name, interaction.user.id, interaction.guildId);
 
 				command.run(client, interaction);
-			}
-			catch (e) {
+			} catch (e) {
 				logger.error(e);
 				return interaction.reply({ content: `An error has occurred.\n\n**\`${e.message}\`**` });
 			}

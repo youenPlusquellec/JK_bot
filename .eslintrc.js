@@ -10,7 +10,7 @@ module.exports = {
 	},
 	rules: {
 		'arrow-spacing': ['warn', { 'before': true, 'after': true }],
-		'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+		'brace-style': ['error', '1tbs', { 'allowSingleLine': false }],
 		'comma-dangle': ['error', 'always-multiline'],
 		'comma-spacing': 'error',
 		'comma-style': 'error',
@@ -20,7 +20,7 @@ module.exports = {
 		'indent': ['error', 'tab'],
 		'keyword-spacing': 'error',
 		'max-nested-callbacks': ['error', { 'max': 4 }],
-		'max-statements-per-line': ['error', { 'max': 2 }],
+		'max-statements-per-line': ['error', { 'max': 3 }],
 		'no-console': 'off',
 		'no-empty-function': 'error',
 		'no-floating-decimal': 'error',
