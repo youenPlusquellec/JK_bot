@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v10');
@@ -9,7 +9,7 @@ module.exports = {
 	async deploy(guildIdTab) {
 		const commandData = [];
 
-		fs.readdirSync(path.join(__dirname, `../../commands/`)).forEach(async category => {
+		fs.readdirSync(path.join(__dirname, '../../commands/')).forEach(async category => {
 			const commands = fs.readdirSync(path.join(__dirname, `../../commands/${category}/`)).filter(cmd => cmd.endsWith('.js'));
 
 			for (const command of commands) {
@@ -30,7 +30,7 @@ module.exports = {
 			logger.info('Started refreshing Slash Commands and Context Menus...');
 
 			guildIdTab.forEach(async (value, key) => {
-				const guildId = key.toString()
+				const guildId = key.toString();
 				await rest.put(
 					Routes.applicationGuildCommands(clientId, guildId),
 					{ body: commandData },
@@ -38,8 +38,9 @@ module.exports = {
 					logger.info(`Slash Commands and Context Menus have now been deployed on ${guildId}.`);
 				});
 			});
-		} catch (e) {
+		}
+		catch (e) {
 			console.error(e);
 		}
 	},
-}
+};
