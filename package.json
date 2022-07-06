@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "eslint --ext .js,.ts . ./ --fix",
         "start": "node bot",
-        "deploy": "node deploy"
+        "doc": "node documentation"
     },
     "keywords": [
         "discord-bot",
