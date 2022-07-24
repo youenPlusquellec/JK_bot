@@ -29,10 +29,6 @@ module.exports = {
 			.render()
 			.toFile(path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`));
 
-		console.log(typeof(randKanji.kunReadings))
-		console.log(typeof(JSON.stringify(randKanji.kunReadings)))
-		console.log(JSON.parse(JSON.stringify(randKanji.kunReadings)))
-
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
 			.setTitle(`**\`Le kanji du jour : ${randKanji.kanji}\`**`)
