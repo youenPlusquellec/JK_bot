@@ -1,0 +1,28 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  update_documentation:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [ '3.x', 'pypy3.7', 'pypy3.8' ]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+        cache: 'pip'
+    - run: pip install mkdocs mkdocs-material
+    - run: cd documentation
+    - run: python -m mkdocs gh-deploy
