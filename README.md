@@ -7,7 +7,7 @@ A Discord Bot initially created for Japan Kankei discord [server](https://discor
 1. Create a folder on your computer, then type the following console command to clone this repository.
 
 ```bash
-git clone https://github.com/NTMNathan/djs-command-handler
+git clone https://github.com/youenPlusquellec/jk_bot
 ```
 
 2. Create a Discord Application and name it.
