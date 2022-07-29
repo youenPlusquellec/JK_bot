@@ -22,5 +22,6 @@ jobs:
         architecture: x64
         cache: 'pip'
     - run: pip install mkdocs mkdocs-material
-    - run: cd documentation
-    - run: python -m mkdocs gh-deploy
+    - name: Deploy github pages
+      working-directory: ./documentation
+      run: python -m mkdocs gh-deploy
