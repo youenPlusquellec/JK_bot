@@ -2,9 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master, develop ]
+    branches: [ main, master, feature/JB-6 ]
 
 jobs:
   update_documentation:
