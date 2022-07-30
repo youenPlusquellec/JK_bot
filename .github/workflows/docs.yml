@@ -2,7 +2,7 @@ name: Github pages Documentation
 
 on:
   push:
-    branches: [ main, master, feature/JB-6 ]
+    branches: [ main, master ]
 
 jobs:
   deploy:
