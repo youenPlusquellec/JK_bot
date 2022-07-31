@@ -1,6 +1,6 @@
 const mariadb = require('mariadb');
 const cron = require('cron');
-const mysqlBackup = require('../../mysqlBackupackup');
+const mysqlBackup = require('../../mysqlBackup');
 const config = require('../../config');
 
 const pool = mariadb.createPool({
