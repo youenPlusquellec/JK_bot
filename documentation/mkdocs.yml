@@ -28,10 +28,15 @@ markdown_extensions:
 
 nav:
   - Home : 'index.md'
+  - Getting Started: 'getting_started.md'
+  - Releases:
+    - v1.2: 'releases/v1.2.md'
+    - v1.1: 'releases/v1.1.md'
+    - v1.0: 'releases/v1.0.md'
   - About : 'about.md'
 theme:
   name: material
-  logo: logo/logo-128.png
+  logo: src/logo-128.png
   nav_style: dark
   highlightjs: true
   features:
