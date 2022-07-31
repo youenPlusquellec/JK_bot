@@ -2,14 +2,15 @@
 
 const mysqldump = require('mysqldump');
 const fs = require('fs');
+const path = require('path');
 const moment = require('moment');
 const logger = require('./common/utils/logger');
 
 const mysqlBackup = function(host, user, password, database) {
 
 	// Creates "dumps" folder if does not exist
-	if (!fs.existsSync('database/dumps')) {
-		fs.mkdirSync('database/dumps');
+	if (!fs.existsSync(path.join(__dirname, 'database/dumps'))) {
+		fs.mkdirSync(path.join(__dirname, 'database/dumps'));
 		logger.info('Creating database/dumps folder');
 	}
 
@@ -21,7 +22,7 @@ const mysqlBackup = function(host, user, password, database) {
 			password: password,
 			database: database,
 		},
-		dumpToFile: 'database/dumps/mysql-backup-' + moment().format('YYYY-MM-DD-HH-mm-ss') + '.sql',
+		dumpToFile: path.join(__dirname, 'database/dumps/mysql-backup-' + moment().format('YYYY-MM-DD-HH-mm-ss') + '.sql'),
 	});
 
 	// Debug
