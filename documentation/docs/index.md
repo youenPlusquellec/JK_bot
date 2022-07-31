@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# Welcome to JK Bot documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+JK Bot is a discord bot using slash commands for [Japan Kankei discord server](https://discord.gg/kR83CU3v4Z).
+Japan Kankei is a Japanese-oriented learning project, with learning [Twitch lives](https://www.twitch.tv/japankankei) as well as many activities on discord.
 
-## Commands
+## 🤖 How can I use the bot ?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+If you wanna use the bot for yourself, you can go on [Getting Started](getting_started.md) section for further details.
 
-## Project layout
+## 🔖 Documentation for a specific release
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To check documentation of a specific release, go on [Releases](releases/v1.0.md) section for further details.

@@ -2,7 +2,7 @@
 
 A Discord Bot initially created for Japan Kankei discord [server](https://discord.gg/kR83CU3v4Z) using Slash Commands and Context Menus. Japan Kankei is a Japanese-oriented learning project, with learning Twitch lives as well as many activities on discord.
 
-## Setup
+## ⚙️ Setup
 
 1. Create a folder on your computer, then type the following console command to clone this repository.
 
@@ -36,9 +36,9 @@ npm i -g --add-python-to-path --vs2015 --production windows-build-tools
 npm start
 ```
 
-## Usage
+## ⌨️ Usage
 
-To create commands, you need to set to `true` deployOnStart variable in `config.js`:
+To create slash commands on the server, you need to set to `true` deployOnStart variable in `config.js`:
 
 ```bash
 module.exports = {
