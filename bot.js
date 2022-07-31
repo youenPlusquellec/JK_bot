@@ -19,7 +19,7 @@ process.on('SIGINT', function() {
 
 	// Stop dump scheduled task
 	if (global.cronDump) {
-		cronDump.stop()
+		global.cronDump.stop();
 	}
 
 	process.exit();

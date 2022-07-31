@@ -14,21 +14,21 @@ const pool = mariadb.createPool({
 
 module.exports = {
 	getConnection() {
-		return new Promise(function (res, rej) {
+		return new Promise(function(res, rej) {
 			pool.getConnection()
-				.then(function (conn) {
+				.then(function(conn) {
 
 					// Schedule dump of the db
 					if (config.dumpCronTab) {
 						global.cronDump = new cron.CronJob(config.dumpCronTab, async () => {
-							mysqlBackup(process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_DATABASE)
+							mysqlBackup(process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_DATABASE);
 						});
 						global.cronDump.start();
 					}
 
 					res(conn);
 				})
-				.catch(function (error) {
+				.catch(function(error) {
 					rej(error);
 				});
 		});
