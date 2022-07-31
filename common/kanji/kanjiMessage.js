@@ -35,11 +35,11 @@ module.exports = {
 			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					**✍️ Lectures KUN:** ${randKanji.kunReadings}
+					**✍️ Lectures KUN:** ${JSON.parse(randKanji.kunReadings)}
 		
-					**✍️ Lectures ON:** ${randKanji.onReadings}
+					**✍️ Lectures ON:** ${JSON.parse(randKanji.onReadings)}
 		
-					**📚 Sens (anglais):** ${randKanji.meanings}
+					**📚 Sens (anglais):** ${JSON.parse(randKanji.meanings)}
 		
 					**🎓 JLPT:** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
 		
