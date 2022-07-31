@@ -1,4 +1,7 @@
 const mariadb = require('mariadb');
+const cron = require('cron');
+const mysqlBackup = require('../../mysqlBackupackup');
+const config = require('../../config');
 
 const pool = mariadb.createPool({
 	host: process.env.DB_HOST,
@@ -14,6 +17,15 @@ module.exports = {
 		return new Promise(function(res, rej) {
 			pool.getConnection()
 				.then(function(conn) {
+
+					// Schedule dump of the db
+					if (config.dumpCronTab) {
+						global.cronDump = new cron.CronJob(config.dumpCronTab, async () => {
+							mysqlBackup(process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_DATABASE);
+						});
+						global.cronDump.start();
+					}
+
 					res(conn);
 				})
 				.catch(function(error) {
