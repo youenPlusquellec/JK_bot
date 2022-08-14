@@ -10,6 +10,7 @@ module.exports = class MessageCreate extends Event {
 	}
 	async run(message) {
 
+		// Add last message to array (it will be deleted after 5 seconds)
 		global.lastMessages.push({
 			id: message.id,
 			userId: message.author.id,
@@ -18,13 +19,22 @@ module.exports = class MessageCreate extends Event {
 			content: message.content,
 		});
 
+		// Get last 5 seconds messages from last sender 
 		const userMessagesIn5s = global.lastMessages.filter(function(item) {
 			return item.userId == message.author.id;
 		});
 
-		if (userMessagesIn5s.length > 2 && userMessagesIn5s[0].channelId != userMessagesIn5s[1].channelId && userMessagesIn5s[1].channelId != userMessagesIn5s[2].channelId && userMessagesIn5s[0].channelId != userMessagesIn5s[2].channelId) {
+		let channelDiffList = [];
+		userMessagesIn5s.forEach(element => {
+			if (!channelDiffList.includes(element.channelId)) {
+				channelDiffList.push(element.channelId);
+			}
+		});
 
-			logger.info(`User '${message.author}' is SPAMING, preparing exclusion`);
+		// If the user wrote in 3 channels or more in less than 5 seconds, kick him 
+		if (userMessagesIn5s.length > 2 && channelDiffList.length > 2) {
+
+			logger.info(`User '${message.author.username}' is SPAMING, preparing exclusion`);
 
 			// Delete messages from channels
 			userMessagesIn5s.forEach(element => {
@@ -34,7 +44,7 @@ module.exports = class MessageCreate extends Event {
 					);
 				});
 			});
-			logger.info(`Last messages from '${message.author}' has been deleted`);
+			logger.info(`Last messages from '${message.author.username}' has been deleted`);
 
 			// Delete messages from array
 			userMessagesIn5s.forEach(element => {
@@ -51,15 +61,15 @@ module.exports = class MessageCreate extends Event {
 				}).catch(console.log);
 
 			// Send url invitation
-			message.author.send(invite ? `Vous avez été exclu du serveur pour SPAM Bot, pour revenir, cliquez sur ce lien: ${invite}` : 'Vous avez été exclu du serveur pour SPAM Bot, aucune invitation n\'a pu être générée.').then(() => {
+			message.author.send(invite ? `Vous avez été exclu du serveur Japan Kankei pour SPAM Bot, pour revenir, cliquez sur ce lien: ${invite}` : 'Vous avez été exclu du serveur Japan Kankei pour SPAM Bot, aucune invitation n\'a pu être générée.').then(() => {
 
 				this.client.channels.fetch(message.channelId).then(channel => {
-					channel.send(`<@${message.author.id}> a été exclu pour SPAM Bot !`);
+					channel.send(`${message.author} a été exclu pour SPAM Bot !`);
 				});
 				message.member.kick('SPAM bot');
 
 			});
-			logger.info(`Member '${message.author}' kicked`);
+			logger.info(`Member '${message.author.username}' kicked`);
 		}
 	}
 };
