@@ -6,7 +6,7 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	generateEmbedKanji: async function(embedColor, randKanji) {
+	generateEmbedKanji: async function (embedColor, randKanji) {
 
 		// register font
 		registerFont(path.join(__dirname, '../fonts/Aozora Mincho Medium.ttf'));
@@ -28,6 +28,18 @@ module.exports = {
 		})
 			.render()
 			.toFile(path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`));
+
+
+		// Security in case of changing type
+		if (Array.isArray(randKanji.kunReadings)) {
+			randKanji.kunReadings = JSON.stringify(randKanji.kunReadings)
+		}
+		if (Array.isArray(randKanji.onReadings)) {
+			randKanji.onReadings = JSON.stringify(randKanji.onReadings)
+		}
+		if (Array.isArray(randKanji.meanings)) {
+			randKanji.meanings = JSON.stringify(randKanji.meanings)
+		}
 
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
