@@ -98,7 +98,7 @@ module.exports = class UsedVocabularies extends Command {
 						value: stripIndents`
 						**🈳️ Kanji:** ${vocabulary.vocabulary}
 						**🆙 JTLP:** ${vocabulary.jlpt}
-						**🗓️ Date:** ${vocabulary.timestamp}
+						**🗓️ Date:** ${vocabulary.timestamp.toLocaleDateString('fr-FR', {year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long'})}
 					`,
 						inline: true,
 					});
