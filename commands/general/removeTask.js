@@ -2,7 +2,6 @@ const Command = require('../../structures/CommandClass');
 
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { stripIndents } = require('common-tags');
 
 const actionModel = require('../../models/action.model');
 const logger = require('../../common/utils/logger');
@@ -61,18 +60,24 @@ module.exports = class ListScheduledTasks extends Command {
 			// Debugging
 			logger.info(`Removing scheduled task with id n°${id} ${channel ? `for channel ${channel}` : ''}`);
 
+			let message = '';
+			message = `**#️⃣ Salon:** <#${action.channelId}>\n`;
+			message += `**⚙️ Commande:** ${action.type}\n`;
+			message += `**📅 Planification:** ${action.cron}\n`;
+			if (action.mentionRole) {
+				message += `**👤 Mentionne:** ${action.mentionRole}\n`;
+			}
+			if (action.parameters && action.parameters.message) {
+				message += `**💬 Message:** ${action.parameters.message.slice(0, 30)}${action.parameters.message.length > 30 ? '...' : '' }\n`;
+			}
+
 			// It's creating an embed with the information about the kanji.
 			const listEmbed = new MessageEmbed()
 				.setTitle('**La tâche suivante vient d\'être supprimée**')
 				.setColor(client.config.embedColor)
 				.addFields({
 					name: `N°${id}`,
-					value: stripIndents`
-					${!channel ? `**#️⃣ Salon:** <#${action.channelId}>` : ''}
-					**⚙️ Commande:** ${action.type}
-					**📅 Planification:** ${action.cron}
-					${action.mentionRole ? `**👤 Mentionne:** ${action.mentionRole}` : ''}
-				`,
+					value: message,
 					inline: false,
 				})
 				.setTimestamp();

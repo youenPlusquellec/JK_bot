@@ -1,11 +1,19 @@
 const pool = require('../common/utils/db');
 
 module.exports = {
-	async createAction(serverId, userId, type, cron, channelId, mentionRole) {
+	async createAction(serverId, userId, type, cron, channelId, mentionRole, parameters = null) {
 		const conn = await pool.getConnection();
 
-		const sql = 'INSERT INTO action (serverId, userId, type, cron, channelId, mentionRole) VALUES ((select id from server where serverId=?), (select id from user_account where userId=?), ?, ?, ?, ?)';
-		const row = await conn.query(sql, [serverId, userId, type, cron, channelId, mentionRole ? mentionRole : null]);
+		const sql = 'INSERT INTO action (serverId, userId, type, cron, channelId, mentionRole, parameters) VALUES ((select id from server where serverId=?), (select id from user_account where userId=?), ?, ?, ?, ?, ?)';
+		const row = await conn.query(sql, [
+			serverId,
+			userId,
+			type,
+			cron,
+			channelId,
+			mentionRole ? mentionRole : null,
+			JSON.stringify(parameters),
+		]);
 
 		conn.end();
 		return row;
