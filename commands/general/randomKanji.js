@@ -33,7 +33,7 @@ module.exports = class RandomKanji extends Command {
 					option.setName('role')
 						.setDescription('Pour ping un role à chaque message')
 						.setRequired(false)),
-			usage: 'rkanji',
+			usage: 'rkanji [scheduling] [role]',
 			category: 'kanji',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});

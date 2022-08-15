@@ -41,7 +41,7 @@ module.exports = class ListScheduledTasks extends Command {
 							},
 						),
 				),
-			usage: 'usedkanjis',
+			usage: 'usedkanjis COMMAND',
 			category: 'kanji',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});

@@ -17,36 +17,32 @@ module.exports = class Help extends Command {
 						.setRequired(true)
 						.addChoices(
 							{
-								name: 'Hello',
-								value: 'hello',
-							},
-							{
-								name: 'Avatar',
-								value: 'Avatar',
-							},
-							{
-								name: 'User Info',
-								value: 'User Info',
-							},
-							{
-								name: 'rkanji',
+								name: 'Random Kanji',
 								value: 'rkanji',
+							},
+							{
+								name: 'Used Kanjis',
+								value: 'usedkanjis',
+							},
+							{
+								name: 'Random Vocabulary',
+								value: 'rvocabulary',
+							},
+							{
+								name: 'List Scheduled Tasks',
+								value: 'listscheduledtasks',
+							},
+							{
+								name: 'Remove Task',
+								value: 'removetask',
+							},
+							{
+								name: 'Scheduled Message',
+								value: 'scheduledmessage',
 							},
 							{
 								name: 'Help',
 								value: 'help',
-							},
-							{
-								name: 'Ping',
-								value: 'ping',
-							},
-							{
-								name: 'Prefix',
-								value: 'prefix',
-							},
-							{
-								name: 'Not Found',
-								value: 'notfound',
 							},
 						),
 				),
