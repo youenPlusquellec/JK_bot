@@ -15,6 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+--
+-- Update Table structure for table `action`
+--
+ALTER TABLE `action` ADD parameters json NULL;
+
 --
 -- Table structure for table `vocabulary`
 --
