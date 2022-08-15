@@ -62,7 +62,7 @@ module.exports = class Help extends Command {
 				const commandEmbed = new MessageEmbed()
 					.setTitle(`**\`${command.name}\`** Command Information`)
 					.setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-					.setColor('#57f287')
+					.setColor(client.config.embedColor)
 					.setDescription(stripIndents`
                     > ${command.contextDescription ? command.contextDescription : command.description}
 
