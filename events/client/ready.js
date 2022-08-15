@@ -48,7 +48,7 @@ module.exports = class ReadyEvent extends Event {
 
 			const server = await serverModel.getServerById(action.serverId);
 
-			global.cronTasks.set(action.id, command.cronFunction(client, server[0].serverId, action.cron, action.channelId, action.mentionRole));
+			global.cronTasks.set(action.id, command.cronFunction(client, server[0].serverId, action.cron, action.channelId, action.mentionRole, action.parameters));
 		});
 	}
 };
