@@ -198,7 +198,7 @@ module.exports = {
                     SET used=false 
                     WHERE server.serverId=? AND vocabulary.jlpt=?;`;
 
-		const rows = await conn.query(sql, serverId);
+		const rows = await conn.query(sql, [serverId, jlpt]);
 
 		conn.end();
 		return rows;
@@ -225,7 +225,7 @@ module.exports = {
                     SET used=true 
                     WHERE server.serverId=? AND vocabulary.jlpt=?;`;
 
-		const rows = await conn.query(sql, serverId);
+		const rows = await conn.query(sql, [serverId, jlpt]);
 
 		conn.end();
 		return rows;

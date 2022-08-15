@@ -9,7 +9,7 @@ const logger = require('../../common/utils/logger');
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 the information about the kanji */
-module.exports = class ListScheduledTasks extends Command {
+module.exports = class RemoveTask extends Command {
 
 	/**
 	 * A constructor function. It is called when the class is instantiated.
