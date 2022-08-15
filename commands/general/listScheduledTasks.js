@@ -2,7 +2,6 @@ const Command = require('../../structures/CommandClass');
 
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { stripIndents } = require('common-tags');
 
 const actionModel = require('../../models/action.model');
 
@@ -51,14 +50,16 @@ module.exports = class ListScheduledTasks extends Command {
 			const json = [];
 			actions.forEach((action, index) => {
 
-				let message = ""
-				message = `**#️⃣ Salon:** <#${action.channelId}>\n`
-				message += `**⚙️ Commande:** ${action.type}\n`
-				message += `**📅 Planification:** ${action.cron}\n`
-				if (action.mentionRole)
-					message += `**👤 Mentionne:** ${action.mentionRole}\n`
-				if (action.parameters && action.parameters.message)
-					message += `**💬 Message:** ${action.parameters.message.slice(0, 30)}${action.parameters.message.length > 30 ? '...' : '' }\n`
+				let message = '';
+				message = `**#️⃣ Salon:** <#${action.channelId}>\n`;
+				message += `**⚙️ Commande:** ${action.type}\n`;
+				message += `**📅 Planification:** ${action.cron}\n`;
+				if (action.mentionRole) {
+					message += `**👤 Mentionne:** ${action.mentionRole}\n`;
+				}
+				if (action.parameters && action.parameters.message) {
+					message += `**💬 Message:** ${action.parameters.message.slice(0, 30)}${action.parameters.message.length > 30 ? '...' : '' }\n`;
+				}
 
 				json.push({
 					name: `N°${index}`,

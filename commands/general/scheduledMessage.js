@@ -4,7 +4,6 @@ const cron = require('cron');
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
-const { generateEmbedKanji } = require('../../common/kanji/kanjiMessage');
 
 const actionModel = require('../../models/action.model');
 const logger = require('../../common/utils/logger');
@@ -57,12 +56,12 @@ module.exports = class ScheduledMessage extends Command {
 			const roleParam = interaction.options.getRole('role');
 			const role = roleParam ? `<@&${roleParam.id}>` : null;
 
-			// Launching task in background if defined 
+			// Launching task in background if defined
 			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role, {
-				message: messageParam
+				message: messageParam,
 			});
 			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role, {
-				message: messageParam
+				message: messageParam,
 			}));
 
 			// Confirmation message
@@ -94,7 +93,7 @@ module.exports = class ScheduledMessage extends Command {
 
 		const message = parameters.message;
 		if (!message) {
-			logger.error(`Cron function of '${this.name}' cannot get 'message' parameter from json`)
+			logger.error(`Cron function of '${this.name}' cannot get 'message' parameter from json`);
 			return;
 		}
 

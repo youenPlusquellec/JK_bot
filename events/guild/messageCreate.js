@@ -19,19 +19,19 @@ module.exports = class MessageCreate extends Event {
 			content: message.content,
 		});
 
-		// Get last 5 seconds messages from last sender 
+		// Get last 5 seconds messages from last sender
 		const userMessagesIn5s = global.lastMessages.filter(function(item) {
 			return item.userId == message.author.id;
 		});
 
-		let channelDiffList = [];
+		const channelDiffList = [];
 		userMessagesIn5s.forEach(element => {
 			if (!channelDiffList.includes(element.channelId)) {
 				channelDiffList.push(element.channelId);
 			}
 		});
 
-		// If the user wrote in 3 channels or more in less than 5 seconds, kick him 
+		// If the user wrote in 3 channels or more in less than 5 seconds, kick him
 		if (userMessagesIn5s.length > 2 && channelDiffList.length > 2) {
 
 			logger.info(`User '${message.author.username}' is SPAMING, preparing exclusion`);
