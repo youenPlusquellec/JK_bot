@@ -98,7 +98,7 @@ module.exports = class UsedVocabularies extends Command {
 						value: stripIndents`
 						**🈳️ Kanji:** ${vocabulary.vocabulary}
 						**🆙 JTLP:** ${vocabulary.jlpt}
-						**🗓️ Date:** ${vocabulary.timestamp.toLocaleDateString('fr-FR', {year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long'})}
+						**🗓️ Date:** ${vocabulary.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
 					`,
 						inline: true,
 					});
@@ -134,7 +134,7 @@ module.exports = class UsedVocabularies extends Command {
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription(`💬 L\'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
+					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
 					.setTimestamp(),
 				],
 			});
@@ -148,7 +148,7 @@ module.exports = class UsedVocabularies extends Command {
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription(`💬 L\'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
+					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
 					.setTimestamp(),
 				],
 			});

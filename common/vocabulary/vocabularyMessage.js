@@ -1,12 +1,9 @@
-const { UltimateTextToImage, registerFont } = require('ultimate-text-to-image');
-const path = require('path');
-
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	generateEmbedVocabularies: async function (embedColor, vocN5, vocN4, vocN3) {
+	generateEmbedVocabularies: async function(embedColor, vocN5, vocN4, vocN3) {
 
 		// Security in case of changing type
 		if (Array.isArray(vocN5.meanings)) {
@@ -21,7 +18,7 @@ module.exports = {
 
 		// It's creating an embed with the information about the vocabulary.
 		const vocabularyEmbed = new MessageEmbed()
-			.setTitle(`**Exercice d'écriture**`)
+			.setTitle('**Exercice d\'écriture**')
 			.setColor(embedColor)
 			.setDescription(stripIndents`
 					Nouvelle atelier écriture ! Créez une ou plusieurs phrases en utilisant au moins un des mots de vocabulaire ci-dessous.
@@ -39,7 +36,7 @@ module.exports = {
 					**💮 JLPT :** N${vocN3.jlpt}
 
 				`)
-			.setThumbnail(`attachment://jk_logo.jpg`)
+			.setThumbnail('attachment://jk_logo.jpg')
 			.setTimestamp();
 
 		// It's returning the embed to the function that called it.

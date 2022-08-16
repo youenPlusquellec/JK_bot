@@ -1,12 +1,12 @@
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
-const kanjiModel = require('./models/kanji.model');
-const actionModel = require('./models/action.model');
+const kanjiModel = require('../models/kanji.model');
+const actionModel = require('../models/action.model');
 
-const KanjiRepository = require('./deprecated/model/kanjiRepository');
+const KanjiRepository = require('./model/kanjiRepository');
 const kanjiRepository = new KanjiRepository();
-const ActionRepository = require('./deprecated/model/actionRepository');
+const ActionRepository = require('./model/actionRepository');
 const actionRepository = new ActionRepository();
 
 async function manageData() {

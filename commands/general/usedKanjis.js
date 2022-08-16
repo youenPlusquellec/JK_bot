@@ -75,7 +75,7 @@ module.exports = class UsedKanjis extends Command {
 						value: stripIndents`
 						**🈳️ Kanji:** ${kanji.kanji}
 						**🆙 JTLP:** ${kanji.jlpt}
-						**🗓️ Date:** ${kanji.timestamp.toLocaleDateString('fr-FR', {year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long'})}
+						**🗓️ Date:** ${kanji.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
 					`,
 						inline: true,
 					});

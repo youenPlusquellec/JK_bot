@@ -81,7 +81,7 @@ module.exports = class RandomVocabulary extends Command {
 					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3);
 
 					/* It's sending the message to the user. */
-					return await interaction.followUp({ embeds: [vocEmbed], files: [path.resolve(__dirname, `../../common/src/jk_logo.jpg`)] }).then(() => {
+					return await interaction.followUp({ embeds: [vocEmbed], files: [path.resolve(__dirname, '../../common/src/jk_logo.jpg')] }).then(() => {
 						// If there is a role to ping, ping it
 						if (role) {
 							client.channels.cache.get(interaction.channelId).send(role);
@@ -140,7 +140,7 @@ module.exports = class RandomVocabulary extends Command {
 				vocabularyModel.useVocabularyById(randVocN5.id, serverId);
 
 				// Sending the message to the user.
-				client.channels.cache.get(channelId).send({ embeds: [vocEmbed], files: [path.resolve(__dirname, `../../common/src/jk_logo.jpg`)] })
+				client.channels.cache.get(channelId).send({ embeds: [vocEmbed], files: [path.resolve(__dirname, '../../common/src/jk_logo.jpg')] })
 					.then(() => {
 						// If there is a role to ping, ping it
 						if (role) {
