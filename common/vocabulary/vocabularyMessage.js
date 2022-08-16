@@ -21,7 +21,7 @@ module.exports = {
 			.setTitle('**Exercice d\'écriture**')
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					Nouvelle atelier écriture ! Créez une ou plusieurs phrases en utilisant au moins un des mots de vocabulaire ci-dessous.
+					Nouvel atelier écriture ! Créez une ou plusieurs phrases en utilisant au moins un des mots de vocabulaire ci-dessous.
 
 					**📒 Mot : [${vocN5.vocabulary}](https://www.dictionnaire-japonais.com/search.php?w=${vocN5.vocabulary}&t=1)**　${vocN5.reading == vocN5.vocabulary ? '' : `(${vocN5.reading})`}
 					**📖 Sens :** ${JSON.parse(vocN5.meanings)}
