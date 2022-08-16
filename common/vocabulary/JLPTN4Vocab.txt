@@ -1,0 +1,672 @@
+vocabulary/reading/nothing/meanings/test
+髭・鬚・髯/ひげ//a mustache, a beard/
+高校/こうこう//high school/
+騒ぐ/さわぐ//to make noise, to be excited/
+駐車場/ちゅうしゃじょう//parking lot/
+駅/えき//station/
+駄目/だめ//no good/
+頭・首/かしら//neck/
+食料品/しょくりょうひん//groceries/
+食事/しょくじ//a meal/
+飛行場/ひこうじょう//an airport/
+風邪/かぜ//a cold/
+風/ふう//wind/
+顔/かお//face/
+頭/あたま//head/
+音楽/おんがく//music/
+鞄/かばん//bag/
+面白い/おもしろい//interesting, funny/
+非常に///extremely/
+青い/あおい//blue/
+電灯/でんとう//electric light/
+電報/でんぽう//telegram/
+雲/くも//cloud/
+階段/かいだん//stairs/
+降り出す/ふりだす//start to rain/
+下りる・降りる/おりる//to get off/
+間違える/まちがえる//to make a mistake/
+間に合う/まにあう//to be in time for/
+間/あいだ//between/
+開ける・明ける・空ける/あける//to open/
+開く/ひらく//open/
+鍵/かぎ//key/
+釣る/つる//to fish/
+重い/おもい//heavy/
+酷い/ひどい//awful/
+都合/つごう//circumstances/
+都/みやこ//metropolitan/
+部長/ぶちょう//head of a section/
+郊外/こうがい//outskirts/
+適当/てきとう//suitable/
+道具/どうぐ//tool, means/
+過ぎる/すぎる//to exceed/
+運ぶ/はこぶ//to transport/
+遊ぶ/あそぶ//to play/
+遅い/おそい//late, slow/
+進む/すすむ//to make progress/
+連れる/つれる//to lead/
+通る/とおる//to go through/
+送る/おくる//to send/
+返事/へんじ//reply/
+返す・反す/かえす//to return an object/
+近所/きんじょ//neighbourhood/
+迎える/むかえる//to go to meet/
+込む/こむ//to be crowded/
+辞典/じてん//dictionary/
+辛い/からい//hot, spicy/
+輸出/ゆしゅつ//export/
+輸入/ゆにゅう//import/
+軽い/かるい//light (not heavy)/
+踏む/ふむ//to step on/
+足りる/たりる//be sufficient/
+趣味/しゅみ//a hobby/
+起きる/おきる//to get up, to stand up/
+赤ん坊/あかんぼ, あかんぼう//baby, newborn/
+赤ちゃん/あかちゃん//baby, newborn/
+赤い/あかい//red/
+貿易/ぼうえき//trade/
+貸す/かす//to lend/
+買う/かう//to buy/
+貰う/もらう//to receive/
+負ける/まける//to lose/
+警察/けいさつ//police/
+講義/こうぎ//lecture/
+講堂/こうどう//auditorium/
+調べる/しらべる//to investigate/
+説明/せつめい//explanation/
+試験/しけん//exam/
+試合/しあい//match, game/
+計画/けいかく//plan/
+触る/さわる//to touch/
+角/つの//corner/
+親切/しんせつ//kindness/
+覚える/おぼえる//to memorize, to remember/
+規則/きそく//regulations/
+見付ける/みつける//to discover/
+見える/みえる//be seen, be visible/
+西洋/せいようとねりこ//western countries/
+褒める/ほめる//praise, speak well of/
+複雑/ふくざつ//complexity, complication/
+行く/いく//to go/
+虫/むし//insect/
+薄い/うすい//thin/
+葡萄/ぶどう//a grape/
+葉/は//leaf/
+草/くさ//grass/
+英語/えいご//English language/
+苦い/にがい//bitter/
+花見/はなみ//cherry-blossom viewing/
+花瓶/かびん//vase/
+色々/いろいろ//various/
+色/いろ//color/
+船・舟/ふね//ship, boat/
+興味/きょうみ//an interest/
+背中/せなか//the back (of the body)/
+育てる/そだてる//to rear, to bring up/
+聞こえる/きこえる//to be heard/
+翻訳/ほんやく//translation/
+習慣/しゅうかん//custom, manners/
+美術館/びじゅつかん//art gallery/
+線/せん//line/
+続く/つづく//continue, last/
+絹/きぬ//Silk/
+絵/え//picture/
+経験/けいけん//experience/
+経済/けいざい//finance, economy/
+終わる/おわる//to end/
+紹介/しょうかい//introduction/
+細かい/こまかい//smal, fin/
+素晴らしい/すばらしい//wonderful/
+紙/かみ//paper/
+約束/やくそく//promise/
+米/べい//uncooked rice/
+笑う/わらう//to laugh, to smile/
+空港/くうこう//airport/
+空気/くうき//air, atmosphere/
+開く・明く・空く/あく//empty, has space/
+秋/あき//autumn, fall/
+神社/じんじゃ//Shinto shrine/
+祖父/そふ//grandfather/
+祖母/そぼ//grandmother/
+研究室/けんきゅうしつ//laboratory/
+研究/けんきゅう//research/
+砂/いさご//sand/
+着物/きもの//a kimono/
+眠る/ねむる//to sleep/
+眠い/ねむい//to be sleepy/
+真面目/まじめ//serious/
+真ん中/まんなか//middle/
+直る/なおる//to be fixed, repaired/
+盛ん/さかん//popular, prosperous/
+盗む/ぬすむ//to steal/
+皆/みな, みんな//everybody/
+発音/はつおん//pronunciation/
+痩せる/やせる//to become thin/
+痛い/いたい//to be painful/
+番組/ばんぐみ//television or radio program/
+留守/るす//absence/
+男性/だんせい//man/
+男の子/おとこのこ//boy/
+男/おとこ//man/
+申す/もうす//to be called, to say (respectful)/
+申し上げる/もうしあげる//to say, to tell (respectful)/
+用意/ようい//preparation/
+用/よう//use/
+生活/せいかつ//life, living/
+甘い/あまい//sweet/
+理由/りゆう//reason/
+珍しい/めずらしい//rare/
+特急/とっきゅう//limites express train/
+特に/とくに//particularly, especially/
+片仮名/かたかな//Katakana/
+熱心/ねっしん//enthusiasm/
+熱/ねつ//fever/
+焼ける/やける//to burn, to be roasted/
+焼く/やく//to bake, to grill/
+無理/むり//impossible/
+無くなる/なくなる//to disappear, to get lost/
+為/ため//in order to/
+点/てん//point, dot/
+火曜日/かようび//Tuesday/
+火/ひ//fire/
+濡れる/ぬれる//to get wet/
+浸ける・漬ける/つける//to soak, to pickle/
+漫画/まんが//japanese comic, manga/
+漢字/かんじ//Kanji character/
+滑る/すべる//to slide, to slip/
+準備/じゅんび//preparation/
+湯/ゆ//hot water/
+湖/こ//a lake/
+港/みなと//harbour/
+暖かい・温かい/あたたかい//warm/
+済む/すむ//to finish/
+深い/ふかい//deep/
+消しゴム/けしゴム//an eraser/
+海/うみ//sea/
+泳ぐ/およぐ//to swim/
+注意/ちゅうい//caution/
+法律/ほうりつ//law/
+治る/なおる//to be cured, to heal/
+沸く/わく//to boil, to grow hot/
+沸かす/わかす//to boil, to heat/
+汽車/きしゃ//steam train/
+決める/きめる//to decide/
+決まる/きまる//to be decided/
+決して/けっして//never/
+池/いけ//pond/
+汚れる/よごれる//to get dirty/
+水泳/すいえい//swimming/
+気持ち/きもち//feeling, mood/
+気分/きぶん//mood/
+気/き//Spirit, mood/
+毛/け//hair or fur/
+比べる/くらべる//to compare/
+残る/のこる//to remain/
+歴史/れきし//history/
+歯医者/はいしゃ//dentist/
+歩く/あるく//to walk/
+正しい/ただしい//correct/
+止める・停める/とめる//to stop/
+止む・已む/やむ//to stop/
+歌う/うたう//to sing/
+歌/うた//song/
+機会/きかい//Opportunity/
+楽しむ/たのしむ//enjoy, enjoy oneself/
+楽しみ/たのしみ//pleasure, amusement/
+椅子/いす//chair/
+棚/たな//shelves/
+校長/こうちょう//headmaster/
+柔道/じゅうどう//judo/
+柔らかい/やわらかい//soft, tender/
+木綿/もめん//cotton/
+朝寝坊/あさねぼう//a late riser/
+朝/ちょう//morning/
+最近/さいきん//nowadays/
+最初/さいしょ//beginning, first/
+書く・描く/かく//to write/
+暮れる/くれる//to get dark, to come to an end/
+暑い/あつい//hot (air)/
+景色/けしき//landscape/
+普通/ふつう//usually/
+時代/じだい//era/
+昼間/ひるま//daytime, during the day/
+昼休み/ひるやすみ//noon break/
+是非/ぜひ//without fail/
+映画館/えいがかん//cinema/
+映画/えいが//movie/
+星/ほし//star/
+昔/むかし//olden days, former/
+明日/あした//tomorrow/
+日記/にっき//diary/
+日/ひ//day, sun/
+旅館/りょかん//Japanese style hotel/
+-方/-かた//person (polite)/
+文法/ぶんぽう//grammar/
+文学/ぶんがく//litterature/
+文化/ぶんか//culture/
+数学/すうがく//mathematic, arithmetic/
+教育/きょういく//education/
+教会/きょうかい//church/
+放送/ほうそう//to broadcast/
+支度・仕度/したく//preparations/
+揺れる/ゆれる//to shake, to sway/
+捜す・探す/さがす//to look for/
+捨てる/すてる//to throw away/
+捕まえる・掴まえる・捉まえる/つかまえる//to seize/
+挨拶/あいさつ//greeting/
+指輪・指環/ゆびわ//a ring/
+指/ゆび//finger/
+拾う/ひろう//to pick up, to gather/
+押す/おす//to push/
+投げる/なげる//to throw away/
+技術/ぎじゅつ//Skill, art, technique/
+承知/しょうち//consentment/
+払う/はらう//to pay/
+手袋/てぶくろ//glove/
+戻る/もどる//to return, to go back to/
+意味/いみ//meaning/
+恥ずかしい/はずかしい//embarrassed/
+怪我/けが//an injury/
+急行/きゅうこう//speedy, express/
+急/きゅう//urgent/
+怖い/こわい//frightening/
+忙しい/いそがしい//to be busy/
+忘れ物/わすれもの//lost article/
+必要/ひつよう//necessary/
+心配/しんぱい//worries/
+心/しん//core,heart/
+復習/ふくしゅう//revision/
+後ろ/うしろ//back, rear, behind/
+後/あと//later, after/
+弟/てい//someone’s younger brother/
+引っ越す/ひっこす//to move (house)/
+引き出す/ひきだす//to draw out/
+引き出し/ひきだし//drawer/
+床屋/とこや//a barber shop/
+帰る/かえる//to return home/
+席/せき//seat/
+布団・蒲団/ふとん//Japanese bed, futon/
+市民/しみん//citizen/
+市/し//city/
+差し上げる/さしあげる//to give (respectful)/
+工業/こうぎょう//the manufacturing industry/
+工場/こうじょう//factory/
+川・河/かわ//river/
+島/しま//island/
+展覧会/てんらんかい//exhibition/
+届ける/とどける//to reach/
+小鳥/ことり//small, bird/
+小説/しょうせつ//novel/
+尋ねる/たずねる//to ask/
+将来/しょうらい//future, prospects/
+寺/てら//temple/
+寝坊/ねぼう//sleeping in late/
+寄る/よる//to visit/
+寂しい/さびしい//lonely/
+家族/かぞく//family/
+家内/かない//my wife/
+家/いえ//house, home/
+宜しい/よろしい//ok, all right (respectful)/
+学生/がくせい//student/
+学校/がっこう//school/
+季節/きせつ//season/
+子/こ//child/
+娘/むすめ//daughter/
+姉/あね//older sister/
+具・妻/つま//wife/
+女の子/おんなのこ//girl/
+女/おんな//woman/
+奥さん/おくさん//someone’s wife/
+失敗/しっぱい//failure, mistake/
+太る/ふとる//to grow fat/
+大分/だいぶ//greatly/
+大体/だいたい//generally/
+大人/たいじん//adult/
+大事/だいじ//important, valuable/
+夢/ゆめ//dream/
+外国人/がいこくじん//foreigner/
+外国/がいこく//foreign country/
+変/へん//strange/
+売る/うる//to sell/
+壊れる/こわれる//to be broken/
+壊す/こわす//to break/
+増える/ふえる//to increase/
+塗る/ぬる//to paint, lacquer/
+場所/ばしょ//location/
+場合/ばあい//situation/
+坂/さか//slope, hill/
+地震/じしん//earthquake/
+国際/こくさい//international/
+回る/まわる//to go around/
+四月/よつき//April/
+喧嘩/けんか//a quarrel/
+喜ぶ/よろこぶ//to be delighted/
+品物/しなもの//goods/
+味噌/みそ//bean paste/
+味/あじ//taste, flavor/
+周り/まわり//surroundings/
+君/きみ//You (informal)/
+向かう/むかう//to face/
+同じ/おなじ//same/
+合う/あう//fit, suit/
+吃驚/びっくり//be surprised/
+叱る/しかる//to scold/
+可愛い/かわいい//cute, pretty/
+召し上がる/めしあがる//to eat (respectful)/
+取り替える・取り換える/とりかえる//to exchange/
+参る・詣る/まいる//to go, to come (humble form)/
+厳しい/きびしい//strict/
+原因/げんいん//source, cause/
+厚い/あつい//thick/
+危険/きけん//Danger/
+危ない/あぶない//dangerous/
+卒業/そつぎょう//graduation/
+十月/じゅうがつ//October/
+十分・充分/じゅうぶん//enough/
+十二月/じゅうにがつ//December/
+十一月/じゅういちがつ//November/
+医者/いしゃ//doctor/
+包む/つつむ//to wrap/
+匂い・臭い/におい//a smell/
+力/ちから//strengh, power/
+割合/わりあい//rate, ratio, percentage/
+割れる/われる//to break/
+利用/りよう//utilization/
+別れる/わかれる//to separate/
+別/べつ//different/
+出席/しゅっせき//attendance/
+冷房/れいぼう//air conditioning/
+冷える/ひえる//get cold, feel chilly/
+再来週/さらいしゅう//the week after next/
+再来月/さらいげつ//the month after next/
+円/えん//Yen/
+内/うち//home/
+具合/ぐあい//condition, health/
+六月/ろくがつ//June/
+公務員/こうむいん//Government worker/
+八月/はちがつ//August/
+全然/ぜんぜん//not at all (in negative sentence)/
+入院/にゅういん//be hospitalized/
+入学/にゅうがく//enter school or university/
+入れる/いれる//to insert, to put in/
+光る/ひかる//to shine/
+光/ひかり//light/
+先輩/せんぱい//senior/
+兄/けい//older brother/
+僕/しもべ//I (for male)/
+傘/かさ//umbrella/
+値段/ねだん//price/
+借りる/かりる//to borrow/
+倍/ばい//twice, double/
+例えば/たとえば//for example/
+体/たい//body/
+似る/にる//to be similar/
+伯母さん・叔母さん・小母さん/おばさん//aunt/
+伝える/つたえる//to report/
+会社/かいしゃ//company, enterprise/
+会う・逢う・遭う/あう//to meet/
+付く/つく//to be attached/
+仕方/しかた//method/
+今度/こんど//now, next time/
+今夜/こんや//tonight/
+今/いま//now/
+人形/にんぎょう//a doll/
+人口/じんこう//population/
+交通/こうつう//traffic, transportation/
+亡くなる/なくなる//to die/
+五月/ごがつ//May/
+五日/いつか//the 5th day of the month, 5 days/
+五つ/いつつ//five/
+二月/ふたつき//February/
+事故/じこ//accident/
+事務所/じむしょ//office/
+予習/よしゅう//preparation of a lesson/
+予約/よやく//reservation/
+予定/よてい//arrangement/
+九月/くがつ//September/
+乗り物/のりもの//vehicle/
+乗り換える/のりかえる//to tansfer, change/
+中学校/ちゅうがっこう//junior high school/
+両方/りょうほう//both sides/
+世話/せわ//to look after/
+世界/せかい//the world/
+不便/ふべん//inconvenience/
+下着/したぎ//underwear/
+下宿/げしゅく//lodging/
+下げる/さげる//to lower/
+下がる/さがる//to get down/
+上着/うわぎ//coat, jacket/
+上げる・挙げる/あげる//to rise/
+上がる/あがる//to go up/
+三月/みつき//March/
+七月/しちがつ//July/
+丁寧/ていねい//polite/
+一番/いちばん//No. 1, the best, the first/
+一月/ひとつき//January/
+一昨日/いっさくじつ//the day before yesterday/
+一昨年/おととし//the year before last/
+一/いち//one/
+ワープロ/ワープロ//word processor/
+レポート/レポート//report/
+ベル/ベル//bell/
+プレゼント/プレゼント//a present, a gift/
+ファックス/ファックス//fax/
+ビル/ビル//building/
+ピアノ/ピアノ//piano/
+パソコン/パソコン//personal computer/
+テニス/テニス//tenis/
+タイプ/タイプ//type, style/
+ソフト/ソフト//soft/
+ステーキ/ステーキ//steak/
+スクリーン/スクリーン//screen/
+スーツケース/スーツケース//suitcase/
+スーツ/スーツ//suit/
+サンドイッチ/サンドイッチ//sandwich/
+サンダル/サンダル//sandal/
+サラダ/サラダ//salad/
+カレンダー/カレンダー//calendar/
+カメラ/カメラ//camera/
+お茶/おちゃ//tea/
+お父さん/おとうさん//father/
+お手洗い/おてあらい//toilet, lavatory/
+お弁当/おべんとう//lunchbox/
+お姉さん/おねえさん//someone’s elder sister/
+お兄さん/おにいさん//someone’s elder brother/
+お祖父さん・お爺さん/おじいさん//grand father/
+嫌/いや//not likable, unpleasant/
+何時も/いつも//always/
+何時/いつ//when/
+幾ら/いくら//how much/
+いいえ/いいえ//no/
+あれ/あれ//that one/
+有る・在る/ある//to possess/
+余り/あまり//not so/
+アパート/アパート//apartment/
+あの, あのう/あの, あのう//that (over there)/
+あそこ/あそこ//over there/
+明後日/あさって//the day after tomorrow/
+ああ/ああ//Ah!/
+階/かい//~floor/
+回/かい//~times/
+鳴る/なる//sound, ring/
+高等学校/こうとうがっこう//High school (full word)/
+高校生///high school students/
+雨/あめ//rain/
+隅/すみ//corner, nook/
+鉛筆/えんぴつ//pencil/
+遠く/とおく//distant/
+連絡/れんらく//contact/
+途中/とちゅう//on the way/
+逃げる/にげる//to escape/
+退院/たいいん//leave hospital/
+足す/たす//to add a number/
+足・脚/あし//leg, foot/
+貴方/あなた//you/
+訳/わけ//meaning, reason/
+訪ねる/たずねる//to visit/
+言う/いう//to say, to tell/
+見物/けんぶつ//sightseeing/
+血/ち//blood/
+良い/よい//good/
+自由/じゆう//freedom/
+続ける/つづける//to continue, go on/
+競争/きょうそう//competition/
+立てる/たてる//stand up, put up/
+社長/しゃちょう//company president/
+社会/しゃかい//society/
+確か/たしか//definite/
+知らせる/しらせる//to notify/
+相談/そうだん//to discuss/
+直す/なおす//to fix, to repair/
+畳/たたみ//a Tatami/
+用事/ようじ//things to do/
+産業/さんぎょう//industry/
+生産/せいさん//production/
+生まれる・産まれる/うまれる//to be born/
+特別/とくべつ//special/
+浴びる/あびる//to take a shower/
+洗う/あらう//to wash/
+注射/ちゅうしゃ//injection/
+泥棒/どろぼう//thief/
+泣く/なく//to cry/
+泊まる/とまる//to lodge at/
+水道/すいどう//water supply/
+残念/ざんねん//disappointment/
+森/もり//forest/
+林/はやし//woods, forest/
+有る・在る/ある//to be, to exist/
+月/つき//moon/
+最後/さいご//last, end/
+暖房/だんぼう//heating/
+明るい/あかるい//light, bright/
+新聞社/しんぶんしゃ//newspaper company/
+新しい/あたらしい//new/
+故障/こしょう//trouble, damage, breakdown/
+政治/せいじ//politics, government/
+拝見/はいけん//to look at, find out (respectful)/
+招待/しょうたい//invitation/
+手伝う/てつだう//to assist/
+戦争/せんそう//war/
+慣れる・馴れる/なれる//to grow accustomed to/
+息子/むすこ//son/
+役に立つ///to be helpful/
+建てる/たてる//to build/
+店員/てんいん//shop assistant/
+小学校/しょうがっこう//elementary school/
+客/きゃく//guest, customer/
+字/じ//city/
+始める/はじめる//to begin/
+妹/いもうと//someone’s younger sister/
+女性/じょせい//woman/
+天気予報/てんきよほう//weather forecast/
+大学生/だいがくせい//university student/
+大きい, 大きな/おおきい, おおきな//big/
+地理/ちり//geography/
+台風・颱風/たいふう//typhoon/
+反対/はんたい//Opposition/
+動物園/どうぶつえん//zoo/
+出発/しゅっぱつ//departure/
+優しい/やさしい//kind/
+倒れる/たおれる//to break down/
+住所/じゅうしょ//an address, a residence/
+伯父さん・叔父さん・小父さん/おじさん//uncle/
+二階建て/にかいだて//two storied/
+上/うえ//top, on, above/
+一緒/いっしょ//together/
+一日/いちにち//one day/
+レジ/レジ//a register/
+もうすぐ/もうすぐ//soon/
+ハンドバッグ/ハンドバッグ//Handbag/
+パート/パート//part time/
+テキスト/テキスト//text, text book/
+チェック/チェック//check/
+ステレオ/ステレオ//Stereo/
+ジャム/ジャム//jam/
+お金/おかね//money/
+お母さん/おかあさん//my own mother/
+ええ/ええ//Yes, I see/
+幾つ/いくつ//how many, how old/
+あちら/あちら//over there (polite)/
+側/かわ, がわ//~side/
+朝御飯/あさごはん//breakfast/
+入り口/いりぐち//entrance/
+エレベーター/エレベーター//elevator/
+碁/ご//honorific prefix/
+おいしい/おいしい//delicious; tasty; good/
+酒/さけ//alcohol/
+皿/さら//plate; dish/
+中/なか//stomach; belly/
+-界/-かい//counter for times/
+買い物/かいもの//shopping/
+-箇月/-かげつ//counter for months/
+側/かわ, がわ//side (of something)/
+御存じ/ごぞんじ//to know (honorific)/
+問う/とう//answer/
+すごい/すごい//amazing/
+なかなか/なかなか//very/
+久し振り/ひさしぶり//long time; long time, no see/
+見付かる/みつかる//to find/
+高校生///high school student/
+上げる・挙げる/あげる//to give/
+居る/いる//need, must have, be required/
+大勢/おおぜい//many people/
+起きる/おきる//to put/
+お祖母さん・お婆さん/おばあさん//grandmother/
+掛かる・懸かる/かかる//to take time, money/
+掛ける・懸ける/かける//to wear/
+きっと/きっと//surely/
+下さる/くださる//to give (to me) respectful/
+呉れる/くれる//to give (to me) simple form/
+ケーキ/ケーキ//Cake/
+けれど(も)/けれど(も)//however/
+けれど(も)/けれど(も)//however/
+請う・乞う/こう//this way/
+御馳走/ごちそう//a feast/
+事/こと//thing,matter/
+この間/このあいだ//the other day, recently/
+この頃/このごろ//these days, nowadays/
+塵・芥/ごみ//rubbish/
+コンサート/コンサート//Concert/
+コンピューター/コンピューター//Computer/
+さっき/さっき//a little while ago/
+しっかり/しっかり//firmly, steadily/
+しばらく/しばらく//little while/
+邪魔/じゃま//intrusion, obstacle/
+随分/ずいぶん//very, extremely/
+すっかり/すっかり//completely/
+すっと/すっと//straight, all of a sudden/
+掏摸/すり//a pickpocket/
+すると/すると//then/
+添う・副う/そう//really/
+それで/それで//because of that/
+それに/それに//moreover/
+それ程/それほど//to that extent/
+そろそろ/そろそろ//gradually, soon/
+そんな/そんな//that kind of/
+そんなに/そんなに//so much, like that/
+大抵/たいてい//usually/
+だから/だから//so, therefore/
+たまに/たまに//occasionally/
+ちっとも/ちっとも//not at all (in negative sentence)/
+瀝青/チャン//familiar suffix usually for girls/
+積もり/つもり//intention/
+できるだけ/できるだけ//as much as possible/
+到頭/とうとう//finally, after all/
+どんどん/どんどん//more and more/
+(-)なさる/(-)なさる//to do (respectful)/
+なるべく/なるべく//as much as possible/
+成程/なるほど//Indeed, really, I see/
+喉/のど//throat/
+はず/はず//it should be so/
+はっきり/はっきり//clearly/
+程/ほど//extent/
+殆ど/ほとんど//mostly/
+先ず/まず//first of all/
+又は/または//or, otherwise/
+もし/もし//if/
+もちろん/もちろん//of course/
+尤も/もっとも//extremely/
+やっと/やっと//at last/
+やはり, やっぱり/やはり, やっぱり//as I thought/
+やはり, やっぱり/やはり, やっぱり//as I thought/
+良い/よい//good/

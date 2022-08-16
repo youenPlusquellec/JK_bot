@@ -46,5 +46,6 @@ module.exports = {
 		'space-unary-ops': 'error',
 		'spaced-comment': 'error',
 		'yoda': 'error',
+		'no-irregular-whitespace': 'off',
 	},
 };

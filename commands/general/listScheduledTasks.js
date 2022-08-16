@@ -23,7 +23,7 @@ module.exports = class ListScheduledTasks extends Command {
 					option.setName('channel')
 						.setDescription('Liste les actions pour le salon donné')
 						.setRequired(false)),
-			usage: 'listScheduledTasks',
+			usage: 'listScheduledTasks [channel]',
 			category: 'kanji',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});

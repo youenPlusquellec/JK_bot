@@ -9,3 +9,4 @@ prod.env
 prod.config.js
 out.png
 db.json
+database/dumps

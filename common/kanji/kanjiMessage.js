@@ -47,13 +47,13 @@ module.exports = {
 			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					**✍️ Lectures KUN:** ${JSON.parse(randKanji.kunReadings)}
+					**📖 Lectures KUN :** ${JSON.parse(randKanji.kunReadings)}
 		
-					**✍️ Lectures ON:** ${JSON.parse(randKanji.onReadings)}
+					**📖 Lectures ON :** ${JSON.parse(randKanji.onReadings)}
 		
-					**📚 Sens (anglais):** ${JSON.parse(randKanji.meanings)}
+					**📚 Sens :** ${JSON.parse(randKanji.meanings)}
 		
-					**🎓 JLPT:** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
+					**💮 JLPT :** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
 		
 					À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
 				`)
