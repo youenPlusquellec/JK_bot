@@ -2,6 +2,10 @@
 
 A Discord Bot initially created for Japan Kankei discord [server](https://discord.gg/kR83CU3v4Z) using Slash Commands and Context Menus. Japan Kankei is a Japanese-oriented learning project, with learning Twitch lives as well as many activities on discord.
 
+## Documentation
+
+Just go [there](https://youenplusquellec.github.io/jk_bot/)
+
 ## ⚙️ Setup
 
 1. Create a folder on your computer, then type the following console command to clone this repository.
