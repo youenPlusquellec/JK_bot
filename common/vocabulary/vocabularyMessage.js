@@ -31,7 +31,7 @@ module.exports = {
 					**📖 Sens :** ${JSON.parse(vocN4.meanings)}
 					**💮 JLPT :** N${vocN4.jlpt}
 
-					**📒 Mot : [${vocN3.vocabulary}](https://www.dictionnaire-japonais.com/search.php?w=${vocN4.vocabulary}&t=1)**　${vocN3.reading == vocN3.vocabulary ? '' : `(${vocN3.reading})`}
+					**📒 Mot : [${vocN3.vocabulary}](https://www.dictionnaire-japonais.com/search.php?w=${vocN3.vocabulary}&t=1)**　${vocN3.reading == vocN3.vocabulary ? '' : `(${vocN3.reading})`}
 					**📖 Sens :** ${JSON.parse(vocN3.meanings)}
 					**💮 JLPT :** N${vocN3.jlpt}
 
