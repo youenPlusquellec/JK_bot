@@ -59,7 +59,8 @@ module.exports = {
                     FROM used_kanji
                     INNER JOIN server ON used_kanji.serverId=server.id
                     INNER JOIN kanji ON used_kanji.kanjiId=kanji.id
-                    WHERE used=1 AND server.serverId=?;`;
+                    WHERE used=1 AND server.serverId=?
+					order by used_kanji.timestamp;`;
 		const rows = await conn.query(sql, serverId);
 
 		conn.end();

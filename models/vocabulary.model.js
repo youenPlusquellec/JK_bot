@@ -51,7 +51,8 @@ module.exports = {
                     FROM used_vocabulary
                     INNER JOIN server ON used_vocabulary.serverId=server.id
                     INNER JOIN vocabulary ON used_vocabulary.vocabularyId=vocabulary.id
-                    WHERE used=1 AND server.serverId=?;`;
+                    WHERE used=1 AND server.serverId=?
+					order by used_vocabulary.timestamp;`;
 		const rows = await conn.query(sql, serverId);
 
 		conn.end();
@@ -64,7 +65,8 @@ module.exports = {
                     FROM used_vocabulary
                     INNER JOIN server ON used_vocabulary.serverId=server.id
                     INNER JOIN vocabulary ON used_vocabulary.vocabularyId=vocabulary.id
-                    WHERE used=1 AND server.serverId=? AND vocabulary.jlpt=?;`;
+                    WHERE used=1 AND server.serverId=? AND vocabulary.jlpt=?
+					order by used_vocabulary.timestamp;`;
 		const rows = await conn.query(sql, [serverId, jlpt]);
 
 		conn.end();
