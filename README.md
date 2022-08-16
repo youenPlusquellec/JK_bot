@@ -41,7 +41,9 @@ npm i -g --add-python-to-path --vs2015 --production windows-build-tools
 npm start
 ```
 
-## ⌨️ Usage
+## ⌨️ ⌨️ Usage
+
+To create slash commands on the server, you need to set to `true` deployOnStart variable in `config.js`:
 
 To create slash commands on the server, you need to set to `true` deployOnStart variable in `config.js`:
 
