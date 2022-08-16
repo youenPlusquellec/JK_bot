@@ -17,36 +17,32 @@ module.exports = class Help extends Command {
 						.setRequired(true)
 						.addChoices(
 							{
-								name: 'Hello',
-								value: 'hello',
-							},
-							{
-								name: 'Avatar',
-								value: 'Avatar',
-							},
-							{
-								name: 'User Info',
-								value: 'User Info',
-							},
-							{
-								name: 'rkanji',
+								name: 'Random Kanji',
 								value: 'rkanji',
+							},
+							{
+								name: 'Used Kanjis',
+								value: 'usedkanjis',
+							},
+							{
+								name: 'Random Vocabulary',
+								value: 'rvocabulary',
+							},
+							{
+								name: 'List Scheduled Tasks',
+								value: 'listscheduledtasks',
+							},
+							{
+								name: 'Remove Task',
+								value: 'removetask',
+							},
+							{
+								name: 'Scheduled Message',
+								value: 'scheduledmessage',
 							},
 							{
 								name: 'Help',
 								value: 'help',
-							},
-							{
-								name: 'Ping',
-								value: 'ping',
-							},
-							{
-								name: 'Prefix',
-								value: 'prefix',
-							},
-							{
-								name: 'Not Found',
-								value: 'notfound',
 							},
 						),
 				),
@@ -66,7 +62,7 @@ module.exports = class Help extends Command {
 				const commandEmbed = new MessageEmbed()
 					.setTitle(`**\`${command.name}\`** Command Information`)
 					.setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-					.setColor('#57f287')
+					.setColor(client.config.embedColor)
 					.setDescription(stripIndents`
                     > ${command.contextDescription ? command.contextDescription : command.description}
 

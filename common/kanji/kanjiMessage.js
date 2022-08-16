@@ -29,19 +29,31 @@ module.exports = {
 			.render()
 			.toFile(path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`));
 
+
+		// Security in case of changing type
+		if (Array.isArray(randKanji.kunReadings)) {
+			randKanji.kunReadings = JSON.stringify(randKanji.kunReadings);
+		}
+		if (Array.isArray(randKanji.onReadings)) {
+			randKanji.onReadings = JSON.stringify(randKanji.onReadings);
+		}
+		if (Array.isArray(randKanji.meanings)) {
+			randKanji.meanings = JSON.stringify(randKanji.meanings);
+		}
+
 		// It's creating an embed with the information about the kanji.
 		const kanjiEmbed = new MessageEmbed()
 			.setTitle(`**\`Le kanji du jour : ${randKanji.kanji}\`**`)
 			.setURL(`https://jisho.org/search/${randKanji.kanji}%20%23kanji`)
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					**✍️ Lectures KUN:** ${JSON.parse(randKanji.kunReadings)}
+					**📖 Lectures KUN :** ${JSON.parse(randKanji.kunReadings)}
 		
-					**✍️ Lectures ON:** ${JSON.parse(randKanji.onReadings)}
+					**📖 Lectures ON :** ${JSON.parse(JSON.parse(randKanji.onReadings))}
 		
-					**📚 Sens (anglais):** ${JSON.parse(randKanji.meanings)}
+					**📚 Sens :** ${JSON.parse(randKanji.meanings)}
 		
-					**🎓 JLPT:** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
+					**💮 JLPT :** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
 		
 					À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
 				`)

@@ -4,13 +4,13 @@ const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
 
-const kanjiModel = require('../../models/kanji.model');
+const vocabularyModel = require('../../models/vocabulary.model');
 const logger = require('../../common/utils/logger');
 
 /* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 the information about the kanji */
-module.exports = class UsedKanjis extends Command {
+module.exports = class UsedVocabularies extends Command {
 
 	/**
 	 * A constructor function. It is called when the class is instantiated.
@@ -19,8 +19,8 @@ module.exports = class UsedKanjis extends Command {
 	constructor(client) {
 		super(client, {
 			data: new SlashCommandBuilder()
-				.setName('usedkanjis')
-				.setDescription('Permet de manipuler les kanjis "utilisées"')
+				.setName('usedvocabularies')
+				.setDescription('Supprime une tâche programmée par son id')
 				.addStringOption((str) =>
 					str
 						.setName('command')
@@ -40,9 +40,29 @@ module.exports = class UsedKanjis extends Command {
 								value: 'clear',
 							},
 						),
+				)
+				.addNumberOption((str) =>
+					str
+						.setName('jlpt')
+						.setDescription('Niveau de JLPT ciblé')
+						.setRequired(false)
+						.addChoices(
+							{
+								name: 'N5',
+								value: 5,
+							},
+							{
+								name: 'N4',
+								value: 4,
+							},
+							{
+								name: 'N3',
+								value: 3,
+							},
+						),
 				),
-			usage: 'usedkanjis COMMAND',
-			category: 'kanji',
+			usage: 'usedvocabularies COMMAND',
+			category: 'vocabularies',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
 	}
@@ -52,30 +72,33 @@ module.exports = class UsedKanjis extends Command {
 		// Getting command parameter
 		const command = interaction.options.getString('command');
 
+		// Getting command parameter
+		const jlpt = interaction.options.getNumber('jlpt');
+
 		// It's a way to send a message to the user without sending it right away.
 		await interaction.deferReply();
 
 		// Debugging
-		logger.info(`'${command}' available kanjis for server '${interaction.member.guild.name}'`);
+		logger.info(`'${command}' available vocabularies for server '${interaction.member.guild.name}'`);
 
 		let listEmbed;
 		if (command === 'list') {
 
 			// It's getting the actions from the database.
-			const kanjis = await kanjiModel.getUsedKanjis(interaction.guildId);
+			const vocabularies = jlpt ? await vocabularyModel.getUsedVocabulariesByJlpt(interaction.guildId, jlpt) : await vocabularyModel.getUsedVocabularies(interaction.guildId);
 
 			// Checking if we-ve got values from DB
-			if (kanjis && kanjis.length) {
+			if (vocabularies && vocabularies.length) {
 
-				// Preparing the list of kanjis
+				// Preparing the list of vocabularies
 				const json = [];
-				kanjis.slice(-25).forEach((kanji, index) => {
+				vocabularies.slice(-25).forEach((vocabulary, index) => {
 					json.push({
 						name: `N°${index + 1}`,
 						value: stripIndents`
-						**🈳️ Kanji:** ${kanji.kanji}
-						**🆙 JTLP:** ${kanji.jlpt}
-						**🗓️ Date:** ${kanji.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
+						**🈳️ Kanji:** ${vocabulary.vocabulary}
+						**🆙 JTLP:** ${vocabulary.jlpt}
+						**🗓️ Date:** ${vocabulary.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
 					`,
 						inline: true,
 					});
@@ -83,11 +106,11 @@ module.exports = class UsedKanjis extends Command {
 
 				// Preparing embed message
 				listEmbed = new MessageEmbed()
-					.setTitle(`Liste des kanjis utilisés sur '${interaction.member.guild.name}'`)
+					.setTitle(`Liste des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}utilisés sur '${interaction.member.guild.name}'`)
 					.setColor(client.config.embedColor)
 					.addFields(json)
 					.setTimestamp()
-					.setFooter({ text: '⚠️ La limite est de 25 kanjis affichés' });
+					.setFooter({ text: '⚠️ La limite est de 25 mots de vocabulaire affichés' });
 				return await interaction.followUp({ embeds: [listEmbed] });
 			} else {
 				// In case of no kanji used
@@ -95,7 +118,7 @@ module.exports = class UsedKanjis extends Command {
 					embeds: [new MessageEmbed()
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
-						.setDescription('💬 Aucun kanji épuisé sur ce serveur')
+						.setDescription('💬 Aucun mot de vocabulaire épuisé sur ce serveur')
 						.setTimestamp(),
 					],
 				});
@@ -104,28 +127,28 @@ module.exports = class UsedKanjis extends Command {
 		} else if (command === 'clear') {
 
 			// Clear database from used message for current server
-			await kanjiModel.clearKanjis(interaction.guildId);
+			jlpt ? await vocabularyModel.clearVocabulariesByJlpt(interaction.guildId, jlpt) : await vocabularyModel.clearVocabularies(interaction.guildId);
 
 			// Return confirmation message
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
 					.setTimestamp(),
 				],
 			});
 		} else if (command === 'restore') {
 
 			// Clear database from used message for current server
-			await kanjiModel.restoreKanjis(interaction.guildId);
+			jlpt ? await vocabularyModel.restoreVocabulariesByJlpt(interaction.guildId, jlpt) : await vocabularyModel.restoreVocabularies(interaction.guildId);
 
 			// Return confirmation message
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
 					.setTimestamp(),
 				],
 			});

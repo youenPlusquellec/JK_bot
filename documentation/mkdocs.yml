@@ -30,6 +30,7 @@ nav:
   - Home : 'index.md'
   - Getting Started: 'getting_started.md'
   - Releases:
+    - v1.3: 'releases/v1.3.md'
     - v1.2: 'releases/v1.2.md'
     - v1.1: 'releases/v1.1.md'
     - v1.0: 'releases/v1.0.md'
