@@ -10,6 +10,7 @@ Just go [there](https://youenplusquellec.github.io/jk_bot/)
 
 1. Create a folder on your computer, then type the following console command to clone this repository.
 
+
 ```bash
 git clone https://github.com/youenPlusquellec/jk_bot
 ```

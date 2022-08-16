@@ -49,7 +49,7 @@ module.exports = {
 			.setDescription(stripIndents`
 					**📖 Lectures KUN :** ${JSON.parse(randKanji.kunReadings)}
 		
-					**📖 Lectures ON :** ${JSON.parse(randKanji.onReadings)}
+					**📖 Lectures ON :** ${JSON.parse(JSON.parse(randKanji.onReadings))}
 		
 					**📚 Sens :** ${JSON.parse(randKanji.meanings)}
 		
