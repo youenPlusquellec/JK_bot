@@ -90,7 +90,12 @@ module.exports = class ScheduledMessage extends Command {
 	}
 
 	cronFunction(client, serverId, cronTimer, channelId, role, parameters) {
+		// Add security to parameters
+		if (typeof parameters === 'string') {
+			parameters = JSON.parse(parameters);
+		}
 
+		// Getting message parameter
 		const message = parameters.message;
 		if (!message) {
 			logger.error(`Cron function of '${this.name}' cannot get 'message' parameter from json`);
