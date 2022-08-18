@@ -55,7 +55,7 @@ module.exports = {
 		
 					**💮 JLPT :** ${randKanji.jlpt ? randKanji.jlpt : 'Pas dans le JLPT'}
 		
-					À toi de jouer : écris un ou plusieurs mots avec ce Kanji !
+					À toi de jouer : écris un ou plusieurs mots **que tu connais** avec ce Kanji !
 				`)
 			.setImage(`attachment://${randKanji.id}.png`)
 			.setTimestamp();
