@@ -50,6 +50,10 @@ module.exports = class ListScheduledTasks extends Command {
 			const json = [];
 			actions.forEach((action, index) => {
 
+				if (typeof action.parameters === 'string') {
+					action.parameters = JSON.parse(action.parameters);
+				}
+
 				let message = '';
 				message = `**#️⃣ Salon:** <#${action.channelId}>\n`;
 				message += `**⚙️ Commande:** ${action.type}\n`;
