@@ -51,7 +51,7 @@ module.exports = class ListScheduledTasks extends Command {
 			actions.forEach((action, index) => {
 
 				if (typeof action.parameters === 'string') {
-					action.parameters = JSON.parse(action.parameters)
+					action.parameters = JSON.parse(action.parameters);
 				}
 
 				let message = '';

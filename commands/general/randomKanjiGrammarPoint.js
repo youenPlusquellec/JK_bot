@@ -11,7 +11,7 @@ const grammarModel = require('../../models/grammar.model');
 const logger = require('../../common/utils/logger');
 const path = require('path');
 
-/* It's getting a random grammar point from the database and getting the information about it. Then, it's 
+/* It's getting a random grammar point from the database and getting the information about it. Then, it's
 creating an embed with the information about the grammar point */
 module.exports = class RandomGrammarPoint extends Command {
 
@@ -75,7 +75,7 @@ module.exports = class RandomGrammarPoint extends Command {
 
 				if (randGrammarPoint) {
 
-					/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's 
+					/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
 					creating an embed with the information about the grammar point */
 					const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint);
 

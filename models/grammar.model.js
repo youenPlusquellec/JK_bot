@@ -1,4 +1,3 @@
-const axios = require('axios');
 const pool = require('../common/utils/db');
 
 module.exports = {
@@ -112,5 +111,5 @@ module.exports = {
 
 		conn.end();
 		return rows;
-	}
+	},
 };

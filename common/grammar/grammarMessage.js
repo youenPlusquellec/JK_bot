@@ -5,7 +5,7 @@ const downloader = require('../../common/utils/downloader');
 
 module.exports = {
 
-	generateEmbedGrammar: async function (embedColor, grammarPoint) {
+	generateEmbedGrammar: async function(embedColor, grammarPoint) {
 
 		// Security in case of changing type
 		if (Array.isArray(grammarPoint.japanese)) {
@@ -20,12 +20,12 @@ module.exports = {
 
 		await downloader.downloadFile(
 			grammarPoint.flashcard,
-			path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${grammarPoint.id}.png`)
-		)
+			path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${grammarPoint.id}.png`),
+		);
 
 		// It's creating an embed with the information about the vocabulary.
 		const grammarEmbed = new MessageEmbed()
-			.setTitle(`**Exercice de grammaire**`)
+			.setTitle('**Exercice de grammaire**')
 			.setColor(embedColor)
 			.setDescription(stripIndents`
 					Lien vers la leçon : [ici](${grammarPoint.url})

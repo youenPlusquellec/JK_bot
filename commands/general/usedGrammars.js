@@ -7,7 +7,7 @@ const { stripIndents } = require('common-tags');
 const grammarModel = require('../../models/grammar.model');
 const logger = require('../../common/utils/logger');
 
-/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's 
+/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
 creating an embed with the information about the grammar point */
 module.exports = class UsedGrammars extends Command {
 
