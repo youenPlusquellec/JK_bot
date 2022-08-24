@@ -13,7 +13,13 @@ const banMessages = [
 	"Quand je regarde comme ça on me voit. Si je regarde comme ça on me voit plus. On me voit, on me voit plus. On me voit plus, on me voit. On me voit plus, on me voit. Oups on te voit plus User.",
 	"Tu es comme la fin de The Promised Neverland User",
 	"Ah zut, User est parti",
-
+	"Technique d'Extension du Territoire : La Sphère de L'espace Infini. User a été désintégré.",
+	"Tu as fini comme la maman d'Eren User",
+	"Usopp Golden Hammer sur User",
+	"Oups, User a raté la marche et est tombé du serveur 🙄",
+	"Userの言語わからん、ごめんごめん",
+	"Il semblerait que User ait cliqué sur un lien de désinvitation",
+	"Il ne faut jamais embêter un modo qui attend sa paye User"
 ]
 
 module.exports = class Avatar extends Command {
