@@ -3,7 +3,7 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	generateEmbedVocabularies: async function(embedColor, vocN5, vocN4, vocN3) {
+	generateEmbedVocabularies: async function(embedColor, vocN5, vocN4, vocN3, thumbnail) {
 
 		// Security in case of changing type
 		if (Array.isArray(vocN5.meanings)) {
@@ -36,7 +36,7 @@ module.exports = {
 					**💮 JLPT :** N${vocN3.jlpt}
 
 				`)
-			.setThumbnail('attachment://jk_logo.jpg')
+			.setThumbnail(thumbnail)
 			.setTimestamp();
 
 		// It's returning the embed to the function that called it.
