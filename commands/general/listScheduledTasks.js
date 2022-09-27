@@ -57,7 +57,7 @@ module.exports = class ListScheduledTasks extends Command {
 				let message = '';
 				message = `**#️⃣ Salon:** <#${action.channelId}>\n`;
 				message += `**⚙️ Commande:** ${action.type}\n`;
-				message += `**📅 Planification:** ${action.cron}\n`;
+				message += `**📅 Planification:** ${action.cron.replaceAll('*', '\\*')}\n`;
 				if (action.mentionRole) {
 					message += `**👤 Mentionne:** ${action.mentionRole}\n`;
 				}
