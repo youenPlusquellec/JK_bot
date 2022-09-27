@@ -9,7 +9,6 @@ const { generateEmbedVocabularies } = require('../../common/vocabulary/vocabular
 const actionModel = require('../../models/action.model');
 const vocabularyModel = require('../../models/vocabulary.model');
 const logger = require('../../common/utils/logger');
-const path = require('path');
 
 /* It's getting 3 random vocabularies from the database and getting the information about it. Then, it's creating an embed with
 the information about vocabularies */
