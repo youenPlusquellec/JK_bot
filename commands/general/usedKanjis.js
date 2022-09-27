@@ -1,6 +1,7 @@
 const Command = require('../../structures/CommandClass');
 
 const { MessageEmbed } = require('discord.js');
+const { MessageActionRow, MessageButton } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
 
@@ -67,6 +68,24 @@ module.exports = class UsedKanjis extends Command {
 			// Checking if we-ve got values from DB
 			if (kanjis && kanjis.length) {
 
+				const previous = new MessageActionRow()
+					.addComponents(
+						new MessageButton()
+							.setCustomId('switch_previous')
+							.setLabel('Précédent')
+							.setStyle('SECONDARY')
+							.setEmoji('⏮️')
+							.setDisabled(false)   /* TODO : Add condition if end */
+					)
+					.addComponents(
+						new MessageButton()
+							.setCustomId('switch_next')
+							.setLabel('Suivant')
+							.setStyle('SECONDARY')
+							.setEmoji('⏭️')
+							.setDisabled(false)   /* TODO : Add condition if end */
+					);
+
 				// Preparing the list of kanjis
 				const json = [];
 				kanjis.slice(-25).forEach((kanji, index) => {
@@ -88,7 +107,7 @@ module.exports = class UsedKanjis extends Command {
 					.addFields(json)
 					.setTimestamp()
 					.setFooter({ text: '⚠️ La limite est de 25 kanjis affichés' });
-				return await interaction.followUp({ embeds: [listEmbed] });
+				return await interaction.followUp({ embeds: [listEmbed], components: [previous] });
 			} else {
 				// In case of no kanji used
 				return await interaction.followUp({
