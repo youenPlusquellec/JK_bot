@@ -80,6 +80,7 @@ module.exports = class RemoveTask extends Command {
 					value: message,
 					inline: false,
 				})
+				.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 				.setTimestamp();
 
 			return await interaction.followUp({ embeds: [listEmbed] });
@@ -91,6 +92,7 @@ module.exports = class RemoveTask extends Command {
 					.setTitle('❌ Erreur lors de la suppression de la tâche')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 L\'id renseignée est trop élevée')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});

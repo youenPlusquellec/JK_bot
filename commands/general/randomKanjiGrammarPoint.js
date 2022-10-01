@@ -64,6 +64,7 @@ module.exports = class RandomGrammarPoint extends Command {
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription(`💬 Le point de grammaire a bien été programmé en suivant la règle \`${cronTimer}\``)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -77,7 +78,7 @@ module.exports = class RandomGrammarPoint extends Command {
 
 					/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
 					creating an embed with the information about the grammar point */
-					const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint);
+					const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, interaction.member.guild);
 
 					/* It's sending the message to the user. */
 					return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
@@ -93,6 +94,7 @@ module.exports = class RandomGrammarPoint extends Command {
 							.setTitle('❌ Erreur lors de la génération du point de grammaire')
 							.setColor(client.config.embedColor)
 							.setDescription('💬 Plus aucun point de grammaire n\'est disponible')
+							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 							.setTimestamp(),
 						],
 					});
@@ -106,6 +108,7 @@ module.exports = class RandomGrammarPoint extends Command {
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
 							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -129,7 +132,7 @@ module.exports = class RandomGrammarPoint extends Command {
 			if (randGrammarPoint) {
 
 				// Generating random randGrammarPoint message
-				const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint);
+				const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, client.channels.cache.get(channelId).guild);
 				grammarModel.useGrammarById(randGrammarPoint.id, serverId);
 
 				// Sending the message to the user.
@@ -148,6 +151,7 @@ module.exports = class RandomGrammarPoint extends Command {
 						.setTitle('❌ Erreur lors de la génération du point de grammaire')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Plus aucun point de grammaire n\'est disponible')
+						.setFooter({ text: `${client.channels.cache.get(channelId).guild.name}`, iconURL: client.channels.cache.get(channelId).guild.iconURL() })
 						.setTimestamp(),
 					],
 				});

@@ -5,7 +5,7 @@ const downloader = require('../../common/utils/downloader');
 
 module.exports = {
 
-	generateEmbedGrammar: async function(embedColor, grammarPoint) {
+	generateEmbedGrammar: async function(embedColor, grammarPoint, guild) {
 
 		// Security in case of changing type
 		if (Array.isArray(grammarPoint.japanese)) {
@@ -33,8 +33,8 @@ module.exports = {
 					À toi de jouer : écris une ou plusieurs phrases à l'aide de ce point de grammaire !
 				`)
 			.setImage(`attachment://grammar_${grammarPoint.id}.png`)
-			.setTimestamp()
-			.setFooter({ text: 'Tiré de JLPT Sensei' });
+			.setFooter({ text: `${guild.name}・Tiré de JLPT Sensei`, iconURL: guild.iconURL() })
+			.setTimestamp();
 
 		// It's returning the embed to the function that called it.
 		return grammarEmbed;

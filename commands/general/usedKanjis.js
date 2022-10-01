@@ -86,8 +86,8 @@ module.exports = class UsedKanjis extends Command {
 					.setTitle(`Liste des kanjis utilisés sur '${interaction.member.guild.name}'`)
 					.setColor(client.config.embedColor)
 					.addFields(json)
-					.setTimestamp()
-					.setFooter({ text: '⚠️ La limite est de 25 kanjis affichés' });
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp();
 				return await interaction.followUp({ embeds: [listEmbed] });
 			} else {
 				// In case of no kanji used
@@ -96,6 +96,7 @@ module.exports = class UsedKanjis extends Command {
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Aucun kanji épuisé sur ce serveur')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -112,6 +113,7 @@ module.exports = class UsedKanjis extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -126,6 +128,7 @@ module.exports = class UsedKanjis extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -136,6 +139,7 @@ module.exports = class UsedKanjis extends Command {
 					.setTitle('❌ Echec lors de l\'exécution')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 La commande renseignée n\'a pas encore été implémentée')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});

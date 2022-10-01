@@ -21,7 +21,7 @@ const banMessages = [
 	'Il ne faut jamais embêter un modo qui attend sa paye User',
 ];
 
-module.exports = class Avatar extends Command {
+module.exports = class Ban extends Command {
 	constructor(client) {
 		super(client, {
 			data: new ContextMenuCommandBuilder()

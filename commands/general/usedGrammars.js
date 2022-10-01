@@ -91,8 +91,8 @@ module.exports = class UsedGrammars extends Command {
 					.setTitle(`Liste des points de grammaire utilisés sur '${interaction.member.guild.name}'`)
 					.setColor(client.config.embedColor)
 					.addFields(json)
-					.setTimestamp()
-					.setFooter({ text: '⚠️ La limite est de 25 points de grammaire affichés' });
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp();
 				return await interaction.followUp({ embeds: [listEmbed] });
 			} else {
 				// In case of no grammar point used
@@ -101,6 +101,7 @@ module.exports = class UsedGrammars extends Command {
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Aucun point de grammaire épuisé sur ce serveur')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -117,6 +118,7 @@ module.exports = class UsedGrammars extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 L\'ensemble des points de grammaire du serveur sont de nouveau accessible par les tâches programmées')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -131,6 +133,7 @@ module.exports = class UsedGrammars extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 L\'ensemble des points de grammaire du serveur sont de nouveau accessible par les tâches programmées')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -141,6 +144,7 @@ module.exports = class UsedGrammars extends Command {
 					.setTitle('❌ Echec lors de l\'exécution')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 La commande renseignée n\'a pas encore été implémentée')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
