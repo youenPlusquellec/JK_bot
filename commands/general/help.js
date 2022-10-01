@@ -69,7 +69,9 @@ module.exports = class Help extends Command {
                     **Usage:** ${command.contextDescription ? 'Right-Click > Apps > ' : '/'}${command.usage}
                     **Category:** ${command.category}
                     **Permissions Needed:** ${command.permissions[0] ? `${command.permissions.join(', ')}` : 'None'}
-                    `);
+                    `)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp();
 
 				await interaction.reply({ embeds: [commandEmbed] });
 			} else {

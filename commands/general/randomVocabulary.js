@@ -63,6 +63,7 @@ module.exports = class RandomVocabulary extends Command {
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription(`💬 L'exercice de vocabulaire a bien été programmé en suivant la règle \`${cronTimer}\``)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -77,7 +78,7 @@ module.exports = class RandomVocabulary extends Command {
 				if (randVocN5 && randVocN4 && randVocN3) {
 
 					/* Generate the vocabularies embed message */
-					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild.iconURL());
+					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild);
 
 					/* It's sending the message to the user. */
 					return await interaction.followUp({ embeds: [vocEmbed] }).then(() => {
@@ -93,6 +94,7 @@ module.exports = class RandomVocabulary extends Command {
 							.setTitle('❌ Erreur lors de la génération du vocabulaire')
 							.setColor(client.config.embedColor)
 							.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
+							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 							.setTimestamp(),
 						],
 					});
@@ -106,6 +108,7 @@ module.exports = class RandomVocabulary extends Command {
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
 							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -131,7 +134,7 @@ module.exports = class RandomVocabulary extends Command {
 			if (randVocN5 && randVocN4 && randVocN3) {
 
 				// It's generating an embed with the information about the vocabulary
-				const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, client.channels.cache.get(channelId).guild.iconURL());
+				const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, client.channels.cache.get(channelId).guild);
 
 				// Use the three vocabularies got
 				vocabularyModel.useVocabularyById(randVocN3.id, serverId);
@@ -154,6 +157,7 @@ module.exports = class RandomVocabulary extends Command {
 						.setTitle('❌ Erreur lors de la génération du vocabulaire')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
+						.setFooter({ text: `${client.channels.cache.get(channelId).guild.name}`, iconURL: client.channels.cache.get(channelId).guild.iconURL() })
 						.setTimestamp(),
 					],
 				});

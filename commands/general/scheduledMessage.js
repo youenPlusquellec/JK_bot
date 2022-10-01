@@ -70,6 +70,7 @@ module.exports = class ScheduledMessage extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription(`💬 Le message a bien été programmé en suivant la règle \`${cronTimer}\``)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -82,6 +83,7 @@ module.exports = class ScheduledMessage extends Command {
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
 							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});

@@ -28,7 +28,9 @@ module.exports = class Ping extends Command {
 			.setDescription(stripIndents`
             **⏱ Roundtrip:** ${Math.round(Date.now() - now)} ms
             **💓 API:** ${Math.round(client.ws.ping)} ms
-            `);
+            `)
+			.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+			.setTimestamp();
 
 		return await interaction.followUp({ embeds: [pingEmbed] });
 	}

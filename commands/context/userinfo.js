@@ -48,7 +48,9 @@ module.exports = class UserInfo extends Command {
 					value: member.roles.cache.size ? member.roles.cache.map(roles => `**${roles}**`).slice(0, -1).join(' ') : 'None',
 					inline: false,
 				},
-			);
+			)
+			.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+			.setTimestamp();
 
 		await interaction.reply({ embeds: [embed] });
 	}

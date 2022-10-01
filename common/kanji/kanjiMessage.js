@@ -6,7 +6,7 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	generateEmbedKanji: async function(embedColor, randKanji) {
+	generateEmbedKanji: async function(embedColor, randKanji, guild) {
 
 		// register font
 		registerFont(path.join(__dirname, '../fonts/Aozora Mincho Medium.ttf'));
@@ -58,6 +58,7 @@ module.exports = {
 					À toi de jouer : écris un ou plusieurs mots **que tu connais** avec ce Kanji !
 				`)
 			.setImage(`attachment://${randKanji.id}.png`)
+			.setFooter({ text: `${guild.name}`, iconURL: guild.iconURL() })
 			.setTimestamp();
 
 		// It's returning the embed to the function that called it.
