@@ -57,7 +57,7 @@ module.exports = class RandomGrammarPoint extends Command {
 			if (cronTimer) {
 				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
 
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
+				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role));
 
 				return await interaction.followUp({
 					embeds: [new MessageEmbed()
@@ -116,7 +116,7 @@ module.exports = class RandomGrammarPoint extends Command {
 
 	}
 
-	cronFunction(client, serverId, cronTimer, channelId, role) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
 
@@ -124,6 +124,23 @@ module.exports = class RandomGrammarPoint extends Command {
 		const scheduledMessage = new cron.CronJob(cronTimer, async () => {
 
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
+
+			// Delete the action if the bot cannot access to the channel
+			if (!client.channels.cache.get(channelId)) {
+
+				// Informations
+				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`);
+
+				// Delete cron task
+				global.cronTasks.get(id).stop();
+				global.cronTasks.delete(id);
+
+				// Delete in db
+				actionModel.deleteActionById(id);
+
+				// Skip action
+				return;
+			}
 
 			// It's getting a random grammar point from a JSON file and getting the information about it.
 			const randGrammarPoint = await grammarModel.getAvailableRandomGrammar(serverId);
