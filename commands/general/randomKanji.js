@@ -130,9 +130,9 @@ module.exports = class RandomKanji extends Command {
 
 			// Delete the action if the bot cannot access to the channel
 			if (!client.channels.cache.get(channelId)) {
-				
+
 				// Informations
-				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`)
+				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`);
 
 				// Delete cron task
 				global.cronTasks.get(id).stop();

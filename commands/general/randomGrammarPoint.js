@@ -127,9 +127,9 @@ module.exports = class RandomGrammarPoint extends Command {
 
 			// Delete the action if the bot cannot access to the channel
 			if (!client.channels.cache.get(channelId)) {
-				
+
 				// Informations
-				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`)
+				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`);
 
 				// Delete cron task
 				global.cronTasks.get(id).stop();
@@ -141,7 +141,7 @@ module.exports = class RandomGrammarPoint extends Command {
 				// Skip action
 				return;
 			}
-			
+
 			// It's getting a random grammar point from a JSON file and getting the information about it.
 			const randGrammarPoint = await grammarModel.getAvailableRandomGrammar(serverId);
 			logger.info(`Generated grammar point : ${randGrammarPoint.japanese}`);
