@@ -50,10 +50,14 @@ module.exports = class ListScheduledTasks extends Command {
 			const json = [];
 			actions.forEach((action, index) => {
 
+				if (typeof action.parameters === 'string') {
+					action.parameters = JSON.parse(action.parameters);
+				}
+
 				let message = '';
 				message = `**#️⃣ Salon:** <#${action.channelId}>\n`;
 				message += `**⚙️ Commande:** ${action.type}\n`;
-				message += `**📅 Planification:** ${action.cron}\n`;
+				message += `**📅 Planification:** ${action.cron.replaceAll('*', '\\*')}\n`;
 				if (action.mentionRole) {
 					message += `**👤 Mentionne:** ${action.mentionRole}\n`;
 				}
@@ -74,6 +78,7 @@ module.exports = class ListScheduledTasks extends Command {
 				.setURL(`https://discord.com/channels/${interaction.guildId}/${channel ? channel.id : ''}`)
 				.setColor(client.config.embedColor)
 				.addFields(json)
+				.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 				.setTimestamp();
 
 			return await interaction.followUp({ embeds: [listEmbed] });
@@ -83,6 +88,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 Il n\'y a aucune action plannifiée pour ce salon')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -92,6 +98,7 @@ module.exports = class ListScheduledTasks extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 Il n\'y a aucune action plannifiée pour ce serveur')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});

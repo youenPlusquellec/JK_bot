@@ -22,7 +22,9 @@ module.exports = class Avatar extends Command {
 		const embed = new MessageEmbed()
 			.setTitle(`**${user.username}'s Avatar**`)
 			.setColor(client.config.embedColor)
-			.setImage(user.displayAvatarURL({ dynamic: true, size: 2048 }));
+			.setImage(user.displayAvatarURL({ dynamic: true, size: 2048 }))
+			.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+			.setTimestamp();
 
 		await interaction.reply({ embeds: [embed] });
 	}

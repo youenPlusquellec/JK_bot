@@ -4,13 +4,12 @@ const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { stripIndents } = require('common-tags');
 
-const kanjiModel = require('../../models/kanji.model');
+const grammarModel = require('../../models/grammar.model');
 const logger = require('../../common/utils/logger');
 
-/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-the information about the kanji */
-module.exports = class UsedKanjis extends Command {
+/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
+creating an embed with the information about the grammar point */
+module.exports = class UsedGrammars extends Command {
 
 	/**
 	 * A constructor function. It is called when the class is instantiated.
@@ -19,8 +18,8 @@ module.exports = class UsedKanjis extends Command {
 	constructor(client) {
 		super(client, {
 			data: new SlashCommandBuilder()
-				.setName('usedkanjis')
-				.setDescription('Permet de manipuler les kanjis "utilisées"')
+				.setName('usedgrammars')
+				.setDescription('Permet de manipuler les point de grammaire "utilisées"')
 				.addStringOption((str) =>
 					str
 						.setName('command')
@@ -41,8 +40,8 @@ module.exports = class UsedKanjis extends Command {
 							},
 						),
 				),
-			usage: 'usedkanjis COMMAND',
-			category: 'kanji',
+			usage: 'usedgrammars COMMAND',
+			category: 'grammar',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
 	}
@@ -56,26 +55,32 @@ module.exports = class UsedKanjis extends Command {
 		await interaction.deferReply();
 
 		// Debugging
-		logger.info(`'${command}' available kanjis for server '${interaction.member.guild.name}'`);
+		logger.info(`'${command}' available grammar point for server '${interaction.member.guild.name}'`);
 
 		let listEmbed;
 		if (command === 'list') {
 
 			// It's getting the actions from the database.
-			const kanjis = await kanjiModel.getUsedKanjis(interaction.guildId);
+			const grammar_points = await grammarModel.getUsedGrammars(interaction.guildId);
 
 			// Checking if we-ve got values from DB
-			if (kanjis && kanjis.length) {
+			if (grammar_points && grammar_points.length) {
 
-				// Preparing the list of kanjis
+				// Preparing the list of grammar points
 				const json = [];
-				kanjis.slice(-25).forEach((kanji, index) => {
+				grammar_points.slice(-25).forEach((grammar_point, index) => {
+
+					// Add security to grammar_point.japanese
+					if (typeof grammar_point.japanese === 'string') {
+						grammar_point.japanese = JSON.parse(grammar_point.japanese);
+					}
+
 					json.push({
 						name: `N°${index + 1}`,
 						value: stripIndents`
-						**🈳️ Kanji:** ${kanji.kanji}
-						**🆙 JTLP:** ${kanji.jlpt}
-						**🗓️ Date:** ${kanji.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
+						**🈳️ Grammaire:** ${grammar_point.japanese}
+						**🆙 JTLP:** ${grammar_point.jlpt}
+						**🗓️ Date:** ${grammar_point.timestamp.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' })}
 					`,
 						inline: true,
 					});
@@ -83,19 +88,19 @@ module.exports = class UsedKanjis extends Command {
 
 				// Preparing embed message
 				listEmbed = new MessageEmbed()
-					.setTitle(`Liste des kanjis utilisés sur '${interaction.member.guild.name}'`)
+					.setTitle(`Liste des points de grammaire utilisés sur '${interaction.member.guild.name}'`)
 					.setColor(client.config.embedColor)
 					.addFields(json)
 					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp();
 				return await interaction.followUp({ embeds: [listEmbed] });
 			} else {
-				// In case of no kanji used
+				// In case of no grammar point used
 				return await interaction.followUp({
 					embeds: [new MessageEmbed()
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
-						.setDescription('💬 Aucun kanji épuisé sur ce serveur')
+						.setDescription('💬 Aucun point de grammaire épuisé sur ce serveur')
 						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
@@ -105,14 +110,14 @@ module.exports = class UsedKanjis extends Command {
 		} else if (command === 'clear') {
 
 			// Clear database from used message for current server
-			await kanjiModel.clearKanjis(interaction.guildId);
+			await grammarModel.clearGrammars(interaction.guildId);
 
 			// Return confirmation message
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setDescription('💬 L\'ensemble des points de grammaire du serveur sont de nouveau accessible par les tâches programmées')
 					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
@@ -120,14 +125,14 @@ module.exports = class UsedKanjis extends Command {
 		} else if (command === 'restore') {
 
 			// Clear database from used message for current server
-			await kanjiModel.restoreKanjis(interaction.guildId);
+			await grammarModel.restoreGrammars(interaction.guildId);
 
 			// Return confirmation message
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
-					.setDescription('💬 L\'ensemble des kanji du serveur sont de nouveau accessible par les tâches programmées')
+					.setDescription('💬 L\'ensemble des points de grammaire du serveur sont de nouveau accessible par les tâches programmées')
 					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],

@@ -60,6 +60,14 @@ module.exports = {
 		conn.end();
 		return rows;
 	},
+	async deleteActionById(id) {
+		const conn = await pool.getConnection();
+
+		const sql = 'DELETE FROM action WHERE id=?';
+		await conn.query(sql, id);
+
+		conn.end();
+	},
 	async deleteActionByIdAndServerId(id, serverId) {
 		const actions = await this.getActionsByServerId(serverId);
 		if (id > actions.length - 1) throw 'Given id is higher than actions length';

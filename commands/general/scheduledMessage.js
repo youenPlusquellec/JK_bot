@@ -60,7 +60,7 @@ module.exports = class ScheduledMessage extends Command {
 			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role, {
 				message: messageParam,
 			});
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role, {
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role, {
 				message: messageParam,
 			}));
 
@@ -70,6 +70,7 @@ module.exports = class ScheduledMessage extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription(`💬 Le message a bien été programmé en suivant la règle \`${cronTimer}\``)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -82,6 +83,7 @@ module.exports = class ScheduledMessage extends Command {
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
 							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -89,7 +91,7 @@ module.exports = class ScheduledMessage extends Command {
 
 	}
 
-	cronFunction(client, serverId, cronTimer, channelId, role, parameters) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role, parameters) {
 		// Add security to parameters
 		if (typeof parameters === 'string') {
 			parameters = JSON.parse(parameters);
@@ -108,6 +110,23 @@ module.exports = class ScheduledMessage extends Command {
 		const scheduledMessage = new cron.CronJob(cronTimer, async () => {
 
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''} sending '${message}'`);
+
+			// Delete the action if the bot cannot access to the channel
+			if (!client.channels.cache.get(channelId)) {
+
+				// Informations
+				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`);
+
+				// Delete cron task
+				global.cronTasks.get(id).stop();
+				global.cronTasks.delete(id);
+
+				// Delete in db
+				actionModel.deleteActionById(id);
+
+				// Skip action
+				return;
+			}
 
 			client.channels.cache.get(channelId).send(`${role ? role : ''} ${message}`);
 		});

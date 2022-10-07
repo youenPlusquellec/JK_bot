@@ -9,4 +9,4 @@ If you wanna use the bot for yourself, you can go on [Getting Started](getting_s
 
 ## 🔖 Documentation for a specific release
 
-To check documentation of a specific release, go on [Releases](releases/v1.3.md) section for further details.
+To check documentation of a specific release, go on [Releases](releases/v1.4.md) section for further details.

@@ -9,7 +9,6 @@ const { generateEmbedVocabularies } = require('../../common/vocabulary/vocabular
 const actionModel = require('../../models/action.model');
 const vocabularyModel = require('../../models/vocabulary.model');
 const logger = require('../../common/utils/logger');
-const path = require('path');
 
 /* It's getting 3 random vocabularies from the database and getting the information about it. Then, it's creating an embed with
 the information about vocabularies */
@@ -57,13 +56,14 @@ module.exports = class RandomVocabulary extends Command {
 			if (cronTimer) {
 				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
 
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(client, interaction.guildId, cronTimer, interaction.channelId, role));
+				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role));
 
 				return await interaction.followUp({
 					embeds: [new MessageEmbed()
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription(`💬 L'exercice de vocabulaire a bien été programmé en suivant la règle \`${cronTimer}\``)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -78,10 +78,10 @@ module.exports = class RandomVocabulary extends Command {
 				if (randVocN5 && randVocN4 && randVocN3) {
 
 					/* Generate the vocabularies embed message */
-					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3);
+					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild);
 
 					/* It's sending the message to the user. */
-					return await interaction.followUp({ embeds: [vocEmbed], files: [path.resolve(__dirname, '../../common/src/jk_logo.jpg')] }).then(() => {
+					return await interaction.followUp({ embeds: [vocEmbed] }).then(() => {
 						// If there is a role to ping, ping it
 						if (role) {
 							client.channels.cache.get(interaction.channelId).send(role);
@@ -94,6 +94,7 @@ module.exports = class RandomVocabulary extends Command {
 							.setTitle('❌ Erreur lors de la génération du vocabulaire')
 							.setColor(client.config.embedColor)
 							.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
+							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 							.setTimestamp(),
 						],
 					});
@@ -107,6 +108,7 @@ module.exports = class RandomVocabulary extends Command {
 					.setDescription(stripIndents`
 							💬 La valeur \`${cronTimer}\` ne respecte pas la nomenclature d'une crontab 
 							🔗 Documentation des cronTab : https://fr.wikipedia.org/wiki/Cron`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -114,7 +116,7 @@ module.exports = class RandomVocabulary extends Command {
 
 	}
 
-	cronFunction(client, serverId, cronTimer, channelId, role) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
 
@@ -122,6 +124,23 @@ module.exports = class RandomVocabulary extends Command {
 		const scheduledMessage = new cron.CronJob(cronTimer, async () => {
 
 			logger.info(`Scheduled task ${this.name} was called with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
+
+			// Delete the action if the bot cannot access to the channel
+			if (!client.channels.cache.get(channelId)) {
+
+				// Informations
+				logger.error(`Channel #${channelId} does not exist anymore. Deleting action #${id} of type ${this.name}.`);
+
+				// Delete cron task
+				global.cronTasks.get(id).stop();
+				global.cronTasks.delete(id);
+
+				// Delete in db
+				actionModel.deleteActionById(id);
+
+				// Skip action
+				return;
+			}
 
 			/* Get random vocabulary for each jlpt levels*/
 			const randVocN5 = await vocabularyModel.getAvailableRandomVocabularyByJlpt(serverId, 5);
@@ -132,7 +151,7 @@ module.exports = class RandomVocabulary extends Command {
 			if (randVocN5 && randVocN4 && randVocN3) {
 
 				// It's generating an embed with the information about the vocabulary
-				const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3);
+				const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, client.channels.cache.get(channelId).guild);
 
 				// Use the three vocabularies got
 				vocabularyModel.useVocabularyById(randVocN3.id, serverId);
@@ -140,7 +159,7 @@ module.exports = class RandomVocabulary extends Command {
 				vocabularyModel.useVocabularyById(randVocN5.id, serverId);
 
 				// Sending the message to the user.
-				client.channels.cache.get(channelId).send({ embeds: [vocEmbed], files: [path.resolve(__dirname, '../../common/src/jk_logo.jpg')] })
+				client.channels.cache.get(channelId).send({ embeds: [vocEmbed] })
 					.then(() => {
 						// If there is a role to ping, ping it
 						if (role) {
@@ -155,6 +174,7 @@ module.exports = class RandomVocabulary extends Command {
 						.setTitle('❌ Erreur lors de la génération du vocabulaire')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
+						.setFooter({ text: `${client.channels.cache.get(channelId).guild.name}`, iconURL: client.channels.cache.get(channelId).guild.iconURL() })
 						.setTimestamp(),
 					],
 				});

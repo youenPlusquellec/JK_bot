@@ -3,7 +3,7 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	generateEmbedVocabularies: async function(embedColor, vocN5, vocN4, vocN3) {
+	generateEmbedVocabularies: async function(embedColor, vocN5, vocN4, vocN3, guild) {
 
 		// Security in case of changing type
 		if (Array.isArray(vocN5.meanings)) {
@@ -21,7 +21,7 @@ module.exports = {
 			.setTitle('**Exercice d\'écriture**')
 			.setColor(embedColor)
 			.setDescription(stripIndents`
-					Nouvelle atelier écriture ! Créez une ou plusieurs phrases en utilisant au moins un des mots de vocabulaire ci-dessous.
+					Nouvel atelier écriture ! Créez une ou plusieurs phrases en utilisant au moins un des mots de vocabulaire ci-dessous.
 
 					**📒 Mot : [${vocN5.vocabulary}](https://www.dictionnaire-japonais.com/search.php?w=${vocN5.vocabulary}&t=1)**　${vocN5.reading == vocN5.vocabulary ? '' : `(${vocN5.reading})`}
 					**📖 Sens :** ${JSON.parse(vocN5.meanings)}
@@ -36,7 +36,8 @@ module.exports = {
 					**💮 JLPT :** N${vocN3.jlpt}
 
 				`)
-			.setThumbnail('attachment://jk_logo.jpg')
+			.setThumbnail(guild.iconURL())
+			.setFooter({ text: `${guild.name}`, iconURL: guild.iconURL() })
 			.setTimestamp();
 
 		// It's returning the embed to the function that called it.

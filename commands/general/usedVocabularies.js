@@ -109,8 +109,8 @@ module.exports = class UsedVocabularies extends Command {
 					.setTitle(`Liste des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}utilisés sur '${interaction.member.guild.name}'`)
 					.setColor(client.config.embedColor)
 					.addFields(json)
-					.setTimestamp()
-					.setFooter({ text: '⚠️ La limite est de 25 mots de vocabulaire affichés' });
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp();
 				return await interaction.followUp({ embeds: [listEmbed] });
 			} else {
 				// In case of no kanji used
@@ -119,6 +119,7 @@ module.exports = class UsedVocabularies extends Command {
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
 						.setDescription('💬 Aucun mot de vocabulaire épuisé sur ce serveur')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
 				});
@@ -135,6 +136,7 @@ module.exports = class UsedVocabularies extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -149,6 +151,7 @@ module.exports = class UsedVocabularies extends Command {
 					.setTitle('❗ Information')
 					.setColor(client.config.embedColor)
 					.setDescription(`💬 L'ensemble des mots de vocabulaire ${jlpt ? `N${jlpt} ` : ''}du serveur sont de nouveau accessible par les tâches programmées`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
@@ -159,6 +162,7 @@ module.exports = class UsedVocabularies extends Command {
 					.setTitle('❌ Echec lors de l\'exécution')
 					.setColor(client.config.embedColor)
 					.setDescription('💬 La commande renseignée n\'a pas encore été implémentée')
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 					.setTimestamp(),
 				],
 			});
