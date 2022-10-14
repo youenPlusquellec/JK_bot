@@ -56,6 +56,7 @@ module.exports = class RandomKanji extends Command {
 
 		// Check if cron timer respects cron requirements
 		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
+			logger.error('Cron tab value is not valid');
 			interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')

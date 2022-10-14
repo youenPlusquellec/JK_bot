@@ -55,6 +55,7 @@ module.exports = class RandomGrammarPoint extends Command {
 
 		// Check if cron timer respects cron requirements
 		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
+			logger.error('Cron tab value is not valid');
 			return interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
@@ -114,7 +115,7 @@ module.exports = class RandomGrammarPoint extends Command {
 
 			/* It's sending the message to the user. */
 			logger.info(`Sending random kanji ${randGrammarPoint.japanese} embed message in channel ${selectedChannel}`);
-			
+
 			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
 			if (selectedChannel == interaction.channelId) {
 				return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
@@ -134,7 +135,6 @@ module.exports = class RandomGrammarPoint extends Command {
 					],
 				}).then(() => {
 					client.channels.cache.get(selectedChannel).send({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
-						// If there is a role to ping, ping it
 						if (role) {
 							client.channels.cache.get(selectedChannel).send(role);
 						}

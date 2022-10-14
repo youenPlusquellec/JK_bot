@@ -30,6 +30,10 @@ module.exports = class RandomVocabulary extends Command {
 				.addRoleOption(option =>
 					option.setName('role')
 						.setDescription('Pour ping un role à chaque message')
+						.setRequired(false))
+				.addChannelOption(option =>
+					option.setName('channel')
+						.setDescription("Salon cible de l'action programmée")
 						.setRequired(false)),
 			usage: 'rvocabulary [scheduling] [role]',
 			category: 'vocabulary',
@@ -45,63 +49,13 @@ module.exports = class RandomVocabulary extends Command {
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
 
+		// Getting channel parameter
+		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+
 		// Check if cron timer respects cron requirements
-		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
-
-			// Getting role parameter
-			const roleParam = interaction.options.getRole('role');
-			const role = roleParam ? `<@&${roleParam.id}>` : null;
-
-			// Launching task in background if defined
-			if (cronTimer) {
-				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
-
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role));
-
-				return await interaction.followUp({
-					embeds: [new MessageEmbed()
-						.setTitle('❗ Information')
-						.setColor(client.config.embedColor)
-						.setDescription(`💬 L'exercice de vocabulaire a bien été programmé en suivant la règle \`${cronTimer}\``)
-						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-						.setTimestamp(),
-					],
-				});
-			} else {
-
-				/* Get random vocabulary for each jlpt levels*/
-				const randVocN5 = await vocabularyModel.getRandomVocabularyByJlpt(5);
-				const randVocN4 = await vocabularyModel.getRandomVocabularyByJlpt(4);
-				const randVocN3 = await vocabularyModel.getRandomVocabularyByJlpt(3);
-				logger.info(`Generated vocabularies : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
-
-				if (randVocN5 && randVocN4 && randVocN3) {
-
-					/* Generate the vocabularies embed message */
-					const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild);
-
-					/* It's sending the message to the user. */
-					return await interaction.followUp({ embeds: [vocEmbed] }).then(() => {
-						// If there is a role to ping, ping it
-						if (role) {
-							client.channels.cache.get(interaction.channelId).send(role);
-						}
-					});
-				} else {
-					logger.error('Error when generating vocabulary message : No more vocabulary available');
-					interaction.followUp({
-						embeds: [new MessageEmbed()
-							.setTitle('❌ Erreur lors de la génération du vocabulaire')
-							.setColor(client.config.embedColor)
-							.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
-							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-							.setTimestamp(),
-						],
-					});
-				}
-			}
-		} else {
-			interaction.followUp({
+		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
+			logger.error('Cron tab value is not valid');
+			return interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
 					.setColor(client.config.embedColor)
@@ -114,6 +68,77 @@ module.exports = class RandomVocabulary extends Command {
 			});
 		}
 
+		// Getting role parameter
+		const roleParam = interaction.options.getRole('role');
+		const role = roleParam ? `<@&${roleParam.id}>` : null;
+
+		// Launching task in background if defined
+		if (cronTimer) {
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle('❗ Information')
+					.setColor(client.config.embedColor)
+					.setDescription(`💬 L'exercice de vocabulaire a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp(),
+				],
+			});
+		} else {
+
+			/* Get random vocabulary for each jlpt levels*/
+			const randVocN5 = await vocabularyModel.getRandomVocabularyByJlpt(5);
+			const randVocN4 = await vocabularyModel.getRandomVocabularyByJlpt(4);
+			const randVocN3 = await vocabularyModel.getRandomVocabularyByJlpt(3);
+
+			if (!randVocN5 || !randVocN4 || !randVocN3) {
+				logger.error('Error when generating vocabulary message : No more vocabulary available');
+				return interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❌ Erreur lors de la génération du vocabulaire')
+						.setColor(client.config.embedColor)
+						.setDescription('💬 Plus aucun vocabulaire n\'est disponible')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				});
+			}
+
+			/* Generate the vocabularies embed message */
+			logger.info(`Generated vocabularies : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
+			const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild);
+
+			/* It's sending the message to the user. */
+			logger.info(`Sending random vocabularies ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary} embed message in channel ${selectedChannel}`);
+
+			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
+			if (selectedChannel == interaction.channelId) {
+				return await interaction.followUp({ embeds: [vocEmbed] }).then(() => {
+					if (role) {
+						client.channels.cache.get(selectedChannel).send(role);
+					}
+				});
+			} else {
+				return await interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❗ Information')
+						.setColor(client.config.embedColor)
+						.setDescription(`💬 Les points de vocabulaire ont bien été envoyés dans le channel <#${selectedChannel}>`)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				}).then(() => {
+					client.channels.cache.get(selectedChannel).send({ embeds: [vocEmbed] }).then(() => {
+						if (role) {
+							client.channels.cache.get(selectedChannel).send(role);
+						}
+					});
+				});
+			}
+		}
 	}
 
 	cronFunction(id, client, serverId, cronTimer, channelId, role) {
