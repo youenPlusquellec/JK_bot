@@ -40,6 +40,6 @@ module.exports = class Ban extends Command {
 		logger.info(`User '${user.username}' banned with message : ${message}`);
 
 		await interaction.reply(message);
-		interaction.options.getMember('user').ban({ days: 7, reason: 'Ban rigolo' });
+		interaction.options.getMember('user').ban({ reason: "Parce qu'il le mérite" });
 	}
 };
