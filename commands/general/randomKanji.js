@@ -55,83 +55,7 @@ module.exports = class RandomKanji extends Command {
 		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
 
 		// Check if cron timer respects cron requirements
-		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
-
-			// Getting role parameter
-			const roleParam = interaction.options.getRole('role');
-			const role = roleParam ? `<@&${roleParam.id}>` : null;
-
-
-			// Launching task in background if defined
-			if (cronTimer) {
-				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
-
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
-
-				return await interaction.followUp({
-					embeds: [new MessageEmbed()
-						.setTitle('❗ Information')
-						.setColor(client.config.embedColor)
-						.setDescription(`💬 Le kanji a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
-						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-						.setTimestamp(),
-					],
-				});
-			} else {
-
-				// It's getting a random kanji from a JSON file and getting the information about it.
-				const randKanji = await kanjiModel.getRandomKanji();
-				logger.info(`Generated kanji : ${randKanji.kanji}`);
-
-				if (randKanji) {
-
-					/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
-					generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
-					the information about the kanji */
-					const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji, interaction.member.guild);
-
-					/* It's sending the message to the user. */
-					/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
-					if (selectedChannel != interaction.channelId) {
-						return await interaction.followUp({
-							embeds: [new MessageEmbed()
-								.setTitle('❗ Information')
-								.setColor(client.config.embedColor)
-								.setDescription(`💬 Le kanji a bien été envoyé dans le channel <#${selectedChannel}>`)
-								.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-								.setTimestamp(),
-							],
-						}).then(() => {
-							client.channels.cache.get(selectedChannel).send({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
-								// If there is a role to ping, ping it
-								if (role) {
-									client.channels.cache.get(selectedChannel).send(role);
-								}
-							});
-
-						});
-					} else {
-						return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
-							// If there is a role to ping, ping it
-							if (role) {
-								client.channels.cache.get(selectedChannel).send(role);
-							}
-						});
-					}
-				} else {
-					logger.error('Error when generating kanji message : No more kanji available');
-					interaction.followUp({
-						embeds: [new MessageEmbed()
-							.setTitle('❌ Erreur lors de la génération du kanji')
-							.setColor(client.config.embedColor)
-							.setDescription('💬 Plus aucun kanji n\'est disponible')
-							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-							.setTimestamp(),
-						],
-					});
-				}
-			}
-		} else {
+		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
 			interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
@@ -145,6 +69,79 @@ module.exports = class RandomKanji extends Command {
 			});
 		}
 
+		// Getting role parameter
+		const roleParam = interaction.options.getRole('role');
+		const role = roleParam ? `<@&${roleParam.id}>` : null;
+
+		// Launching task in background if defined
+		if (cronTimer) {
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle('❗ Information')
+					.setColor(client.config.embedColor)
+					.setDescription(`💬 Le kanji a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp(),
+				],
+			});
+
+		} else {
+
+			// It's getting a random kanji from a JSON file and getting the information about it.
+			let randKanji = await kanjiModel.getRandomKanji();
+
+			if (!randKanji) {
+
+				logger.error('Error when generating kanji message : No more kanji available');
+				return interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❌ Erreur lors de la génération du kanji')
+						.setColor(client.config.embedColor)
+						.setDescription('💬 Plus aucun kanji n\'est disponible')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				});
+			}
+
+			/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
+			generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
+			the information about the kanji */
+			logger.info(`Generated kanji from DB : ${randKanji.kanji}`);
+			const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji, interaction.member.guild);
+
+			/* It's sending the message to the user. */
+			logger.info(`Sending random kanji ${randKanji.kanji} embed message in channel ${selectedChannel}`);
+
+			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
+			if (selectedChannel == interaction.channelId) {
+				return await interaction.followUp({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
+					if (role) {
+						client.channels.cache.get(selectedChannel).send(role);
+					}
+				});
+			} else {
+				return await interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❗ Information')
+						.setColor(client.config.embedColor)
+						.setDescription(`💬 Le kanji a bien été envoyé dans le channel <#${selectedChannel}>`)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				}).then(() => {
+					client.channels.cache.get(selectedChannel).send({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] }).then(() => {
+						if (role) {
+							client.channels.cache.get(selectedChannel).send(role);
+						}
+					});
+				});
+			}
+		}
 	}
 
 	cronFunction(id, client, serverId, cronTimer, channelId, role) {
