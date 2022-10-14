@@ -31,8 +31,14 @@ git clone https://github.com/youenPlusquellec/jk_bot
 npm install
 ```
 
+Pour Windows
 ```bash
 npm i -g --add-python-to-path --vs2015 --production windows-build-tools
+```
+
+Pour Linux
+```bash
+sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 ```
 
 6. Start the bot.
