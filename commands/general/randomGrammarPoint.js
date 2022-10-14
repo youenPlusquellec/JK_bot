@@ -31,8 +31,12 @@ module.exports = class RandomGrammarPoint extends Command {
 				.addRoleOption(option =>
 					option.setName('role')
 						.setDescription('Pour ping un role à chaque message')
+						.setRequired(false))
+				.addChannelOption(option =>
+					option.setName('channel')
+						.setDescription("Salon cible de l'action programmée")
 						.setRequired(false)),
-			usage: 'rgrammar [scheduling] [role]',
+			usage: 'rgrammar [scheduling] [role] [targetChannel]',
 			category: 'grammar',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -46,6 +50,9 @@ module.exports = class RandomGrammarPoint extends Command {
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
 
+		// Getting channel parameter
+		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+
 		// Check if cron timer respects cron requirements
 		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
 
@@ -55,15 +62,16 @@ module.exports = class RandomGrammarPoint extends Command {
 
 			// Launching task in background if defined
 			if (cronTimer) {
-				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
+				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
 
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role));
+				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
 
+				// TODO follow then send
 				return await interaction.followUp({
 					embeds: [new MessageEmbed()
 						.setTitle('❗ Information')
 						.setColor(client.config.embedColor)
-						.setDescription(`💬 Le point de grammaire a bien été programmé en suivant la règle \`${cronTimer}\``)
+						.setDescription(`💬 Le point de grammaire a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
 						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
 						.setTimestamp(),
 					],
@@ -81,12 +89,33 @@ module.exports = class RandomGrammarPoint extends Command {
 					const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, interaction.member.guild);
 
 					/* It's sending the message to the user. */
-					return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
-						// If there is a role to ping, ping it
-						if (role) {
-							client.channels.cache.get(interaction.channelId).send(role);
-						}
-					});
+					/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
+					if (selectedChannel != interaction.channelId) {
+						return await interaction.followUp({
+							embeds: [new MessageEmbed()
+								.setTitle('❗ Information')
+								.setColor(client.config.embedColor)
+								.setDescription(`💬 Le point de grammaire a bien été envoyé dans le channel <#${selectedChannel}>`)
+								.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+								.setTimestamp(),
+							],
+						}).then(() => {
+							client.channels.cache.get(selectedChannel).send({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
+								// If there is a role to ping, ping it
+								if (role) {
+									client.channels.cache.get(selectedChannel).send(role);
+								}
+							});
+
+						});
+					} else {
+						return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
+							// If there is a role to ping, ping it
+							if (role) {
+								client.channels.cache.get(selectedChannel).send(role);
+							}
+						});
+					}
 				} else {
 					logger.error('Error when generating grammar point message : No more grammar point available');
 					interaction.followUp({
