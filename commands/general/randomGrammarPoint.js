@@ -31,8 +31,12 @@ module.exports = class RandomGrammarPoint extends Command {
 				.addRoleOption(option =>
 					option.setName('role')
 						.setDescription('Pour ping un role à chaque message')
+						.setRequired(false))
+				.addChannelOption(option =>
+					option.setName('channel')
+						.setDescription("Salon cible de l'action programmée")
 						.setRequired(false)),
-			usage: 'rgrammar [scheduling] [role]',
+			usage: 'rgrammar [scheduling] [role] [targetChannel]',
 			category: 'grammar',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -46,62 +50,13 @@ module.exports = class RandomGrammarPoint extends Command {
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
 
+		// Getting channel parameter
+		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+
 		// Check if cron timer respects cron requirements
-		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
-
-			// Getting role parameter
-			const roleParam = interaction.options.getRole('role');
-			const role = roleParam ? `<@&${roleParam.id}>` : null;
-
-			// Launching task in background if defined
-			if (cronTimer) {
-				const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role);
-
-				global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role));
-
-				return await interaction.followUp({
-					embeds: [new MessageEmbed()
-						.setTitle('❗ Information')
-						.setColor(client.config.embedColor)
-						.setDescription(`💬 Le point de grammaire a bien été programmé en suivant la règle \`${cronTimer}\``)
-						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-						.setTimestamp(),
-					],
-				});
-			} else {
-
-				// It's getting a random grammar point from a JSON file and getting the information about it.
-				const randGrammarPoint = await grammarModel.getRandomGrammar();
-				logger.info(`Generated grammar point : ${randGrammarPoint.japanese}`);
-
-				if (randGrammarPoint) {
-
-					/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
-					creating an embed with the information about the grammar point */
-					const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, interaction.member.guild);
-
-					/* It's sending the message to the user. */
-					return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
-						// If there is a role to ping, ping it
-						if (role) {
-							client.channels.cache.get(interaction.channelId).send(role);
-						}
-					});
-				} else {
-					logger.error('Error when generating grammar point message : No more grammar point available');
-					interaction.followUp({
-						embeds: [new MessageEmbed()
-							.setTitle('❌ Erreur lors de la génération du point de grammaire')
-							.setColor(client.config.embedColor)
-							.setDescription('💬 Plus aucun point de grammaire n\'est disponible')
-							.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-							.setTimestamp(),
-						],
-					});
-				}
-			}
-		} else {
-			interaction.followUp({
+		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
+			logger.error('Cron tab value is not valid');
+			return interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
 					.setColor(client.config.embedColor)
@@ -114,6 +69,80 @@ module.exports = class RandomGrammarPoint extends Command {
 			});
 		}
 
+		// Getting role parameter
+		const roleParam = interaction.options.getRole('role');
+		const role = roleParam ? `<@&${roleParam.id}>` : null;
+
+		// Launching task in background if defined
+		if (cronTimer) {
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+
+			return await interaction.followUp({
+				embeds: [new MessageEmbed()
+					.setTitle('❗ Information')
+					.setColor(client.config.embedColor)
+					.setDescription(`💬 Le point de grammaire a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
+					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+					.setTimestamp(),
+				],
+			});
+
+		} else {
+
+			// It's getting a random grammar point from a JSON file and getting the information about it.
+			const randGrammarPoint = await grammarModel.getRandomGrammar();
+
+			if (!randGrammarPoint) {
+
+				logger.error('Error when generating grammar point message : No more grammar point available');
+				return interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❌ Erreur lors de la génération du point de grammaire')
+						.setColor(client.config.embedColor)
+						.setDescription('💬 Plus aucun point de grammaire n\'est disponible')
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				});
+			}
+
+			/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
+			creating an embed with the information about the grammar point */
+			logger.info(`Generated grammar point from DB : ${randGrammarPoint.japanese}`);
+			const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, interaction.member.guild);
+
+			/* It's sending the message to the user. */
+			logger.info(`Sending random kanji ${randGrammarPoint.japanese} embed message in channel ${selectedChannel}`);
+
+			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
+			if (selectedChannel == interaction.channelId) {
+				return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
+					// If there is a role to ping, ping it
+					if (role) {
+						client.channels.cache.get(selectedChannel).send(role);
+					}
+				});
+			} else {
+				return await interaction.followUp({
+					embeds: [new MessageEmbed()
+						.setTitle('❗ Information')
+						.setColor(client.config.embedColor)
+						.setDescription(`💬 Le point de grammaire a bien été envoyé dans le channel <#${selectedChannel}>`)
+						.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+						.setTimestamp(),
+					],
+				}).then(() => {
+					client.channels.cache.get(selectedChannel).send({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
+						if (role) {
+							client.channels.cache.get(selectedChannel).send(role);
+						}
+					});
+
+				});
+			}
+		}
 	}
 
 	cronFunction(id, client, serverId, cronTimer, channelId, role) {
