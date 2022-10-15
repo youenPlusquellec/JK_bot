@@ -31,8 +31,12 @@ module.exports = class ScheduledMessage extends Command {
 				.addRoleOption(option =>
 					option.setName('role')
 						.setDescription('Pour ping un role à chaque message')
+						.setRequired(false))
+				.addChannelOption(option =>
+					option.setName('target_channel')
+						.setDescription("Salon cible de l'action programmée")
 						.setRequired(false)),
-			usage: 'scheduledmessage MESSAGE SCHEDULING [ROLE]',
+			usage: 'scheduledmessage MESSAGE SCHEDULING [role] [target_channel]',
 			category: 'message',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -43,39 +47,12 @@ module.exports = class ScheduledMessage extends Command {
 		// It's a way to send a message to the user without sending it right away.
 		await interaction.deferReply();
 
-		// Getting cron parameter
+		// Getting parameters
 		const cronTimer = interaction.options.getString('scheduling');
+		const selectedChannel = interaction.options.getChannel('target_channel') ? interaction.options.getChannel('target_channel').id : interaction.channelId;
 
 		// Check if cron timer respects cron requirements
-		if (!cronTimer || (cronTimer && /^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer))) {
-
-			// Getting message parameter
-			const messageParam = interaction.options.getString('message');
-
-			// Getting role parameter
-			const roleParam = interaction.options.getRole('role');
-			const role = roleParam ? `<@&${roleParam.id}>` : null;
-
-			// Launching task in background if defined
-			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, interaction.channelId, role, {
-				message: messageParam,
-			});
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, interaction.channelId, role, {
-				message: messageParam,
-			}));
-
-			// Confirmation message
-			return await interaction.followUp({
-				embeds: [new MessageEmbed()
-					.setTitle('❗ Information')
-					.setColor(client.config.embedColor)
-					.setDescription(`💬 Le message a bien été programmé en suivant la règle \`${cronTimer}\``)
-					.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
-					.setTimestamp(),
-				],
-			});
-
-		} else {
+		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
 			interaction.followUp({
 				embeds: [new MessageEmbed()
 					.setTitle('❌ Le paramètre évènementiel n\'est pas correct')
@@ -88,7 +65,35 @@ module.exports = class ScheduledMessage extends Command {
 				],
 			});
 		}
+		
+		// Getting message parameter
+		const messageParam = interaction.options.getString('message');
 
+		// Getting role parameter
+		const roleParam = interaction.options.getRole('role');
+		const role = roleParam ? `<@&${roleParam.id}>` : null;
+
+		// Launching task in background if defined
+		const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role, {
+			message: messageParam,
+		});
+
+		global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role, {
+			message: messageParam,
+		}));
+
+		logger.info(`Sending scheduled message in channel ${selectedChannel}`);
+
+		// Confirmation message
+		return await interaction.followUp({
+			embeds: [new MessageEmbed()
+				.setTitle('❗ Information')
+				.setColor(client.config.embedColor)
+				.setDescription(`💬 Le message a bien été programmé en suivant la règle \`${cronTimer}\` dans le channel <#${selectedChannel}>`)
+				.setFooter({ text: `${interaction.member.guild.name}`, iconURL: interaction.member.guild.iconURL() })
+				.setTimestamp(),
+			],
+		});
 	}
 
 	cronFunction(id, client, serverId, cronTimer, channelId, role, parameters) {
