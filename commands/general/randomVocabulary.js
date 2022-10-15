@@ -32,10 +32,14 @@ module.exports = class RandomVocabulary extends Command {
 						.setDescription('Pour ping un role à chaque message')
 						.setRequired(false))
 				.addChannelOption(option =>
-					option.setName('channel')
+					option.setName('target_channel')
 						.setDescription("Salon cible de l'action programmée")
+						.setRequired(false))
+				.addBooleanOption(option =>
+					option.setName('to_use')
+						.setDescription("Si l'action doit dépenser ou non points de grammaire")
 						.setRequired(false)),
-			usage: 'rvocabulary [scheduling] [role]',
+			usage: 'rvocabulary [scheduling] [role] [target_channel] [to_use]',
 			category: 'vocabulary',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -48,9 +52,8 @@ module.exports = class RandomVocabulary extends Command {
 
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
-
-		// Getting channel parameter
-		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+		const toUse = interaction.options.getBoolean('to_use');
+		const selectedChannel = interaction.options.getChannel('target_channel') ? interaction.options.getChannel('target_channel').id : interaction.channelId;
 
 		// Check if cron timer respects cron requirements
 		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
@@ -74,9 +77,13 @@ module.exports = class RandomVocabulary extends Command {
 
 		// Launching task in background if defined
 		if (cronTimer) {
-			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			});
 
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			}));
 
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
@@ -108,11 +115,16 @@ module.exports = class RandomVocabulary extends Command {
 			}
 
 			/* Generate the vocabularies embed message */
-			logger.info(`Generated vocabularies : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
 			const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, interaction.member.guild);
-
-			/* It's sending the message to the user. */
 			logger.info(`Sending random vocabularies ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary} embed message in channel ${selectedChannel}`);
+
+			// Use the three vocabularies got
+			if (toUse) {
+				logger.debug(`Use random vocabularies for scheduled task : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
+				vocabularyModel.useVocabularyById(randVocN3.id, interaction.member.guild.id);
+				vocabularyModel.useVocabularyById(randVocN4.id, interaction.member.guild.id);
+				vocabularyModel.useVocabularyById(randVocN5.id, interaction.member.guild.id);
+			}
 
 			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
 			if (selectedChannel == interaction.channelId) {
@@ -141,7 +153,7 @@ module.exports = class RandomVocabulary extends Command {
 		}
 	}
 
-	cronFunction(id, client, serverId, cronTimer, channelId, role) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role, params) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
 
@@ -171,17 +183,20 @@ module.exports = class RandomVocabulary extends Command {
 			const randVocN5 = await vocabularyModel.getAvailableRandomVocabularyByJlpt(serverId, 5);
 			const randVocN4 = await vocabularyModel.getAvailableRandomVocabularyByJlpt(serverId, 4);
 			const randVocN3 = await vocabularyModel.getAvailableRandomVocabularyByJlpt(serverId, 3);
-			logger.info(`Generated vocabularies : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
 
 			if (randVocN5 && randVocN4 && randVocN3) {
 
 				// It's generating an embed with the information about the vocabulary
 				const vocEmbed = await generateEmbedVocabularies(client.config.embedColor, randVocN5, randVocN4, randVocN3, client.channels.cache.get(channelId).guild);
+				logger.info(`Sending random vocabularies ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary} embed message in channel ${channelId}`);
 
 				// Use the three vocabularies got
-				vocabularyModel.useVocabularyById(randVocN3.id, serverId);
-				vocabularyModel.useVocabularyById(randVocN4.id, serverId);
-				vocabularyModel.useVocabularyById(randVocN5.id, serverId);
+				if (params && params.toUse) {
+					logger.debug(`Use random vocabularies for scheduled task : ${randVocN5.vocabulary} - ${randVocN4.vocabulary} - ${randVocN3.vocabulary}`);
+					vocabularyModel.useVocabularyById(randVocN3.id, serverId);
+					vocabularyModel.useVocabularyById(randVocN4.id, serverId);
+					vocabularyModel.useVocabularyById(randVocN5.id, serverId);
+				}
 
 				// Sending the message to the user.
 				client.channels.cache.get(channelId).send({ embeds: [vocEmbed] })
