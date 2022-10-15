@@ -34,10 +34,14 @@ module.exports = class RandomKanji extends Command {
 						.setDescription('Pour ping un role à chaque message')
 						.setRequired(false))
 				.addChannelOption(option =>
-					option.setName('channel')
+					option.setName('target_channel')
 						.setDescription("Salon cible de l'action programmée")
+						.setRequired(false))
+				.addBooleanOption(option =>
+					option.setName('to_use')
+						.setDescription("Si l'action doit dépenser ou non points de grammaire")
 						.setRequired(false)),
-			usage: 'rkanji [scheduling] [role]',
+			usage: 'rkanji [scheduling] [role] [target_channel] [to_use]',
 			category: 'kanji',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -50,9 +54,8 @@ module.exports = class RandomKanji extends Command {
 
 		// Getting cron parameter
 		const cronTimer = interaction.options.getString('scheduling');
-
-		// Getting channel parameter
-		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+		const toUse = interaction.options.getBoolean('to_use');
+		const selectedChannel = interaction.options.getChannel('target_channel') ? interaction.options.getChannel('target_channel').id : interaction.channelId;
 
 		// Check if cron timer respects cron requirements
 		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
@@ -76,9 +79,13 @@ module.exports = class RandomKanji extends Command {
 
 		// Launching task in background if defined
 		if (cronTimer) {
-			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			});
 
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			}));
 
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
@@ -112,11 +119,14 @@ module.exports = class RandomKanji extends Command {
 			/* It's getting a random kanji from a JSON file and getting the information about it. Then, it's
 			generating an image from the kanji and saving it to a file. Finally, it's creating an embed with
 			the information about the kanji */
-			logger.info(`Generated kanji from DB : ${randKanji.kanji}`);
 			const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji, interaction.member.guild);
-
-			/* It's sending the message to the user. */
 			logger.info(`Sending random kanji ${randKanji.kanji} embed message in channel ${selectedChannel}`);
+						
+			// Use random kanji
+			if (toUse) {
+				logger.debug(`Use random kanji for scheduled task : ${randKanji.kanji}`);
+				kanjiModel.useKanjiById(randKanji.id, interaction.member.guild.id);
+			}
 
 			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
 			if (selectedChannel == interaction.channelId) {
@@ -145,7 +155,7 @@ module.exports = class RandomKanji extends Command {
 		}
 	}
 
-	cronFunction(id, client, serverId, cronTimer, channelId, role) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role, params) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
 
@@ -173,13 +183,18 @@ module.exports = class RandomKanji extends Command {
 
 			// It's getting a random kanji from a JSON file and getting the information about it.
 			const randKanji = await kanjiModel.getAvailableRandomKanji(serverId);
-			logger.info(`Generated kanji : ${randKanji.kanji}`);
 
 			if (randKanji) {
 
 				// Generating random kanji message
 				const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji, client.channels.cache.get(channelId).guild);
-				kanjiModel.useKanjiById(randKanji.id, serverId);
+				logger.info(`Sending random kanji ${randKanji.kanji} embed message in channel ${channelId}`);
+
+				// Use random kanji
+				if (params && params.toUse) {
+					logger.debug(`Use random kanji for scheduled task : ${randKanji.kanji}`);
+					kanjiModel.useKanjiById(randKanji.id, serverId);
+				}
 
 				// Sending the message to the user.
 				client.channels.cache.get(channelId).send({ embeds: [kanjiEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `${randKanji.id}.png`)] })

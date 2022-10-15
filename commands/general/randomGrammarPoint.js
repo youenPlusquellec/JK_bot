@@ -33,10 +33,14 @@ module.exports = class RandomGrammarPoint extends Command {
 						.setDescription('Pour ping un role à chaque message')
 						.setRequired(false))
 				.addChannelOption(option =>
-					option.setName('channel')
+					option.setName('target_channel')
 						.setDescription("Salon cible de l'action programmée")
+						.setRequired(false))
+				.addBooleanOption(option =>
+					option.setName('to_use')
+						.setDescription("Si l'action doit dépenser ou non points de grammaire")
 						.setRequired(false)),
-			usage: 'rgrammar [scheduling] [role] [targetChannel]',
+			usage: 'rgrammar [scheduling] [role] [target_channel] [to_use]',
 			category: 'grammar',
 			permissions: ['Use Application Commands', 'Send Messages', 'Embed Links'],
 		});
@@ -47,11 +51,10 @@ module.exports = class RandomGrammarPoint extends Command {
 		// It's a way to send a message to the user without sending it right away.
 		await interaction.deferReply();
 
-		// Getting cron parameter
+		// Getting parameter
 		const cronTimer = interaction.options.getString('scheduling');
-
-		// Getting channel parameter
-		const selectedChannel = interaction.options.getChannel('channel') ? interaction.options.getChannel('channel').id : interaction.channelId;
+		const toUse = interaction.options.getBoolean('to_use');
+		const selectedChannel = interaction.options.getChannel('target_channel') ? interaction.options.getChannel('target_channel').id : interaction.channelId;
 
 		// Check if cron timer respects cron requirements
 		if (cronTimer && !/^(\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?[1-5]?[0-9])) (\*|((\*\/)?(1?[0-9]|2[0-3]))) (\*|((\*\/)?([1-9]|[12][0-9]|3[0-1]))) (\*|((\*\/)?([1-9]|1[0-2]))) (\*|((\*\/)?[0-6]))$/.test(cronTimer)) {
@@ -75,9 +78,13 @@ module.exports = class RandomGrammarPoint extends Command {
 
 		// Launching task in background if defined
 		if (cronTimer) {
-			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role);
+			const res = await actionModel.createAction(interaction.guildId, interaction.user.id, this.name, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			});
 
-			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role));
+			global.cronTasks.set(Number(res.insertId), this.cronFunction(Number(res.insertId), client, interaction.guildId, cronTimer, selectedChannel, role, {
+				toUse: toUse != undefined ? toUse : true,
+			}));
 
 			return await interaction.followUp({
 				embeds: [new MessageEmbed()
@@ -110,16 +117,18 @@ module.exports = class RandomGrammarPoint extends Command {
 
 			/* It's getting a random grammar point from a JSON file and getting the information about it. Then, it's
 			creating an embed with the information about the grammar point */
-			logger.info(`Generated grammar point from DB : ${randGrammarPoint.japanese}`);
 			const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, interaction.member.guild);
-
-			/* It's sending the message to the user. */
 			logger.info(`Sending random kanji ${randGrammarPoint.japanese} embed message in channel ${selectedChannel}`);
+
+			// Use grammar point
+			if (toUse) {
+				logger.debug(`Use grammar point for scheduled task : ${randGrammarPoint.japanese}`);
+				grammarModel.useGrammarById(randGrammarPoint.id, interaction.member.guild.id);
+			}
 
 			/* Reply to the message if the selected channel is the current channel, otherwise makes a short response */
 			if (selectedChannel == interaction.channelId) {
 				return await interaction.followUp({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] }).then(() => {
-					// If there is a role to ping, ping it
 					if (role) {
 						client.channels.cache.get(selectedChannel).send(role);
 					}
@@ -145,7 +154,7 @@ module.exports = class RandomGrammarPoint extends Command {
 		}
 	}
 
-	cronFunction(id, client, serverId, cronTimer, channelId, role) {
+	cronFunction(id, client, serverId, cronTimer, channelId, role, params) {
 
 		logger.info(`Starting new ${this.name} with rule ${cronTimer} ${channelId ? `in #${channelId}` : ''} ${role ? `pinging ${role}` : ''}`);
 
@@ -173,13 +182,18 @@ module.exports = class RandomGrammarPoint extends Command {
 
 			// It's getting a random grammar point from a JSON file and getting the information about it.
 			const randGrammarPoint = await grammarModel.getAvailableRandomGrammar(serverId);
-			logger.info(`Generated grammar point : ${randGrammarPoint.japanese}`);
 
 			if (randGrammarPoint) {
 
 				// Generating random randGrammarPoint message
 				const grammarPointEmbed = await generateEmbedGrammar(client.config.embedColor, randGrammarPoint, client.channels.cache.get(channelId).guild);
-				grammarModel.useGrammarById(randGrammarPoint.id, serverId);
+				logger.info(`Sending random kanji ${randGrammarPoint.japanese} embed message in channel ${channelId}`);
+
+				// Use grammar point
+				if (params && params.toUse) {
+					logger.debug(`Use grammar point for scheduled task : ${randGrammarPoint.japanese}`);
+					grammarModel.useGrammarById(randGrammarPoint.id, serverId);
+				}
 
 				// Sending the message to the user.
 				client.channels.cache.get(channelId).send({ embeds: [grammarPointEmbed], files: [path.resolve(process.env.KANJI_IMAGES_FOLDER, `grammar_${randGrammarPoint.id}.png`)] })
