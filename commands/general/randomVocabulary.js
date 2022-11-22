@@ -33,11 +33,11 @@ module.exports = class RandomVocabulary extends Command {
 						.setRequired(false))
 				.addChannelOption(option =>
 					option.setName('target_channel')
-						.setDescription("Salon cible de l'action programmée")
+						.setDescription('Salon cible de l\'action programmée')
 						.setRequired(false))
 				.addBooleanOption(option =>
 					option.setName('to_use')
-						.setDescription("Si l'action doit dépenser ou non points de grammaire")
+						.setDescription('Si l\'action doit dépenser ou non points de grammaire')
 						.setRequired(false)),
 			usage: 'rvocabulary [scheduling] [role] [target_channel] [to_use]',
 			category: 'vocabulary',

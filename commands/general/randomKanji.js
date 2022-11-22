@@ -35,11 +35,11 @@ module.exports = class RandomKanji extends Command {
 						.setRequired(false))
 				.addChannelOption(option =>
 					option.setName('target_channel')
-						.setDescription("Salon cible de l'action programmée")
+						.setDescription('Salon cible de l\'action programmée')
 						.setRequired(false))
 				.addBooleanOption(option =>
 					option.setName('to_use')
-						.setDescription("Si l'action doit dépenser ou non points de grammaire")
+						.setDescription('Si l\'action doit dépenser ou non points de grammaire')
 						.setRequired(false)),
 			usage: 'rkanji [scheduling] [role] [target_channel] [to_use]',
 			category: 'kanji',
@@ -100,7 +100,7 @@ module.exports = class RandomKanji extends Command {
 		} else {
 
 			// It's getting a random kanji from a JSON file and getting the information about it.
-			let randKanji = await kanjiModel.getRandomKanji();
+			const randKanji = await kanjiModel.getRandomKanji();
 
 			if (!randKanji) {
 
@@ -121,7 +121,7 @@ module.exports = class RandomKanji extends Command {
 			the information about the kanji */
 			const kanjiEmbed = await generateEmbedKanji(client.config.embedColor, randKanji, interaction.member.guild);
 			logger.info(`Sending random kanji ${randKanji.kanji} embed message in channel ${selectedChannel}`);
-						
+
 			// Use random kanji
 			if (toUse) {
 				logger.debug(`Use random kanji for scheduled task : ${randKanji.kanji}`);

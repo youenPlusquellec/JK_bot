@@ -34,7 +34,7 @@ module.exports = class ScheduledMessage extends Command {
 						.setRequired(false))
 				.addChannelOption(option =>
 					option.setName('target_channel')
-						.setDescription("Salon cible de l'action programmée")
+						.setDescription('Salon cible de l\'action programmée')
 						.setRequired(false)),
 			usage: 'scheduledmessage MESSAGE SCHEDULING [role] [target_channel]',
 			category: 'message',
@@ -65,7 +65,7 @@ module.exports = class ScheduledMessage extends Command {
 				],
 			});
 		}
-		
+
 		// Getting message parameter
 		const messageParam = interaction.options.getString('message');
 
